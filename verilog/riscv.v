@@ -61,7 +61,7 @@ module riscv(
 	//inout 		          		PS2_DAT2,
 
 	//////////// SW //////////
-	input 		     [9:0]		SW
+	input 		     [9:0]		SW,
 
 	//////////// Video-In //////////
 	//input 		          		TD_CLK27,
@@ -71,14 +71,14 @@ module riscv(
 	//input 		          		TD_VS,
 
 	//////////// VGA //////////
-	//output		          		VGA_BLANK_N,
-	//output		     [7:0]		VGA_B,
-	//output		          		VGA_CLK,
-	//output		     [7:0]		VGA_G,
-	//output		          		VGA_HS,
-	//output		     [7:0]		VGA_R,
-	//output		          		VGA_SYNC_N,
-	//output		          		VGA_VS,
+	output		          		VGA_BLANK_N,
+	output		     [7:0]		VGA_B,
+	output		          		VGA_CLK,
+	output		     [7:0]		VGA_G,
+	output		          		VGA_HS,
+	output		     [7:0]		VGA_R,
+	output		          		VGA_SYNC_N,
+	output		          		VGA_VS
 
 	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
 	//inout 		    [35:0]		GPIO_0,
@@ -89,5 +89,57 @@ module riscv(
 
 assign clk = CLOCK_50;
 assign rst = KEY[3];
+
+reg vga_write_en;
+wire [31:0]vga_input_data;
+reg [12:0]vga_write_address;
+
+reg [7:0]ascii;
+reg [23:0]rgb;
+
+assign vga_input_data = {ascii, rgb};
+
+reg unsigned [3:0]cycles;
+
+always@(posedge clk or negedge rst)
+begin
+	if (rst == 1'b0)
+	begin
+		vga_write_en <= 1'b1;
+		//vga_input_data <= {"A", 24'hFFFFFF};
+		vga_write_address <= 13'd0;
+		
+		ascii <= "0";
+		rgb <= 24'hFFFFFF;
+		
+		cycles <= 4'd0;
+	end
+	else if (vga_write_address < 4800 && cycles == 0)
+	begin
+		vga_write_address <= vga_write_address + 1;
+		ascii <= (ascii == "9") ? "0" : ascii + 1;
+		cycles <= (cycles + 1);
+	end
+	else
+	begin
+		cycles <= (cycles + 1);
+	end
+end
+
+ascii_master_controller controller (
+		.clk(CLOCK_50),
+		.rst(rst),
+		.ascii_write_en(vga_write_en),
+		.ascii_input(vga_input_data),
+		.ascii_write_address(vga_write_address),
+		.vga_blank(VGA_BLANK_N),
+		.vga_b(VGA_B),
+		.vga_r(VGA_R),
+		.vga_g(VGA_G),
+		.vga_clk(VGA_CLK),
+		.vga_hs(VGA_HS),
+		.vga_vs(VGA_VS),
+		.vga_sync(VGA_SYNC_N)
+);
 
 endmodule
