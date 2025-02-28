@@ -101,11 +101,14 @@ assign vga_input_data = {ascii, rgb};
 
 reg unsigned [3:0]cycles;
 
+parameter HW_STRING = "Hello World!";
+reg [7:0]string_count;
+
 always@(posedge clk or negedge rst)
 begin
 	if (rst == 1'b0)
 	begin
-		vga_write_en <= 1'b1;
+		vga_write_en <= 1'b0;
 		//vga_input_data <= {"A", 24'hFFFFFF};
 		vga_write_address <= 13'd0;
 		
@@ -113,12 +116,15 @@ begin
 		rgb <= 24'hFFFFFF;
 		
 		cycles <= 4'd0;
+		string_count <= 8'd11;
 	end
-	else if (vga_write_address < 4800 && cycles == 0)
+	else if (vga_write_address < 12 && cycles == 0)
 	begin
+		vga_write_en <= 1'b1;
 		vga_write_address <= vga_write_address + 1;
-		ascii <= (ascii == "9") ? "0" : ascii + 1;
+		ascii <= HW_STRING[string_count * 8 +: 8];
 		cycles <= (cycles + 1);
+		string_count <= string_count - 1;
 	end
 	else
 	begin

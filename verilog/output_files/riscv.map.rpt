@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Fri Feb 28 14:04:08 2025
+Fri Feb 28 14:49:23 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -28,21 +28,22 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  20. Source assignments for ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated
  21. Source assignments for ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated
  22. Source assignments for ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated
- 23. Parameter Settings for User Entity Instance: ascii_master_controller:controller
- 24. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller
- 25. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|vga_driver:driver
- 26. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer
- 27. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component
- 29. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component
- 30. Parameter Settings for User Entity Instance: ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component
- 31. altsyncram Parameter Settings by Entity Instance
- 32. Port Connectivity Checks: "ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer"
- 33. Port Connectivity Checks: "ascii_master_controller:controller"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
- 37. Analysis & Synthesis Suppressed Messages
+ 23. Parameter Settings for User Entity Instance: Top-level Entity: |riscv
+ 24. Parameter Settings for User Entity Instance: ascii_master_controller:controller
+ 25. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller
+ 26. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|vga_driver:driver
+ 27. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer
+ 28. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component
+ 31. Parameter Settings for User Entity Instance: ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component
+ 32. altsyncram Parameter Settings by Entity Instance
+ 33. Port Connectivity Checks: "ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer"
+ 34. Port Connectivity Checks: "ascii_master_controller:controller"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -69,13 +70,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 28 14:04:08 2025          ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 28 14:49:23 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 216                                            ;
+; Total registers                 ; 219                                            ;
 ; Total pins                      ; 86                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 770,048                                        ;
@@ -233,16 +234,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 138            ;
+; Estimate of Logic utilization (ALMs needed) ; 139            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 194            ;
+; Combinational ALUT usage for logic          ; 196            ;
 ;     -- 7 input functions                    ; 2              ;
 ;     -- 6 input functions                    ; 17             ;
-;     -- 5 input functions                    ; 23             ;
-;     -- 4 input functions                    ; 26             ;
-;     -- <=3 input functions                  ; 126            ;
+;     -- 5 input functions                    ; 21             ;
+;     -- 4 input functions                    ; 32             ;
+;     -- <=3 input functions                  ; 124            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 216            ;
+; Dedicated logic registers                   ; 219            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 86             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -251,9 +252,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 284            ;
-; Total fan-out                               ; 3455           ;
-; Average fan-out                             ; 5.06           ;
+; Maximum fan-out                             ; 287            ;
+; Total fan-out                               ; 3508           ;
+; Average fan-out                             ; 5.10           ;
 +---------------------------------------------+----------------+
 
 
@@ -262,12 +263,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |riscv                                             ; 194 (35)            ; 216 (25)                  ; 770048            ; 0          ; 86   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
-;    |ascii_master_controller:controller|            ; 159 (43)            ; 191 (25)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
+; |riscv                                             ; 196 (36)            ; 219 (28)                  ; 770048            ; 0          ; 86   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
+;    |ascii_master_controller:controller|            ; 160 (43)            ; 191 (25)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
 ;       |ascii_master:master|                        ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master                                                                                                                  ; ascii_master            ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component                                                                                  ; altsyncram              ; work         ;
 ;             |altsyncram_lb12:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated                                                   ; altsyncram_lb12         ; work         ;
-;       |vga_controller:controller|                  ; 116 (51)            ; 166 (9)                   ; 516096            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller                                                                                                            ; vga_controller          ; work         ;
+;       |vga_controller:controller|                  ; 117 (51)            ; 166 (9)                   ; 516096            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller                                                                                                            ; vga_controller          ; work         ;
 ;          |Char_ROM:rom1|                           ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1                                                                                              ; Char_ROM                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component                                                              ; altsyncram              ; work         ;
 ;                |altsyncram_eqg1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated                               ; altsyncram_eqg1         ; work         ;
@@ -279,7 +280,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |ascii_buffer_2:buffer2|               ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2                                                                ; ascii_buffer_2          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                   |altsyncram_p6o1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated ; altsyncram_p6o1         ; work         ;
-;          |vga_driver:driver|                       ; 57 (57)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver                                                                                          ; vga_driver              ; work         ;
+;          |vga_driver:driver|                       ; 58 (58)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver                                                                                          ; vga_driver              ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -369,6 +370,7 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 ; Register name                                                                                   ; Reason for Removal                                           ;
 +-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+; ascii[7]                                                                                        ; Lost fanout                                                  ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[31] ; Lost fanout                                                  ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_1[31] ; Lost fanout                                                  ;
 ; ascii_master_controller:controller|WRITE_S~4                                                    ; Lost fanout                                                  ;
@@ -384,7 +386,9 @@ Encoding Type:  One-Hot
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs~5             ; Lost fanout                                                  ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.ERROR       ; Lost fanout                                                  ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.START       ; Merged with ascii_master_controller:controller|WRITE_S.START ;
-; Total Number of Removed Registers = 15                                                          ;                                                              ;
+; string_count[4..7]                                                                              ; Lost fanout                                                  ;
+; string_count[0]                                                                                 ; Merged with vga_write_address[0]                             ;
+; Total Number of Removed Registers = 21                                                          ;                                                              ;
 +-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
 
 
@@ -402,12 +406,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 216   ;
+; Total registers                              ; 219   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 92    ;
+; Number of registers using Asynchronous Clear ; 95    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 154   ;
+; Number of registers using Clock Enable       ; 157   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -421,9 +425,11 @@ Encoding Type:  One-Hot
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank ; 18      ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_hs ; 1       ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_vs ; 1       ;
-; ascii[4]                                                                              ; 3       ;
-; ascii[5]                                                                              ; 3       ;
-; Total number of inverted registers = 6                                                ;         ;
+; ascii[4]                                                                              ; 1       ;
+; ascii[5]                                                                              ; 1       ;
+; string_count[1]                                                                       ; 8       ;
+; string_count[3]                                                                       ; 8       ;
+; Total number of inverted registers = 8                                                ;         ;
 +---------------------------------------------------------------------------------------+---------+
 
 
@@ -432,9 +438,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
-; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[22] ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]        ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]        ;
+; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[28] ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]        ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 
 
@@ -472,6 +478,16 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                              ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |riscv ;
++----------------+--------------+---------------------------------------+
+; Parameter Name ; Value        ; Type                                  ;
++----------------+--------------+---------------------------------------+
+; HW_STRING      ; Hello World! ; String                                ;
++----------------+--------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------+
@@ -854,7 +870,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port               ; Type   ; Severity ; Details                                                                                                                                      ;
 +--------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; ascii_write_en     ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; ascii_input[23..0] ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; SW                 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; KEY                ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
@@ -867,37 +882,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 216                         ;
+; arriav_ff             ; 219                         ;
 ;     CLR               ; 50                          ;
 ;     CLR SCLR          ; 10                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 66                          ;
-;     ENA CLR           ; 21                          ;
+;     ENA CLR           ; 24                          ;
 ;     ENA CLR SCLR      ; 10                          ;
 ;     ENA SLD           ; 57                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 199                         ;
-;     arith             ; 68                          ;
+; arriav_lcell_comb     ; 201                         ;
+;     arith             ; 64                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 52                          ;
+;         1 data inputs ; 48                          ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 3                           ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 129                         ;
+;     normal            ; 135                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 10                          ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 23                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 21                          ;
 ;         6 data inputs ; 17                          ;
 ; boundary_port         ; 86                          ;
 ; stratixv_ram_block    ; 101                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.45                        ;
+; Average LUT depth     ; 1.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -916,7 +931,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Feb 28 14:04:00 2025
+    Info: Processing started: Fri Feb 28 14:49:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -945,44 +960,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_con
 Warning (10236): Verilog HDL Implicit Net warning at riscv.v(90): created implicit net for "clk" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 90
 Warning (10236): Verilog HDL Implicit Net warning at riscv.v(91): created implicit net for "rst" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 91
 Info (12127): Elaborating entity "riscv" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at riscv.v(119): truncated value with size 32 to match size of target (13) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 119
-Warning (10230): Verilog HDL assignment warning at riscv.v(120): truncated value with size 32 to match size of target (8) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 120
-Warning (10230): Verilog HDL assignment warning at riscv.v(121): truncated value with size 32 to match size of target (4) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 121
-Warning (10230): Verilog HDL assignment warning at riscv.v(125): truncated value with size 32 to match size of target (4) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 125
-Warning (10240): Verilog HDL Always Construct warning at riscv.v(104): inferring latch(es) for variable "vga_write_en", which holds its previous value in one or more paths through the always construct File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Warning (10240): Verilog HDL Always Construct warning at riscv.v(104): inferring latch(es) for variable "rgb", which holds its previous value in one or more paths through the always construct File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
+Warning (10230): Verilog HDL assignment warning at riscv.v(124): truncated value with size 32 to match size of target (13) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 124
+Warning (10230): Verilog HDL assignment warning at riscv.v(126): truncated value with size 32 to match size of target (4) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 126
+Warning (10230): Verilog HDL assignment warning at riscv.v(127): truncated value with size 32 to match size of target (8) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 127
+Warning (10230): Verilog HDL assignment warning at riscv.v(131): truncated value with size 32 to match size of target (4) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 131
+Warning (10240): Verilog HDL Always Construct warning at riscv.v(107): inferring latch(es) for variable "rgb", which holds its previous value in one or more paths through the always construct File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
 Warning (10034): Output port "HEX0" at riscv.v(40) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
 Warning (10034): Output port "HEX1" at riscv.v(41) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
 Warning (10034): Output port "HEX2" at riscv.v(42) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
 Warning (10034): Output port "HEX3" at riscv.v(43) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
 Warning (10034): Output port "HEX4" at riscv.v(44) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
 Warning (10034): Output port "HEX5" at riscv.v(45) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-Info (10041): Inferred latch for "rgb[0]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[1]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[2]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[3]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[4]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[5]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[6]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[7]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[8]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[9]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[10]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[11]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[12]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[13]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[14]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[15]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[16]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[17]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[18]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[19]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[20]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[21]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[22]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "rgb[23]" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (10041): Inferred latch for "vga_write_en" at riscv.v(104) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 104
-Info (12128): Elaborating entity "ascii_master_controller" for hierarchy "ascii_master_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 143
+Info (10041): Inferred latch for "rgb[0]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[1]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[2]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[3]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[4]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[5]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[6]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[7]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[8]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[9]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[10]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[11]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[12]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[13]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[14]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[15]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[16]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[17]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[18]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[19]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[20]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[21]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[22]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (10041): Inferred latch for "rgb[23]" at riscv.v(107) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 107
+Info (12128): Elaborating entity "ascii_master_controller" for hierarchy "ascii_master_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 149
 Info (10264): Verilog HDL Case Statement information at ascii_master_controller.v(170): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master_controller.v Line: 170
 Info (12128): Elaborating entity "vga_controller" for hierarchy "ascii_master_controller:controller|vga_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master_controller.v Line: 56
 Warning (10230): Verilog HDL assignment warning at vga_controller.v(141): truncated value with size 32 to match size of target (13) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/vga_controller.v Line: 141
@@ -1140,7 +1153,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 80
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -entity DE1_SoC was ignored
@@ -1730,16 +1743,16 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-Info (21057): Implemented 507 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 510 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 320 logic cells
+    Info (21061): Implemented 323 logic cells
     Info (21064): Implemented 101 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 658 warnings
-    Info: Peak virtual memory: 4903 megabytes
-    Info: Processing ended: Fri Feb 28 14:04:09 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 657 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Fri Feb 28 14:49:23 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+

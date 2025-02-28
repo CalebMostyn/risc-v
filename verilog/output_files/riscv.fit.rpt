@@ -1,5 +1,5 @@
 Fitter report for riscv
-Fri Feb 28 14:05:31 2025
+Fri Feb 28 14:50:23 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -65,15 +65,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 28 14:05:31 2025          ;
+; Fitter Status                   ; Successful - Fri Feb 28 14:50:23 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 135 / 32,070 ( < 1 % )                         ;
-; Total registers                 ; 239                                            ;
+; Logic utilization (in ALMs)     ; 134 / 32,070 ( < 1 % )                         ;
+; Total registers                 ; 251                                            ;
 ; Total pins                      ; 86 / 457 ( 19 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 770,048 / 4,065,280 ( 19 % )                   ;
@@ -155,26 +155,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processor 3            ;   1.1%      ;
-;     Processor 4            ;   1.0%      ;
-;     Processor 5            ;   1.0%      ;
-;     Processor 6            ;   1.0%      ;
-;     Processor 7            ;   1.0%      ;
-;     Processor 8            ;   1.0%      ;
-;     Processor 9            ;   0.9%      ;
-;     Processor 10           ;   0.9%      ;
-;     Processor 11           ;   0.9%      ;
-;     Processor 12           ;   0.9%      ;
-;     Processor 13           ;   0.8%      ;
-;     Processor 14           ;   0.8%      ;
-;     Processor 15           ;   0.8%      ;
-;     Processor 16           ;   0.8%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.7%      ;
+;     Processor 4            ;   0.7%      ;
+;     Processor 5            ;   0.7%      ;
+;     Processor 6            ;   0.7%      ;
+;     Processor 7            ;   0.7%      ;
+;     Processor 8            ;   0.7%      ;
+;     Processor 9            ;   0.6%      ;
+;     Processor 10           ;   0.6%      ;
+;     Processor 11           ;   0.6%      ;
+;     Processor 12           ;   0.6%      ;
+;     Processor 13           ;   0.6%      ;
+;     Processor 14           ;   0.6%      ;
+;     Processor 15           ;   0.6%      ;
+;     Processor 16           ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -185,28 +185,37 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------------------------------------------------+------------------+-----------------------+
 ; CLOCK_50~inputCLKENA0                                                                    ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                    ;                  ;                       ;
 ; ascii_master_controller:controller|WRITE_S.DELAY                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|WRITE_S.DELAY~DUPLICATE                                         ;                  ;                       ;
-; ascii_master_controller:controller|WRITE_S.WRITE_DONE                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|WRITE_S.WRITE_DONE~DUPLICATE                                    ;                  ;                       ;
-; ascii_master_controller:controller|address_count[1]                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[1]~DUPLICATE                                      ;                  ;                       ;
-; ascii_master_controller:controller|address_count[4]                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[4]~DUPLICATE                                      ;                  ;                       ;
+; ascii_master_controller:controller|WRITE_S.ITERATE                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|WRITE_S.ITERATE~DUPLICATE                                       ;                  ;                       ;
+; ascii_master_controller:controller|WRITE_S.WRITE_START                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|WRITE_S.WRITE_START~DUPLICATE                                   ;                  ;                       ;
+; ascii_master_controller:controller|address_count[0]                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[0]~DUPLICATE                                      ;                  ;                       ;
+; ascii_master_controller:controller|address_count[3]                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[3]~DUPLICATE                                      ;                  ;                       ;
+; ascii_master_controller:controller|address_count[5]                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[5]~DUPLICATE                                      ;                  ;                       ;
+; ascii_master_controller:controller|address_count[10]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[10]~DUPLICATE                                     ;                  ;                       ;
 ; ascii_master_controller:controller|address_count[12]                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|address_count[12]~DUPLICATE                                     ;                  ;                       ;
-; ascii_master_controller:controller|delay_count[0]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|delay_count[0]~DUPLICATE                                        ;                  ;                       ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]~DUPLICATE ;                  ;                       ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3]~DUPLICATE ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY~DUPLICATE              ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|switch_buffer               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|switch_buffer~DUPLICATE               ;                  ;                       ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]~DUPLICATE ;                  ;                       ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]~DUPLICATE ;                  ;                       ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]~DUPLICATE ;                  ;                       ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VDISP  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VDISP~DUPLICATE  ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]~DUPLICATE ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3]~DUPLICATE ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4]~DUPLICATE ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7]~DUPLICATE ;                  ;                       ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT~DUPLICATE ;                  ;                       ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VSYNC  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VSYNC~DUPLICATE  ;                  ;                       ;
 ; cycles[0]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; cycles[0]~DUPLICATE                                                                                ;                  ;                       ;
 ; cycles[1]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; cycles[1]~DUPLICATE                                                                                ;                  ;                       ;
+; string_count[2]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; string_count[2]~DUPLICATE                                                                          ;                  ;                       ;
+; string_count[3]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; string_count[3]~DUPLICATE                                                                          ;                  ;                       ;
+; vga_write_address[0]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[0]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[1]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[1]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[2]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[2]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[3]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[3]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[4]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[4]~DUPLICATE                                                                     ;                  ;                       ;
-; vga_write_address[7]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[7]~DUPLICATE                                                                     ;                  ;                       ;
+; vga_write_address[5]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[5]~DUPLICATE                                                                     ;                  ;                       ;
+; vga_write_address[6]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[6]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[8]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[8]~DUPLICATE                                                                     ;                  ;                       ;
+; vga_write_address[9]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[9]~DUPLICATE                                                                     ;                  ;                       ;
 ; vga_write_address[11]                                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[11]~DUPLICATE                                                                    ;                  ;                       ;
-; vga_write_address[12]                                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_address[12]~DUPLICATE                                                                    ;                  ;                       ;
+; vga_write_en                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_write_en~DUPLICATE                                                                             ;                  ;                       ;
 +------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -396,8 +405,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 685 ) ; 0.00 % ( 0 / 685 )         ; 0.00 % ( 0 / 685 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 685 ) ; 0.00 % ( 0 / 685 )         ; 0.00 % ( 0 / 685 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 690 ) ; 0.00 % ( 0 / 690 )         ; 0.00 % ( 0 / 690 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 690 ) ; 0.00 % ( 0 / 690 )         ; 0.00 % ( 0 / 690 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -420,7 +429,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 685 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 690 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -431,107 +440,107 @@ https://fpgasoftware.intel.com/eula.
 The pin-out file can be found in C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/output_files/riscv.pin.
 
 
-+-------------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                             ;
-+-------------------------------------------------------------+---------------------+-------+
-; Resource                                                    ; Usage               ; %     ;
-+-------------------------------------------------------------+---------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 135 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 135                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 165 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 45                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 57                  ;       ;
-;         [c] ALMs used for registers                         ; 63                  ;       ;
-;         [d] ALMs used for memory (up to half of total ALMs) ; 0                   ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 30 / 32,070         ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070          ; 0 %   ;
-;         [a] Due to location constrained logic               ; 0                   ;       ;
-;         [b] Due to LAB-wide signal conflicts                ; 0                   ;       ;
-;         [c] Due to LAB input limits                         ; 0                   ;       ;
-;         [d] Due to virtual I/Os                             ; 0                   ;       ;
-;                                                             ;                     ;       ;
-; Difficulty packing design                                   ; Low                 ;       ;
-;                                                             ;                     ;       ;
-; Total LABs:  partially or completely used                   ; 72 / 3,207          ; 2 %   ;
-;     -- Logic LABs                                           ; 72                  ;       ;
-;     -- Memory LABs (up to half of total LABs)               ; 0                   ;       ;
-;                                                             ;                     ;       ;
-; Combinational ALUT usage for logic                          ; 197                 ;       ;
-;     -- 7 input functions                                    ; 2                   ;       ;
-;     -- 6 input functions                                    ; 17                  ;       ;
-;     -- 5 input functions                                    ; 23                  ;       ;
-;     -- 4 input functions                                    ; 26                  ;       ;
-;     -- <=3 input functions                                  ; 129                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 94                  ;       ;
-;                                                             ;                     ;       ;
-; Dedicated logic registers                                   ; 239                 ;       ;
-;     -- By type:                                             ;                     ;       ;
-;         -- Primary logic registers                          ; 216 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 23 / 64,140         ; < 1 % ;
-;     -- By function:                                         ;                     ;       ;
-;         -- Design implementation registers                  ; 216                 ;       ;
-;         -- Routing optimization registers                   ; 23                  ;       ;
-;                                                             ;                     ;       ;
-; Virtual pins                                                ; 0                   ;       ;
-; I/O pins                                                    ; 86 / 457            ; 19 %  ;
-;     -- Clock pins                                           ; 6 / 8               ; 75 %  ;
-;     -- Dedicated input pins                                 ; 0 / 21              ; 0 %   ;
-;                                                             ;                     ;       ;
-; Hard processor system peripheral utilization                ;                     ;       ;
-;     -- Boot from FPGA                                       ; 0 / 1 ( 0 % )       ;       ;
-;     -- Clock resets                                         ; 0 / 1 ( 0 % )       ;       ;
-;     -- Cross trigger                                        ; 0 / 1 ( 0 % )       ;       ;
-;     -- S2F AXI                                              ; 0 / 1 ( 0 % )       ;       ;
-;     -- F2S AXI                                              ; 0 / 1 ( 0 % )       ;       ;
-;     -- AXI Lightweight                                      ; 0 / 1 ( 0 % )       ;       ;
-;     -- SDRAM                                                ; 0 / 1 ( 0 % )       ;       ;
-;     -- Interrupts                                           ; 0 / 1 ( 0 % )       ;       ;
-;     -- JTAG                                                 ; 0 / 1 ( 0 % )       ;       ;
-;     -- Loan I/O                                             ; 0 / 1 ( 0 % )       ;       ;
-;     -- MPU event standby                                    ; 0 / 1 ( 0 % )       ;       ;
-;     -- MPU general purpose                                  ; 0 / 1 ( 0 % )       ;       ;
-;     -- STM event                                            ; 0 / 1 ( 0 % )       ;       ;
-;     -- TPIU trace                                           ; 0 / 1 ( 0 % )       ;       ;
-;     -- DMA                                                  ; 0 / 1 ( 0 % )       ;       ;
-;     -- CAN                                                  ; 0 / 2 ( 0 % )       ;       ;
-;     -- EMAC                                                 ; 0 / 2 ( 0 % )       ;       ;
-;     -- I2C                                                  ; 0 / 4 ( 0 % )       ;       ;
-;     -- NAND Flash                                           ; 0 / 1 ( 0 % )       ;       ;
-;     -- QSPI                                                 ; 0 / 1 ( 0 % )       ;       ;
-;     -- SDMMC                                                ; 0 / 1 ( 0 % )       ;       ;
-;     -- SPI Master                                           ; 0 / 2 ( 0 % )       ;       ;
-;     -- SPI Slave                                            ; 0 / 2 ( 0 % )       ;       ;
-;     -- UART                                                 ; 0 / 2 ( 0 % )       ;       ;
-;     -- USB                                                  ; 0 / 2 ( 0 % )       ;       ;
-;                                                             ;                     ;       ;
-; M10K blocks                                                 ; 94 / 397            ; 24 %  ;
-; Total MLAB memory bits                                      ; 0                   ;       ;
-; Total block memory bits                                     ; 770,048 / 4,065,280 ; 19 %  ;
-; Total block memory implementation bits                      ; 962,560 / 4,065,280 ; 24 %  ;
-;                                                             ;                     ;       ;
-; Total DSP Blocks                                            ; 0 / 87              ; 0 %   ;
-;                                                             ;                     ;       ;
-; Fractional PLLs                                             ; 0 / 6               ; 0 %   ;
-; Global signals                                              ; 1                   ;       ;
-;     -- Global clocks                                        ; 1 / 16              ; 6 %   ;
-;     -- Quadrant clocks                                      ; 0 / 66              ; 0 %   ;
-;     -- Horizontal periphery clocks                          ; 0 / 18              ; 0 %   ;
-; SERDES Transmitters                                         ; 0 / 100             ; 0 %   ;
-; SERDES Receivers                                            ; 0 / 100             ; 0 %   ;
-; JTAGs                                                       ; 0 / 1               ; 0 %   ;
-; ASMI blocks                                                 ; 0 / 1               ; 0 %   ;
-; CRC blocks                                                  ; 0 / 1               ; 0 %   ;
-; Remote update blocks                                        ; 0 / 1               ; 0 %   ;
-; Oscillator blocks                                           ; 0 / 1               ; 0 %   ;
-; Impedance control blocks                                    ; 0 / 4               ; 0 %   ;
-; Hard Memory Controllers                                     ; 0 / 2               ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.9% / 0.9% / 0.8%  ;       ;
-; Peak interconnect usage (total/H/V)                         ; 9.5% / 9.6% / 8.9%  ;       ;
-; Maximum fan-out                                             ; 323                 ;       ;
-; Highest non-global fan-out                                  ; 123                 ;       ;
-; Total fan-out                                               ; 3553                ;       ;
-; Average fan-out                                             ; 4.46                ;       ;
-+-------------------------------------------------------------+---------------------+-------+
++---------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                               ;
++-------------------------------------------------------------+-----------------------+-------+
+; Resource                                                    ; Usage                 ; %     ;
++-------------------------------------------------------------+-----------------------+-------+
+; Logic utilization (ALMs needed / total ALMs on device)      ; 134 / 32,070          ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 134                   ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 169 / 32,070          ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 47                    ;       ;
+;         [b] ALMs used for LUT logic                         ; 59                    ;       ;
+;         [c] ALMs used for registers                         ; 63                    ;       ;
+;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 35 / 32,070           ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070            ; 0 %   ;
+;         [a] Due to location constrained logic               ; 0                     ;       ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
+;         [c] Due to LAB input limits                         ; 0                     ;       ;
+;         [d] Due to virtual I/Os                             ; 0                     ;       ;
+;                                                             ;                       ;       ;
+; Difficulty packing design                                   ; Low                   ;       ;
+;                                                             ;                       ;       ;
+; Total LABs:  partially or completely used                   ; 82 / 3,207            ; 3 %   ;
+;     -- Logic LABs                                           ; 82                    ;       ;
+;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
+;                                                             ;                       ;       ;
+; Combinational ALUT usage for logic                          ; 200                   ;       ;
+;     -- 7 input functions                                    ; 2                     ;       ;
+;     -- 6 input functions                                    ; 17                    ;       ;
+;     -- 5 input functions                                    ; 21                    ;       ;
+;     -- 4 input functions                                    ; 32                    ;       ;
+;     -- <=3 input functions                                  ; 128                   ;       ;
+; Combinational ALUT usage for route-throughs                 ; 109                   ;       ;
+;                                                             ;                       ;       ;
+; Dedicated logic registers                                   ; 251                   ;       ;
+;     -- By type:                                             ;                       ;       ;
+;         -- Primary logic registers                          ; 219 / 64,140          ; < 1 % ;
+;         -- Secondary logic registers                        ; 32 / 64,140           ; < 1 % ;
+;     -- By function:                                         ;                       ;       ;
+;         -- Design implementation registers                  ; 219                   ;       ;
+;         -- Routing optimization registers                   ; 32                    ;       ;
+;                                                             ;                       ;       ;
+; Virtual pins                                                ; 0                     ;       ;
+; I/O pins                                                    ; 86 / 457              ; 19 %  ;
+;     -- Clock pins                                           ; 6 / 8                 ; 75 %  ;
+;     -- Dedicated input pins                                 ; 0 / 21                ; 0 %   ;
+;                                                             ;                       ;       ;
+; Hard processor system peripheral utilization                ;                       ;       ;
+;     -- Boot from FPGA                                       ; 0 / 1 ( 0 % )         ;       ;
+;     -- Clock resets                                         ; 0 / 1 ( 0 % )         ;       ;
+;     -- Cross trigger                                        ; 0 / 1 ( 0 % )         ;       ;
+;     -- S2F AXI                                              ; 0 / 1 ( 0 % )         ;       ;
+;     -- F2S AXI                                              ; 0 / 1 ( 0 % )         ;       ;
+;     -- AXI Lightweight                                      ; 0 / 1 ( 0 % )         ;       ;
+;     -- SDRAM                                                ; 0 / 1 ( 0 % )         ;       ;
+;     -- Interrupts                                           ; 0 / 1 ( 0 % )         ;       ;
+;     -- JTAG                                                 ; 0 / 1 ( 0 % )         ;       ;
+;     -- Loan I/O                                             ; 0 / 1 ( 0 % )         ;       ;
+;     -- MPU event standby                                    ; 0 / 1 ( 0 % )         ;       ;
+;     -- MPU general purpose                                  ; 0 / 1 ( 0 % )         ;       ;
+;     -- STM event                                            ; 0 / 1 ( 0 % )         ;       ;
+;     -- TPIU trace                                           ; 0 / 1 ( 0 % )         ;       ;
+;     -- DMA                                                  ; 0 / 1 ( 0 % )         ;       ;
+;     -- CAN                                                  ; 0 / 2 ( 0 % )         ;       ;
+;     -- EMAC                                                 ; 0 / 2 ( 0 % )         ;       ;
+;     -- I2C                                                  ; 0 / 4 ( 0 % )         ;       ;
+;     -- NAND Flash                                           ; 0 / 1 ( 0 % )         ;       ;
+;     -- QSPI                                                 ; 0 / 1 ( 0 % )         ;       ;
+;     -- SDMMC                                                ; 0 / 1 ( 0 % )         ;       ;
+;     -- SPI Master                                           ; 0 / 2 ( 0 % )         ;       ;
+;     -- SPI Slave                                            ; 0 / 2 ( 0 % )         ;       ;
+;     -- UART                                                 ; 0 / 2 ( 0 % )         ;       ;
+;     -- USB                                                  ; 0 / 2 ( 0 % )         ;       ;
+;                                                             ;                       ;       ;
+; M10K blocks                                                 ; 94 / 397              ; 24 %  ;
+; Total MLAB memory bits                                      ; 0                     ;       ;
+; Total block memory bits                                     ; 770,048 / 4,065,280   ; 19 %  ;
+; Total block memory implementation bits                      ; 962,560 / 4,065,280   ; 24 %  ;
+;                                                             ;                       ;       ;
+; Total DSP Blocks                                            ; 0 / 87                ; 0 %   ;
+;                                                             ;                       ;       ;
+; Fractional PLLs                                             ; 0 / 6                 ; 0 %   ;
+; Global signals                                              ; 1                     ;       ;
+;     -- Global clocks                                        ; 1 / 16                ; 6 %   ;
+;     -- Quadrant clocks                                      ; 0 / 66                ; 0 %   ;
+;     -- Horizontal periphery clocks                          ; 0 / 18                ; 0 %   ;
+; SERDES Transmitters                                         ; 0 / 100               ; 0 %   ;
+; SERDES Receivers                                            ; 0 / 100               ; 0 %   ;
+; JTAGs                                                       ; 0 / 1                 ; 0 %   ;
+; ASMI blocks                                                 ; 0 / 1                 ; 0 %   ;
+; CRC blocks                                                  ; 0 / 1                 ; 0 %   ;
+; Remote update blocks                                        ; 0 / 1                 ; 0 %   ;
+; Oscillator blocks                                           ; 0 / 1                 ; 0 %   ;
+; Impedance control blocks                                    ; 0 / 4                 ; 0 %   ;
+; Hard Memory Controllers                                     ; 0 / 2                 ; 0 %   ;
+; Average interconnect usage (total/H/V)                      ; 0.9% / 0.9% / 0.9%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 10.5% / 10.5% / 10.7% ;       ;
+; Maximum fan-out                                             ; 335                   ;       ;
+; Highest non-global fan-out                                  ; 135                   ;       ;
+; Total fan-out                                               ; 3656                  ;       ;
+; Average fan-out                                             ; 4.42                  ;       ;
++-------------------------------------------------------------+-----------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -539,14 +548,14 @@ The pin-out file can be found in C:/Users/Caleb/Documents/ECE 289/BADGES/INTERME
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 135 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 135                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 165 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 45                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 57                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 134 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 134                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 169 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 47                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 59                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 63                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 30 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 35 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -555,28 +564,28 @@ The pin-out file can be found in C:/Users/Caleb/Documents/ECE 289/BADGES/INTERME
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 72 / 3207 ( 2 % )     ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 72                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 82 / 3207 ( 3 % )     ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 82                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 197                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 200                   ; 0                              ;
 ;     -- 7 input functions                                    ; 2                     ; 0                              ;
 ;     -- 6 input functions                                    ; 17                    ; 0                              ;
-;     -- 5 input functions                                    ; 23                    ; 0                              ;
-;     -- 4 input functions                                    ; 26                    ; 0                              ;
-;     -- <=3 input functions                                  ; 129                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 94                    ; 0                              ;
+;     -- 5 input functions                                    ; 21                    ; 0                              ;
+;     -- 4 input functions                                    ; 32                    ; 0                              ;
+;     -- <=3 input functions                                  ; 128                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 109                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 216 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 23 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 219 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 32 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 216                   ; 0                              ;
-;         -- Routing optimization registers                   ; 23                    ; 0                              ;
+;         -- Design implementation registers                  ; 219                   ; 0                              ;
+;         -- Routing optimization registers                   ; 32                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -594,8 +603,8 @@ The pin-out file can be found in C:/Users/Caleb/Documents/ECE 289/BADGES/INTERME
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 4687                  ; 0                              ;
-;     -- Registered Connections                               ; 3351                  ; 0                              ;
+;     -- Total Connections                                    ; 4821                  ; 0                              ;
+;     -- Registered Connections                               ; 3431                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -627,11 +636,11 @@ The pin-out file can be found in C:/Users/Caleb/Documents/ECE 289/BADGES/INTERME
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 324                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 336                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 123                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 135                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[1]    ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[2]    ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1750,24 +1759,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name             ; Library Name ;
 +----------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |riscv                                             ; 134.5 (18.0)         ; 165.0 (18.0)                     ; 30.5 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 197 (36)            ; 239 (35)                  ; 0 (0)         ; 770048            ; 94    ; 0          ; 86   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
-;    |ascii_master_controller:controller|            ; 116.5 (22.9)         ; 147.0 (24.5)                     ; 30.5 (1.6)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 161 (44)            ; 204 (31)                  ; 0 (0)         ; 770048            ; 94    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
+; |riscv                                             ; 134.0 (18.5)         ; 168.0 (19.0)                     ; 34.0 (0.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 200 (38)            ; 251 (43)                  ; 0 (0)         ; 770048            ; 94    ; 0          ; 86   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
+;    |ascii_master_controller:controller|            ; 115.5 (23.1)         ; 149.0 (24.1)                     ; 33.5 (1.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 162 (44)            ; 208 (33)                  ; 0 (0)         ; 770048            ; 94    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
 ;       |ascii_master:master|                        ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master                                                                                                                  ; ascii_master            ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component                                                                                  ; altsyncram              ; work         ;
 ;             |altsyncram_lb12:auto_generated|       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated                                                   ; altsyncram_lb12         ; work         ;
-;       |vga_controller:controller|                  ; 93.6 (25.8)          ; 122.5 (25.8)                     ; 28.9 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 117 (51)            ; 173 (9)                   ; 0 (0)         ; 516096            ; 63    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller                                                                                                            ; vga_controller          ; work         ;
+;       |vga_controller:controller|                  ; 92.4 (25.6)          ; 124.9 (25.9)                     ; 32.5 (0.3)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 118 (51)            ; 175 (11)                  ; 0 (0)         ; 516096            ; 63    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller                                                                                                            ; vga_controller          ; work         ;
 ;          |Char_ROM:rom1|                           ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 8192              ; 1     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1                                                                                              ; Char_ROM                ; work         ;
 ;             |altsyncram:altsyncram_component|      ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 8192              ; 1     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component                                                              ; altsyncram              ; work         ;
 ;                |altsyncram_eqg1:auto_generated|    ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 8192              ; 1     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated                               ; altsyncram_eqg1         ; work         ;
 ;          |clock_divider:clock|                     ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|clock_divider:clock                                                                                        ; clock_divider           ; work         ;
-;          |double_buffer:buffer|                    ; 33.6 (33.6)          ; 61.4 (61.4)                      ; 27.8 (27.8)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 123 (123)                 ; 0 (0)         ; 507904            ; 62    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer                                                                                       ; double_buffer           ; work         ;
+;          |double_buffer:buffer|                    ; 31.9 (31.9)          ; 61.0 (61.0)                      ; 29.1 (29.1)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 123 (123)                 ; 0 (0)         ; 507904            ; 62    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer                                                                                       ; double_buffer           ; work         ;
 ;             |ascii_buffer_1:buffer1|               ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1                                                                ; ascii_buffer_1          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                   |altsyncram_o6o1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated ; altsyncram_o6o1         ; work         ;
 ;             |ascii_buffer_2:buffer2|               ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2                                                                ; ascii_buffer_2          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                   |altsyncram_p6o1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 253952            ; 31    ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated ; altsyncram_p6o1         ; work         ;
-;          |vga_driver:driver|                       ; 33.7 (33.7)          ; 35.0 (35.0)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 57 (57)             ; 40 (40)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver                                                                                          ; vga_driver              ; work         ;
+;          |vga_driver:driver|                       ; 34.4 (34.4)          ; 37.7 (37.7)                      ; 3.3 (3.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 58 (58)             ; 40 (40)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver                                                                                          ; vga_driver              ; work         ;
 +----------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1886,26 +1895,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]                                                                                                       ;                   ;         ;
 ; KEY[3]                                                                                                      ;                   ;         ;
 ;      - ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[2]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[9]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[8]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[5]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[4]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[4]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[7]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[2]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[5]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[8]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[9]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[5]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]             ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[9]             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]             ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HDISP              ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hblank                ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank                ; 0                 ; 0       ;
@@ -1943,6 +1952,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ascii_master_controller:controller|vga_controller:controller|SWITCH_S.SWITCH_BUFFER                  ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                    ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                          ; 0                 ; 0       ;
+;      - vga_write_en                                                                                         ; 0                 ; 0       ;
 ;      - vga_write_address[0]                                                                                 ; 0                 ; 0       ;
 ;      - vga_write_address[1]                                                                                 ; 0                 ; 0       ;
 ;      - vga_write_address[2]                                                                                 ; 0                 ; 0       ;
@@ -1967,10 +1977,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ascii_master_controller:controller|vga_controller:controller|count[0]                                ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|count[1]                                ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|SWITCH_S.RESET                          ; 0                 ; 0       ;
-;      - cycles[0]                                                                                            ; 0                 ; 0       ;
+;      - cycles[1]                                                                                            ; 0                 ; 0       ;
 ;      - cycles[3]                                                                                            ; 0                 ; 0       ;
 ;      - cycles[2]                                                                                            ; 0                 ; 0       ;
-;      - cycles[1]                                                                                            ; 0                 ; 0       ;
+;      - cycles[0]                                                                                            ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|delay_count[3]                                                    ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|delay_count[2]                                                    ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|delay_count[1]                                                    ; 0                 ; 0       ;
@@ -1984,30 +1994,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ascii[4]                                                                                             ; 0                 ; 0       ;
 ;      - ascii[5]                                                                                             ; 0                 ; 0       ;
 ;      - ascii[6]                                                                                             ; 0                 ; 0       ;
-;      - ascii[7]                                                                                             ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]~DUPLICATE   ; 0                 ; 0       ;
+;      - string_count[1]                                                                                      ; 0                 ; 0       ;
+;      - string_count[2]                                                                                      ; 0                 ; 0       ;
+;      - string_count[3]                                                                                      ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]~DUPLICATE   ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3]~DUPLICATE   ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]~DUPLICATE   ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]~DUPLICATE   ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VDISP~DUPLICATE    ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3]~DUPLICATE   ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]~DUPLICATE   ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4]~DUPLICATE   ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7]~DUPLICATE   ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VSYNC~DUPLICATE    ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|switch_buffer~DUPLICATE                 ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT~DUPLICATE   ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|address_count[1]~DUPLICATE                                        ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|address_count[4]~DUPLICATE                                        ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|address_count[0]~DUPLICATE                                        ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|address_count[3]~DUPLICATE                                        ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|address_count[5]~DUPLICATE                                        ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|address_count[10]~DUPLICATE                                       ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|address_count[12]~DUPLICATE                                       ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY~DUPLICATE                ; 0                 ; 0       ;
+;      - vga_write_en~DUPLICATE                                                                               ; 0                 ; 0       ;
+;      - vga_write_address[0]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[1]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[2]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[3]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[4]~DUPLICATE                                                                       ; 0                 ; 0       ;
-;      - vga_write_address[7]~DUPLICATE                                                                       ; 0                 ; 0       ;
+;      - vga_write_address[5]~DUPLICATE                                                                       ; 0                 ; 0       ;
+;      - vga_write_address[6]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[8]~DUPLICATE                                                                       ; 0                 ; 0       ;
+;      - vga_write_address[9]~DUPLICATE                                                                       ; 0                 ; 0       ;
 ;      - vga_write_address[11]~DUPLICATE                                                                      ; 0                 ; 0       ;
-;      - vga_write_address[12]~DUPLICATE                                                                      ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|WRITE_S.ITERATE~DUPLICATE                                         ; 0                 ; 0       ;
 ;      - ascii_master_controller:controller|WRITE_S.DELAY~DUPLICATE                                           ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|WRITE_S.WRITE_DONE~DUPLICATE                                      ; 0                 ; 0       ;
-;      - cycles[0]~DUPLICATE                                                                                  ; 0                 ; 0       ;
+;      - ascii_master_controller:controller|WRITE_S.WRITE_START~DUPLICATE                                     ; 0                 ; 0       ;
 ;      - cycles[1]~DUPLICATE                                                                                  ; 0                 ; 0       ;
-;      - ascii_master_controller:controller|delay_count[0]~DUPLICATE                                          ; 0                 ; 0       ;
+;      - cycles[0]~DUPLICATE                                                                                  ; 0                 ; 0       ;
+;      - string_count[2]~DUPLICATE                                                                            ; 0                 ; 0       ;
+;      - string_count[3]~DUPLICATE                                                                            ; 0                 ; 0       ;
 ; CLOCK_50                                                                                                    ;                   ;         ;
 ;      - ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; 0                 ; 0       ;
 +-------------------------------------------------------------------------------------------------------------+-------------------+---------+
@@ -2019,19 +2040,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                 ; Location            ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                                                             ; PIN_AF14            ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50                                                                                             ; PIN_AF14            ; 292     ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; KEY[3]                                                                                               ; PIN_Y16             ; 123     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; always0~1                                                                                            ; LABCELL_X35_Y60_N48 ; 29      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; FF_X34_Y68_N38      ; 42      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B2_DISP_B1_WRITE ; FF_X37_Y67_N50      ; 63      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_1[0]~0     ; LABCELL_X37_Y67_N57 ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[0]~0     ; LABCELL_X37_Y67_N27 ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[1]~0     ; LABCELL_X37_Y67_N6  ; 57      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_1             ; FF_X37_Y67_N4       ; 32      ; Read enable, Write enable  ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_2             ; FF_X37_Y67_N25      ; 32      ; Read enable, Write enable  ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]~1           ; MLABCELL_X34_Y68_N3 ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]~2           ; LABCELL_X36_Y68_N21 ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]~3           ; LABCELL_X36_Y68_N30 ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                                                                                             ; PIN_AF14            ; 304     ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; KEY[3]                                                                                               ; PIN_Y16             ; 135     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; always0~3                                                                                            ; LABCELL_X43_Y58_N54 ; 37      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; FF_X40_Y62_N8       ; 42      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B2_DISP_B1_WRITE ; FF_X37_Y64_N20      ; 63      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_1[0]~0     ; LABCELL_X37_Y64_N27 ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[0]~0     ; LABCELL_X37_Y64_N0  ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[1]~0     ; LABCELL_X37_Y64_N57 ; 57      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_1             ; FF_X37_Y64_N14      ; 32      ; Read enable, Write enable  ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_2             ; FF_X37_Y64_N53      ; 32      ; Read enable, Write enable  ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]~1           ; LABCELL_X40_Y62_N36 ; 11      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]~2           ; LABCELL_X40_Y63_N18 ; 14      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]~3           ; LABCELL_X40_Y63_N45 ; 14      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; vga_write_en                                                                                         ; FF_X42_Y58_N14      ; 22      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; vga_write_en~DUPLICATE                                                                               ; FF_X42_Y58_N13      ; 9       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2040,7 +2063,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 292     ; Global Clock         ; GCLK4            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 304     ; Global Clock         ; GCLK4            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -2049,10 +2072,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 ; Name                                                                                                                                                                               ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size   ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF                ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ALTSYNCRAM                                                   ; AUTO ; Simple Dual Port ; Single Clock ; 8192         ; 32           ; 8192         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 262144 ; 8192                        ; 31                          ; 8192                        ; 31                          ; 253952              ; 31          ; 0     ; ascii_master.mif   ; M10K_X26_Y56_N0, M10K_X41_Y63_N0, M10K_X41_Y61_N0, M10K_X26_Y62_N0, M10K_X38_Y62_N0, M10K_X49_Y60_N0, M10K_X49_Y61_N0, M10K_X41_Y56_N0, M10K_X41_Y62_N0, M10K_X49_Y58_N0, M10K_X49_Y59_N0, M10K_X41_Y58_N0, M10K_X38_Y61_N0, M10K_X14_Y61_N0, M10K_X26_Y61_N0, M10K_X26_Y63_N0, M10K_X49_Y62_N0, M10K_X26_Y58_N0, M10K_X14_Y60_N0, M10K_X41_Y60_N0, M10K_X41_Y57_N0, M10K_X26_Y60_N0, M10K_X14_Y63_N0, M10K_X14_Y62_N0, M10K_X41_Y59_N0, M10K_X26_Y57_N0, M10K_X26_Y59_N0, M10K_X38_Y56_N0, M10K_X38_Y58_N0, M10K_X38_Y57_N0, M10K_X38_Y59_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
-; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ALTSYNCRAM                               ; AUTO ; ROM              ; Single Clock ; 1024         ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192   ; 1024                        ; 8                           ; --                          ; --                          ; 8192                ; 1           ; 0     ; ASCII_Encode.mif   ; M10K_X38_Y60_N0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 8192         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 262144 ; 8192                        ; 31                          ; --                          ; --                          ; 253952              ; 31          ; 0     ; ascii_buffer_1.mif ; M10K_X38_Y74_N0, M10K_X26_Y76_N0, M10K_X38_Y67_N0, M10K_X41_Y74_N0, M10K_X26_Y67_N0, M10K_X41_Y76_N0, M10K_X38_Y71_N0, M10K_X49_Y70_N0, M10K_X38_Y64_N0, M10K_X26_Y75_N0, M10K_X41_Y67_N0, M10K_X26_Y65_N0, M10K_X26_Y73_N0, M10K_X26_Y70_N0, M10K_X38_Y66_N0, M10K_X38_Y63_N0, M10K_X49_Y75_N0, M10K_X38_Y72_N0, M10K_X26_Y71_N0, M10K_X49_Y73_N0, M10K_X38_Y75_N0, M10K_X26_Y69_N0, M10K_X38_Y70_N0, M10K_X26_Y64_N0, M10K_X41_Y64_N0, M10K_X41_Y69_N0, M10K_X49_Y63_N0, M10K_X49_Y64_N0, M10K_X41_Y68_N0, M10K_X49_Y67_N0, M10K_X41_Y73_N0 ; Don't care           ; Don't care      ; New data        ; Off      ; No                     ; No - Address Too Wide ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 8192         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 262144 ; 8192                        ; 31                          ; --                          ; --                          ; 253952              ; 31          ; 0     ; ascii_buffer_2.mif ; M10K_X38_Y73_N0, M10K_X26_Y77_N0, M10K_X14_Y67_N0, M10K_X41_Y77_N0, M10K_X26_Y68_N0, M10K_X38_Y76_N0, M10K_X41_Y71_N0, M10K_X49_Y71_N0, M10K_X38_Y68_N0, M10K_X26_Y74_N0, M10K_X41_Y70_N0, M10K_X14_Y65_N0, M10K_X26_Y72_N0, M10K_X14_Y68_N0, M10K_X41_Y66_N0, M10K_X38_Y65_N0, M10K_X49_Y74_N0, M10K_X14_Y72_N0, M10K_X14_Y71_N0, M10K_X49_Y72_N0, M10K_X38_Y77_N0, M10K_X14_Y69_N0, M10K_X14_Y70_N0, M10K_X26_Y66_N0, M10K_X41_Y65_N0, M10K_X38_Y69_N0, M10K_X49_Y65_N0, M10K_X49_Y66_N0, M10K_X49_Y68_N0, M10K_X49_Y69_N0, M10K_X41_Y75_N0 ; Don't care           ; Don't care      ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ALTSYNCRAM                                                   ; AUTO ; Simple Dual Port ; Single Clock ; 8192         ; 32           ; 8192         ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 262144 ; 8192                        ; 31                          ; 8192                        ; 31                          ; 253952              ; 31          ; 0     ; ascii_master.mif   ; M10K_X49_Y62_N0, M10K_X41_Y58_N0, M10K_X38_Y54_N0, M10K_X41_Y59_N0, M10K_X26_Y54_N0, M10K_X41_Y54_N0, M10K_X38_Y57_N0, M10K_X49_Y55_N0, M10K_X38_Y61_N0, M10K_X49_Y60_N0, M10K_X49_Y59_N0, M10K_X49_Y58_N0, M10K_X49_Y54_N0, M10K_X41_Y63_N0, M10K_X41_Y56_N0, M10K_X38_Y55_N0, M10K_X49_Y57_N0, M10K_X49_Y63_N0, M10K_X49_Y56_N0, M10K_X49_Y61_N0, M10K_X41_Y55_N0, M10K_X38_Y62_N0, M10K_X38_Y56_N0, M10K_X38_Y58_N0, M10K_X38_Y60_N0, M10K_X26_Y56_N0, M10K_X41_Y60_N0, M10K_X38_Y59_N0, M10K_X26_Y55_N0, M10K_X26_Y57_N0, M10K_X41_Y57_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ALTSYNCRAM                               ; AUTO ; ROM              ; Single Clock ; 1024         ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192   ; 1024                        ; 8                           ; --                          ; --                          ; 8192                ; 1           ; 0     ; ASCII_Encode.mif   ; M10K_X14_Y63_N0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 8192         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 262144 ; 8192                        ; 31                          ; --                          ; --                          ; 253952              ; 31          ; 0     ; ascii_buffer_1.mif ; M10K_X14_Y67_N0, M10K_X38_Y70_N0, M10K_X41_Y73_N0, M10K_X41_Y66_N0, M10K_X38_Y69_N0, M10K_X49_Y65_N0, M10K_X38_Y65_N0, M10K_X41_Y62_N0, M10K_X49_Y74_N0, M10K_X49_Y72_N0, M10K_X49_Y68_N0, M10K_X41_Y71_N0, M10K_X38_Y74_N0, M10K_X49_Y66_N0, M10K_X14_Y65_N0, M10K_X14_Y68_N0, M10K_X41_Y65_N0, M10K_X38_Y64_N0, M10K_X26_Y58_N0, M10K_X41_Y67_N0, M10K_X38_Y68_N0, M10K_X26_Y59_N0, M10K_X49_Y70_N0, M10K_X26_Y73_N0, M10K_X26_Y65_N0, M10K_X26_Y69_N0, M10K_X14_Y60_N0, M10K_X26_Y74_N0, M10K_X14_Y59_N0, M10K_X26_Y66_N0, M10K_X26_Y63_N0 ; Don't care           ; Don't care      ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 8192         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 262144 ; 8192                        ; 31                          ; --                          ; --                          ; 253952              ; 31          ; 0     ; ascii_buffer_2.mif ; M10K_X14_Y66_N0, M10K_X38_Y72_N0, M10K_X41_Y72_N0, M10K_X41_Y64_N0, M10K_X41_Y69_N0, M10K_X49_Y64_N0, M10K_X38_Y66_N0, M10K_X41_Y61_N0, M10K_X49_Y73_N0, M10K_X49_Y71_N0, M10K_X49_Y69_N0, M10K_X38_Y71_N0, M10K_X38_Y73_N0, M10K_X49_Y67_N0, M10K_X14_Y64_N0, M10K_X14_Y69_N0, M10K_X38_Y67_N0, M10K_X38_Y63_N0, M10K_X26_Y60_N0, M10K_X41_Y68_N0, M10K_X26_Y68_N0, M10K_X26_Y61_N0, M10K_X41_Y70_N0, M10K_X26_Y71_N0, M10K_X26_Y64_N0, M10K_X26_Y70_N0, M10K_X14_Y62_N0, M10K_X26_Y72_N0, M10K_X14_Y61_N0, M10K_X26_Y67_N0, M10K_X26_Y62_N0 ; Don't care           ; Don't care      ; New data        ; Off      ; No                     ; No - Address Too Wide ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+--------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2062,14 +2085,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+---------------------------+
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Block interconnects                         ; 2,300 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 86 / 13,420 ( < 1 % )     ;
-; C2 interconnects                            ; 766 / 119,108 ( < 1 % )   ;
-; C4 interconnects                            ; 558 / 56,300 ( < 1 % )    ;
+; Block interconnects                         ; 2,331 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 114 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 831 / 119,108 ( < 1 % )   ;
+; C4 interconnects                            ; 538 / 56,300 ( < 1 % )    ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 72 / 289,320 ( < 1 % )    ;
+; Direct links                                ; 46 / 289,320 ( < 1 % )    ;
 ; Global clocks                               ; 1 / 16 ( 6 % )            ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -2125,12 +2148,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 94 / 84,580 ( < 1 % )     ;
+; Local interconnects                         ; 95 / 84,580 ( < 1 % )     ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 292 / 12,676 ( 2 % )      ;
-; R14/C12 interconnect drivers                ; 320 / 20,720 ( 2 % )      ;
-; R3 interconnects                            ; 1,066 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 1,812 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 299 / 12,676 ( 2 % )      ;
+; R14/C12 interconnect drivers                ; 334 / 20,720 ( 2 % )      ;
+; R3 interconnects                            ; 1,087 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 1,818 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 3 / 360 ( < 1 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
@@ -2332,9 +2355,9 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                                         ; Destination Clock(s)                                                                    ; Delay Added in ns ;
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------+
-; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; CLOCK_50                                                                                ; 183.4             ;
-; CLOCK_50                                                                                ; CLOCK_50                                                                                ; 116.8             ;
-; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; 15.9              ;
+; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; CLOCK_50                                                                                ; 180.2             ;
+; CLOCK_50                                                                                ; CLOCK_50                                                                                ; 157.0             ;
+; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25 ; 17.1              ;
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2345,106 +2368,106 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                      ; Destination Register                                                                                                                                                                                     ; Delay Added in ns ;
 +------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25                                                                                                                  ; 6.485             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]                                                                                                           ; 4.768             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|disp_done             ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                                                                                                                        ; 4.637             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[5]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.494             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[4]                                                                                                           ; 4.431             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hblank                ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.424             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank                ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.424             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[9]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.361             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[8]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]                                                                                                           ; 4.351             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]                                                                                                           ; 4.262             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[7]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[4]                                                                                                           ; 4.256             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[10]                                                                                                          ; 4.221             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[0]                                                                                                           ; 4.211             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[3]                                                                                                           ; 4.113             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[7]                                                                                                           ; 4.066             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[9]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[12]                                                                                                          ; 3.967             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[5]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[2]                                                                                                           ; 3.790             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[4]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[1]                                                                                                           ; 3.695             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.541             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.275             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.204             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HDISP              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hblank                                                                                                                    ; 0.604             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_hs                                                                                                                    ; 0.584             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VDISP              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank                                                                                                                    ; 0.569             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HFRONT             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC                                                                                                                  ; 0.519             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VSYNC              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_vs                                                                                                                    ; 0.508             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[1]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.489             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VBACK              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[9]                                                                                                                 ; 0.488             ;
-; vga_write_address[1]                                                                                 ; vga_write_address[11]                                                                                                                                                                                    ; 0.485             ;
-; vga_write_address[12]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.438             ;
-; vga_write_address[4]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.430             ;
-; vga_write_address[3]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.420             ;
-; vga_write_address[8]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.420             ;
-; vga_write_address[0]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.413             ;
-; vga_write_address[7]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.406             ;
-; vga_write_address[11]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.401             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC                                                                                                                  ; 0.401             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HBACK              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HDISP                                                                                                                  ; 0.385             ;
-; vga_write_address[6]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.381             ;
-; ascii_master_controller:controller|vga_controller:controller|count[0]                                ; ascii_master_controller:controller|vga_controller:controller|count[2]                                                                                                                                    ; 0.379             ;
-; vga_write_address[2]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.378             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[2]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC                                                                                                                  ; 0.378             ;
-; ascii_master_controller:controller|WRITE_S.CHECK                                                     ; ascii_master_controller:controller|WRITE_S.WRITE_DONE                                                                                                                                                    ; 0.378             ;
-; ascii_master_controller:controller|delay_count[1]                                                    ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.377             ;
-; vga_write_address[10]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.374             ;
-; vga_write_address[9]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.374             ;
-; ascii_master_controller:controller|delay_count[2]                                                    ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.374             ;
-; vga_write_address[5]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_address_reg0                                                   ; 0.369             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|disp_done                                                                                                                 ; 0.367             ;
-; ascii_master_controller:controller|WRITE_S.START                                                     ; ascii_master_controller:controller|WRITE_S.WRITE_DONE                                                                                                                                                    ; 0.360             ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC                                                                                                                  ; 0.355             ;
-; cycles[0]                                                                                            ; cycles[3]                                                                                                                                                                                                ; 0.352             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B2_DISP_B1_WRITE ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_2                                                                                                                 ; 0.350             ;
-; ascii_master_controller:controller|address_count[1]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.349             ;
-; ascii_master_controller:controller|WRITE_S.DELAY                                                     ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.345             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[1]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a2~porta_address_reg0  ; 0.342             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[7]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.342             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[2]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.336             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[3]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.336             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[5]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.336             ;
-; ascii[4]                                                                                             ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a28~porta_datain_reg0                                                    ; 0.335             ;
-; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.SWITCH_BUFFER                  ; ascii_master_controller:controller|vga_controller:controller|count[1]                                                                                                                                    ; 0.334             ;
-; ascii_master_controller:controller|WRITE_S.ITERATE                                                   ; ascii_master_controller:controller|WRITE_S.CHECK                                                                                                                                                         ; 0.333             ;
-; cycles[2]                                                                                            ; cycles[3]                                                                                                                                                                                                ; 0.332             ;
-; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                          ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                                                                                                                        ; 0.331             ;
-; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                    ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.SWITCH_BUFFER                                                                                                                      ; 0.329             ;
-; ascii_master_controller:controller|address_count[0]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.323             ;
-; ascii_master_controller:controller|delay_count[3]                                                    ; ascii_master_controller:controller|WRITE_S.ITERATE                                                                                                                                                       ; 0.322             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[0]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.322             ;
-; cycles[1]                                                                                            ; cycles[2]                                                                                                                                                                                                ; 0.316             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.315             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.315             ;
-; ascii_master_controller:controller|WRITE_S.WRITE_DONE                                                ; ascii_master_controller:controller|WRITE_S.WAIT_SWITCH                                                                                                                                                   ; 0.314             ;
-; ascii[2]                                                                                             ; ascii[3]                                                                                                                                                                                                 ; 0.313             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_1             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a2~porta_re_reg        ; 0.309             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[8]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.308             ;
-; ascii_master_controller:controller|delay_count[0]                                                    ; ascii_master_controller:controller|delay_count[1]                                                                                                                                                        ; 0.307             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B1_DISP_B2_WRITE ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_2                                                                                                                 ; 0.307             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[0]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.307             ;
-; ascii_master_controller:controller|WRITE_S.WRITE_START                                               ; ascii_master_controller:controller|WRITE_S.CHECK                                                                                                                                                         ; 0.306             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[10]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.304             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[11]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.304             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.303             ;
-; ascii[1]                                                                                             ; ascii[3]                                                                                                                                                                                                 ; 0.303             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[4]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.300             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[6]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.300             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[8]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a28~porta_address_reg0 ; 0.300             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[11]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a2~porta_address_reg0  ; 0.296             ;
-; ascii_master_controller:controller|WRITE_S.WAIT_SWITCH                                               ; ascii_master_controller:controller|WRITE_S.WRITE_START                                                                                                                                                   ; 0.291             ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[12]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a8~porta_address_reg0  ; 0.283             ;
-; ascii_master_controller:controller|vga_controller:controller|count[1]                                ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                                                                                                                              ; 0.281             ;
-; ascii_master_controller:controller|address_count[5]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[4]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[3]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[2]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[11]                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[10]                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[9]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[8]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
-; ascii_master_controller:controller|address_count[7]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a17~portb_address_reg0                                                   ; 0.280             ;
+; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25              ; ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25                                                                                                                  ; 6.952             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[4]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]                                                                                                           ; 4.555             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[3]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[4]                                                                                                           ; 4.555             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[5]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.453             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank                ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]                                                                                                           ; 4.337             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[8]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]                                                                                                           ; 4.234             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[7]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[4]                                                                                                           ; 4.221             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[9]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.150             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[7]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[8]                                                                                                           ; 4.132             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]                                                                                                           ; 4.090             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[6]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]                                                                                                           ; 4.077             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[9]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[12]                                                                                                          ; 4.075             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hblank                ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]                                                                                                           ; 4.063             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|disp_done             ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                                                                                                                        ; 4.023             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[3]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[0]                                                                                                           ; 3.967             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[3]                                                                                                           ; 3.743             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[4]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[1]                                                                                                           ; 3.731             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[5]             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[2]                                                                                                           ; 3.635             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.479             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.412             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]             ; ascii_master_controller:controller|vga_controller:controller|Char_ROM:rom1|altsyncram:altsyncram_component|altsyncram_eqg1:auto_generated|ram_block1a2~porta_address_reg0                                ; 3.408             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_hs                                                                                                                    ; 0.755             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VSYNC              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_vs                                                                                                                    ; 0.707             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|disp_done                                                                                                                 ; 0.592             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HDISP              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hblank                                                                                                                    ; 0.572             ;
+; vga_write_address[1]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.561             ;
+; ascii[2]                                                                                             ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a26~porta_datain_reg0                                                    ; 0.554             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VBACK              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[8]                                                                                                                 ; 0.522             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VDISP              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs.VFRONT                                                                                                                 ; 0.491             ;
+; vga_write_address[0]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a26~porta_address_reg0                                                   ; 0.481             ;
+; vga_write_address[2]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.459             ;
+; vga_write_address[7]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.459             ;
+; vga_write_address[6]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.459             ;
+; vga_write_address[3]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.459             ;
+; vga_write_address[10]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.458             ;
+; vga_write_address[9]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.458             ;
+; vga_write_address[8]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.454             ;
+; vga_write_address[4]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a26~porta_address_reg0                                                   ; 0.446             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[0]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HBACK                                                                                                                  ; 0.443             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HFRONT             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HSYNC                                                                                                                  ; 0.441             ;
+; vga_write_address[5]                                                                                 ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.429             ;
+; vga_write_address[12]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.427             ;
+; ascii[3]                                                                                             ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a27~porta_datain_reg0                                                    ; 0.419             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[2]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HBACK                                                                                                                  ; 0.415             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HBACK              ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HDISP                                                                                                                  ; 0.414             ;
+; vga_write_address[11]                                                                                ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_address_reg0                                                    ; 0.401             ;
+; ascii[0]                                                                                             ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a24~porta_datain_reg0                                                    ; 0.390             ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[1]             ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs.HBACK                                                                                                                  ; 0.390             ;
+; ascii_master_controller:controller|vga_controller:controller|count[0]                                ; ascii_master_controller:controller|vga_controller:controller|count[2]                                                                                                                                    ; 0.381             ;
+; ascii_master_controller:controller|delay_count[1]                                                    ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.380             ;
+; ascii_master_controller:controller|vga_write_done                                                    ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                                                                                                                        ; 0.378             ;
+; ascii_master_controller:controller|delay_count[2]                                                    ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.375             ;
+; ascii_master_controller:controller|address_count[1]                                                  ; ascii_master_controller:controller|WRITE_S.WRITE_DONE                                                                                                                                                    ; 0.372             ;
+; ascii_master_controller:controller|address_count[0]                                                  ; ascii_master_controller:controller|WRITE_S.DELAY                                                                                                                                                         ; 0.361             ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                    ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.SWITCH_BUFFER                                                                                                                      ; 0.353             ;
+; ascii_master_controller:controller|vga_controller:controller|count[2]                                ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                                                                                                                              ; 0.351             ;
+; ascii_master_controller:controller|WRITE_S.START                                                     ; ascii_master_controller:controller|vga_write_done                                                                                                                                                        ; 0.346             ;
+; ascii_master_controller:controller|WRITE_S.DELAY                                                     ; ascii_master_controller:controller|delay_count[3]                                                                                                                                                        ; 0.346             ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.SWITCH_BUFFER                  ; ascii_master_controller:controller|vga_controller:controller|count[2]                                                                                                                                    ; 0.342             ;
+; ascii_master_controller:controller|vga_controller:controller|switch_buffer                           ; ascii_master_controller:controller|WRITE_S.WRITE_START                                                                                                                                                   ; 0.337             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B2_DISP_B1_WRITE ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_2                                                                                                                 ; 0.336             ;
+; ascii_master_controller:controller|vga_controller:controller|count[3]                                ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                                                                                                                              ; 0.336             ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.DELAY                          ; ascii_master_controller:controller|vga_controller:controller|SWITCH_S.WAIT_SIGNAL                                                                                                                        ; 0.336             ;
+; ascii_master_controller:controller|delay_count[0]                                                    ; ascii_master_controller:controller|delay_count[1]                                                                                                                                                        ; 0.329             ;
+; ascii_master_controller:controller|delay_count[3]                                                    ; ascii_master_controller:controller|WRITE_S.ITERATE                                                                                                                                                       ; 0.323             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[0]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a16~porta_address_reg0 ; 0.321             ;
+; string_count[1]                                                                                      ; ascii[0]                                                                                                                                                                                                 ; 0.319             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[1]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a16~porta_address_reg0 ; 0.313             ;
+; cycles[0]                                                                                            ; cycles[1]                                                                                                                                                                                                ; 0.313             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|wren_1             ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_we_reg       ; 0.312             ;
+; ascii_master_controller:controller|WRITE_S.WAIT_SWITCH                                               ; ascii_master_controller:controller|WRITE_S.WRITE_START                                                                                                                                                   ; 0.310             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B1_DISP_B2_WRITE ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.B2_DISP_B1_WRITE                                                                                                     ; 0.309             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[1]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.309             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[7]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.309             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[8]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.309             ;
+; ascii_master_controller:controller|WRITE_S.ITERATE                                                   ; ascii_master_controller:controller|address_count[4]                                                                                                                                                      ; 0.307             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[9]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.305             ;
+; string_count[3]                                                                                      ; ascii[0]                                                                                                                                                                                                 ; 0.304             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[10]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.303             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[11]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.303             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[12]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.299             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[5]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.297             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[6]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.297             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[2]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.294             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[3]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.294             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[5]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.294             ;
+; ascii_master_controller:controller|vga_controller:controller|count[1]                                ; ascii_master_controller:controller|vga_controller:controller|count[2]                                                                                                                                    ; 0.290             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[4]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a3~porta_address_reg0  ; 0.287             ;
+; vga_write_en                                                                                         ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a3~porta_we_reg                                                          ; 0.282             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[4]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.271             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[7]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.271             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[10]      ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.271             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[6]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_1:buffer1|altsyncram:altsyncram_component|altsyncram_o6o1:auto_generated|ram_block1a17~porta_address_reg0 ; 0.267             ;
+; ascii[6]                                                                                             ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a30~porta_datain_reg0                                                    ; 0.267             ;
+; ascii_master_controller:controller|address_count[3]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a23~portb_address_reg0                                                   ; 0.254             ;
+; ascii_master_controller:controller|address_count[2]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a23~portb_address_reg0                                                   ; 0.254             ;
+; ascii_master_controller:controller|address_count[8]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a23~portb_address_reg0                                                   ; 0.254             ;
+; ascii_master_controller:controller|address_count[6]                                                  ; ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|ram_block1a23~portb_address_reg0                                                   ; 0.254             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[6]       ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|ascii_buffer_2:buffer2|altsyncram:altsyncram_component|altsyncram_p6o1:auto_generated|ram_block1a6~porta_datain_reg0   ; 0.251             ;
+; cycles[1]                                                                                            ; cycles[3]                                                                                                                                                                                                ; 0.244             ;
 +------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -2463,7 +2486,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 314 fanout uses global clock CLKCTRL_G4
+    Info (11162): CLOCK_50~inputCLKENA0 with 317 fanout uses global clock CLKCTRL_G4
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'riscv.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -2646,32 +2669,32 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "USB_SCL" is assigned to location or region, but does not exist in design
     Warning (15706): Node "USB_SDA" is assigned to location or region, but does not exist in design
     Warning (15706): Node "USB_WR_N" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:24
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:13
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 9% of the available device resources in the region that extends from location X33_Y58 to location X44_Y69
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
-Info (11888): Total time spent on timing analysis during the Fitter is 1.62 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+Info (11888): Total time spent on timing analysis during the Fitter is 1.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/output_files/riscv.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 178 warnings
-    Info: Peak virtual memory: 7926 megabytes
-    Info: Processing ended: Fri Feb 28 14:05:32 2025
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:02:03
+    Info: Peak virtual memory: 7935 megabytes
+    Info: Processing ended: Fri Feb 28 14:50:23 2025
+    Info: Elapsed time: 00:00:59
+    Info: Total CPU time (on all processors): 00:02:19
 
 
 +----------------------------+
