@@ -1,5 +1,5 @@
 Fitter report for riscv
-Fri Feb 28 09:05:25 2025
+Fri Feb 28 10:41:48 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 28 09:05:24 2025          ;
+; Fitter Status                   ; Successful - Fri Feb 28 10:41:48 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
@@ -2155,9 +2155,9 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/output_files/riscv.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 250 warnings
-    Info: Peak virtual memory: 7790 megabytes
-    Info: Processing ended: Fri Feb 28 09:05:25 2025
-    Info: Elapsed time: 00:00:28
+    Info: Peak virtual memory: 7810 megabytes
+    Info: Processing ended: Fri Feb 28 10:41:48 2025
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:01:15
 
 

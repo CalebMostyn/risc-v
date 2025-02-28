@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Fri Feb 28 09:04:56 2025
+Fri Feb 28 10:41:25 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 28 09:04:56 2025          ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 28 10:41:25 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
@@ -254,18 +254,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Feb 28 09:04:48 2025
+    Info: Processing started: Fri Feb 28 10:41:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file riscv.v
     Info (12023): Found entity 1: riscv File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: register_file File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/register_file.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at riscv.v(90): created implicit net for "clk" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 90
 Warning (10236): Verilog HDL Implicit Net warning at riscv.v(91): created implicit net for "rst" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 91
 Info (12127): Elaborating entity "riscv" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at riscv.v(90): object "clk" assigned a value but never read File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 90
 Warning (10036): Verilog HDL or VHDL warning at riscv.v(91): object "rst" assigned a value but never read File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 91
-Warning (12158): Entity "riscv" contains only dangling pins
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -entity DE1_SoC was ignored
@@ -859,10 +860,10 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
 Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 594 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Fri Feb 28 09:04:56 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 593 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Fri Feb 28 10:41:25 2025
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
