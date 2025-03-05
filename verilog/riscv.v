@@ -153,20 +153,22 @@ reg [7:0]S;
 assign LEDR = S;
 reg [7:0]NS;
 
-parameter WAIT_ADDR = 8'd0,
-			READ_ADDR = 8'd1,
-			WAIT_DATA = 8'd2,
-			READ_DATA = 8'd3,
-			WRITE_DATA = 8'd4,
-			START_RENDER = 8'd5,
-			WAIT_RENDER = 8'd6,
-			RENDER_DONE = 8'd7,
+parameter WAIT_A = 8'd0,
+			READ_A = 8'd1,
+			WAIT_B = 8'd2,
+			READ_B = 8'd3,
+			WAIT_OP = 8'd4,
+			READ_OP = 8'd5,
+			WRITE_DATA = 8'd6,
+			START_RENDER = 8'd7,
+			WAIT_RENDER = 8'd8,
+			RENDER_DONE = 8'd9,
 			ERR = 8'hFF;
 			
 always@(posedge clk or negedge rst)
 begin
 	if (rst == 1'b0)
-		S <= WAIT_ADDR;
+		S <= WAIT_A;
 	else
 		S <= NS;
 end
@@ -174,24 +176,34 @@ end
 always@(*)
 begin
 	case(S)
-		WAIT_ADDR:
+		WAIT_A:
 			if (~KEY[0])
-				NS = READ_ADDR;
+				NS = READ_A;
 			else
-				NS = WAIT_ADDR;
-		READ_ADDR: 
+				NS = WAIT_A;
+		READ_A: 
 			if (~KEY[0])
-				NS = READ_ADDR;
+				NS = READ_A;
 			else
-				NS = WAIT_DATA;
-		WAIT_DATA:
+				NS = WAIT_B;
+		WAIT_B:
 			if (~KEY[0])
-				NS = READ_DATA;
+				NS = READ_B;
 			else
-				NS = WAIT_DATA;
-		READ_DATA:
+				NS = WAIT_B;
+		READ_B:
 			if (~KEY[0])
-				NS = READ_DATA;
+				NS = READ_B;
+			else
+				NS = WAIT_OP;
+		WAIT_OP:
+			if (~KEY[0])
+				NS = READ_OP;
+			else
+				NS = WAIT_OP;
+		READ_OP:
+			if (~KEY[0])
+				NS = READ_OP;
 			else
 				NS = WRITE_DATA;
 		WRITE_DATA: NS = START_RENDER;
@@ -201,7 +213,7 @@ begin
 				NS = RENDER_DONE;
 			else
 				NS = WAIT_RENDER;
-		RENDER_DONE: NS = WAIT_ADDR;
+		RENDER_DONE: NS = WAIT_A;
 		default: NS = ERR;
 	endcase
 end
@@ -215,25 +227,51 @@ begin
 		rf_w_addr <= 5'd0;
 		rf_w_data <= 32'd0;
 		rf_w_en <= 1'b0;
+		
+		src_a <= 32'd0;
+		src_b <= 32'd0;
+		op <= 4'd0;
 	end
 	else
 	begin
 		case(S)
-			WAIT_ADDR:
+			WAIT_A:
 			begin
 				reset_renderer <= 1'b1;
 				rr_start <= 1'b0;
 				rf_w_addr <= 5'd0;
 				rf_w_data <= 32'd0;
 				rf_w_en <= 1'b0;
+				
+				src_a <= 32'd0;
+				src_b <= 32'd0;
+				op <= 4'd0;
 			end
-			READ_ADDR: rf_w_addr <= SW[4:0];
-			READ_DATA: rf_w_data <= {22'd0, SW[9:0]};
-			WRITE_DATA: rf_w_en <= 1'b1;
+			READ_A: src_a <= SW[9] ? {22'hFFFFFF, SW[9:0]} : {22'd0, SW[9:0]};
+			READ_B: src_b <= SW[9] ? {22'hFFFFFF, SW[9:0]} : {22'd0, SW[9:0]};
+			READ_OP: op <= SW[3:0];
+			WRITE_DATA:
+			begin
+				rf_w_addr <= 5'd1;
+				rf_w_data <= alu_result;
+				rf_w_en <= 1'b1;
+			end
 			START_RENDER: rr_start <= 1'b1;
 			RENDER_DONE: reset_renderer <= 1'b0;
 		endcase
 	end
 end
+
+reg [31:0]src_a;
+reg [31:0]src_b;
+wire [31:0]alu_result;
+reg [3:0]op;
+
+alu alu_0(
+	.src_a(src_a),
+	.src_b(src_b),
+	.op(op),
+	.result(alu_result)
+);
 
 endmodule
