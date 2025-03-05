@@ -1,0 +1,7 @@
+module register_renderer(
+	input clk,
+	input rst,
+	
+);
+
+endmodule

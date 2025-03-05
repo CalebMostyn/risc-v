@@ -1,13 +1,13 @@
-Fitter Status : Successful - Fri Feb 28 14:50:23 2025
+Fitter Status : Successful - Wed Mar  5 03:28:50 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : riscv
 Top-level Entity Name : riscv
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 134 / 32,070 ( < 1 % )
-Total registers : 251
-Total pins : 86 / 457 ( 19 % )
+Logic utilization (in ALMs) : 628 / 32,070 ( 2 % )
+Total registers : 642
+Total pins : 96 / 457 ( 21 % )
 Total virtual pins : 0
 Total block memory bits : 770,048 / 4,065,280 ( 19 % )
 Total RAM Blocks : 94 / 397 ( 24 % )

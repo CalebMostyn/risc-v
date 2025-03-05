@@ -52,7 +52,7 @@ module riscv(
 	input 		     [3:0]		KEY,
 
 	//////////// LED //////////
-	//output		     [9:0]		LEDR,
+	output		     [9:0]		LEDR,
 
 	//////////// PS2 //////////
 	//inout 		          		PS2_CLK,
@@ -90,47 +90,9 @@ module riscv(
 assign clk = CLOCK_50;
 assign rst = KEY[3];
 
-reg vga_write_en;
+wire vga_write_en;
 wire [31:0]vga_input_data;
-reg [12:0]vga_write_address;
-
-reg [7:0]ascii;
-reg [23:0]rgb;
-
-assign vga_input_data = {ascii, rgb};
-
-reg unsigned [3:0]cycles;
-
-parameter HW_STRING = "Hello World!";
-reg [7:0]string_count;
-
-always@(posedge clk or negedge rst)
-begin
-	if (rst == 1'b0)
-	begin
-		vga_write_en <= 1'b0;
-		//vga_input_data <= {"A", 24'hFFFFFF};
-		vga_write_address <= 13'd0;
-		
-		ascii <= "0";
-		rgb <= 24'hFFFFFF;
-		
-		cycles <= 4'd0;
-		string_count <= 8'd11;
-	end
-	else if (vga_write_address < 12 && cycles == 0)
-	begin
-		vga_write_en <= 1'b1;
-		vga_write_address <= vga_write_address + 1;
-		ascii <= HW_STRING[string_count * 8 +: 8];
-		cycles <= (cycles + 1);
-		string_count <= string_count - 1;
-	end
-	else
-	begin
-		cycles <= (cycles + 1);
-	end
-end
+wire [12:0]vga_write_address;
 
 ascii_master_controller controller (
 		.clk(CLOCK_50),
@@ -147,5 +109,131 @@ ascii_master_controller controller (
 		.vga_vs(VGA_VS),
 		.vga_sync(VGA_SYNC_N)
 );
+
+wire [4:0]rf_r_addr_0;
+wire [31:0]rf_r_data_0;
+wire [4:0]rf_r_addr_1;
+wire [31:0]rf_r_data_1;
+reg [4:0]rf_w_addr;
+reg [31:0]rf_w_data;
+reg rf_w_en;
+
+register_file rf(
+	.clk(clk),
+	.rst(rst),
+	.read_addr_0(rf_r_addr_0),
+	.read_addr_1(rf_r_addr_1),
+	.write_addr(rf_w_addr),
+	.write_en(rf_w_en),
+	.write_data(rf_w_data),
+	.read_data_0(rf_r_data_0),
+	.read_data_1(rf_r_data_1)
+);
+
+reg rr_start;
+wire rr_done;
+wire rr_rst;
+assign rr_rst = (reset_renderer && rst);
+
+reg reset_renderer;
+
+register_renderer rr(
+	.clk(clk),
+	.rst(rr_rst),
+	.start(rr_start), // start rendering
+	.rf_addr(rf_r_addr_0), // register file in-addr
+	.rf_data(rf_r_data_0), // register file output
+	.ascii_write_en(vga_write_en),
+	.ascii_input(vga_input_data),
+	.ascii_write_address(vga_write_address),
+	.done(rr_done) // finished rendering
+);
+
+reg [7:0]S;
+assign LEDR = S;
+reg [7:0]NS;
+
+parameter WAIT_ADDR = 8'd0,
+			READ_ADDR = 8'd1,
+			WAIT_DATA = 8'd2,
+			READ_DATA = 8'd3,
+			WRITE_DATA = 8'd4,
+			START_RENDER = 8'd5,
+			WAIT_RENDER = 8'd6,
+			RENDER_DONE = 8'd7,
+			ERR = 8'hFF;
+			
+always@(posedge clk or negedge rst)
+begin
+	if (rst == 1'b0)
+		S <= WAIT_ADDR;
+	else
+		S <= NS;
+end
+
+always@(*)
+begin
+	case(S)
+		WAIT_ADDR:
+			if (~KEY[0])
+				NS = READ_ADDR;
+			else
+				NS = WAIT_ADDR;
+		READ_ADDR: 
+			if (~KEY[0])
+				NS = READ_ADDR;
+			else
+				NS = WAIT_DATA;
+		WAIT_DATA:
+			if (~KEY[0])
+				NS = READ_DATA;
+			else
+				NS = WAIT_DATA;
+		READ_DATA:
+			if (~KEY[0])
+				NS = READ_DATA;
+			else
+				NS = WRITE_DATA;
+		WRITE_DATA: NS = START_RENDER;
+		START_RENDER: NS = WAIT_RENDER;
+		WAIT_RENDER:
+			if (rr_done)
+				NS = RENDER_DONE;
+			else
+				NS = WAIT_RENDER;
+		RENDER_DONE: NS = WAIT_ADDR;
+		default: NS = ERR;
+	endcase
+end
+
+always@(posedge clk or negedge rst)
+begin
+	if (rst == 1'b0)
+	begin
+		reset_renderer <= 1'b1;
+		rr_start <= 1'b0;
+		rf_w_addr <= 5'd0;
+		rf_w_data <= 32'd0;
+		rf_w_en <= 1'b0;
+	end
+	else
+	begin
+		case(S)
+			WAIT_ADDR:
+			begin
+				reset_renderer <= 1'b1;
+				rr_start <= 1'b0;
+				rf_w_addr <= 5'd0;
+				rf_w_data <= 32'd0;
+				rf_w_en <= 1'b0;
+			end
+			READ_ADDR: rf_w_addr <= SW[4:0];
+			READ_DATA: rf_w_data <= {22'd0, SW[9:0]};
+			WRITE_DATA: rf_w_en <= 1'b1;
+			START_RENDER: rr_start <= 1'b1;
+			RENDER_DONE: reset_renderer <= 1'b0;
+		endcase
+	end
+end
 
 endmodule
