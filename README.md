@@ -3,7 +3,7 @@ FPGA RISC-V Processor
 
 # Components
 For Tiny RISC-V:
-- [ ] ALU
+- [X] ALU
 - [X] Register File (with visualization)
 - [ ] Stack Memory (with visualization)
 - [ ] Heap Memory (with visualization)
