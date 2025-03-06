@@ -1,5 +1,5 @@
 Flow report for riscv
-Wed Mar  5 09:46:47 2025
+Wed Mar  5 22:36:03 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar  5 09:46:47 2025          ;
+; Flow Status                     ; Successful - Wed Mar  5 22:36:03 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 738 / 32,070 ( 2 % )                           ;
-; Total registers                 ; 411                                            ;
+; Logic utilization (in ALMs)     ; 576 / 32,070 ( 2 % )                           ;
+; Total registers                 ; 369                                            ;
 ; Total pins                      ; 96 / 457 ( 21 % )                              ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 770,048 / 4,065,280 ( 19 % )                   ;
-; Total DSP Blocks                ; 2 / 87 ( 2 % )                                 ;
+; Total block memory bits         ; 770,112 / 4,065,280 ( 19 % )                   ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/05/2025 09:43:49 ;
+; Start date & time ; 03/05/2025 22:33:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; riscv               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 110289777797126.174118582940368        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 110289777797126.174123198337108        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -89,6 +89,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; MISC_FILE                           ; data_memory_bb.v                       ; --            ; --          ; --                                ;
+; MISC_FILE                           ; instruction_memory_bb.v                ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -101,12 +103,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4939 MB             ; 00:00:15                           ;
-; Fitter               ; 00:02:27     ; 1.1                     ; 7864 MB             ; 00:03:29                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4874 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:06     ; 3.0                     ; 5346 MB             ; 00:00:09                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4747 MB             ; 00:00:01                           ;
-; Total                ; 00:02:53     ; --                      ; --                  ; 00:03:58                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4953 MB             ; 00:00:11                           ;
+; Fitter               ; 00:02:35     ; 1.1                     ; 7862 MB             ; 00:05:09                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4870 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 2.3                     ; 5356 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4747 MB             ; 00:00:01                           ;
+; Total                ; 00:02:56     ; --                      ; --                  ; 00:05:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

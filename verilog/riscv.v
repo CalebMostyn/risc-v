@@ -90,6 +90,8 @@ module riscv(
 assign clk = CLOCK_50;
 assign rst = KEY[3];
 
+parameter UPDATE_SPEED = 30'd1; // Times a second there is an update
+
 wire vga_write_en;
 wire [31:0]vga_input_data;
 wire [12:0]vga_write_address;
@@ -130,13 +132,43 @@ register_file rf(
 	.read_data_1(rf_r_data_1)
 );
 
+wire [15:0]dm_addr;
+wire [3:0]dm_byte_en;
+wire [31:0]dm_w_data;
+wire dm_w_en;
+wire [31:0]dm_r_data;
+
+data_memory dm(
+	.address(16'd0),
+	.byteena(4'b1010),
+	.clock(clk),
+	.data(32'hFFFFFFFF),
+	.wren(1'b1),
+	.q(dm_r_data)
+);
+
 reg rr_start;
 wire rr_done;
 wire rr_rst;
 assign rr_rst = (reset_renderer && rst);
 
 reg reset_renderer;
+reg [19:0]curr_rend_mem_addr;
 
+
+memory_renderer rr(
+	.clk(clk),
+	.rst(rr_rst),
+	.start(rr_start), // start rendering
+	.start_addr(curr_rend_mem_addr),
+	.mem_addr(dm_addr), // register file in-addr
+	.mem_data(dm_r_data), // register file output
+	.ascii_write_en(vga_write_en),
+	.ascii_input(vga_input_data),
+	.ascii_write_address(vga_write_address),
+	.done(rr_done) // finished rendering
+);
+/*
 register_renderer rr(
 	.clk(clk),
 	.rst(rr_rst),
@@ -147,28 +179,29 @@ register_renderer rr(
 	.ascii_input(vga_input_data),
 	.ascii_write_address(vga_write_address),
 	.done(rr_done) // finished rendering
-);
+);*/
 
 reg [7:0]S;
 assign LEDR = S;
 reg [7:0]NS;
 
-parameter WAIT_A = 8'd0,
-			READ_A = 8'd1,
-			WAIT_B = 8'd2,
-			READ_B = 8'd3,
-			WAIT_OP = 8'd4,
-			READ_OP = 8'd5,
-			WRITE_DATA = 8'd6,
+reg [29:0]counter;
+
+parameter START = 8'd0,
 			START_RENDER = 8'd7,
 			WAIT_RENDER = 8'd8,
 			RENDER_DONE = 8'd9,
+			WAIT_INPUT = 8'd10,
+			INCR = 8'd11,
+			DECR = 8'd12,
+			WAIT_INCR = 8'd13,
+			WAIT_DECR = 8'd14,
 			ERR = 8'hFF;
 			
 always@(posedge clk or negedge rst)
 begin
 	if (rst == 1'b0)
-		S <= WAIT_A;
+		S <= START;
 	else
 		S <= NS;
 end
@@ -176,7 +209,7 @@ end
 always@(*)
 begin
 	case(S)
-		WAIT_A:
+		/*WAIT_A:
 			if (~KEY[0])
 				NS = READ_A;
 			else
@@ -206,14 +239,34 @@ begin
 				NS = READ_OP;
 			else
 				NS = WRITE_DATA;
-		WRITE_DATA: NS = START_RENDER;
+		WRITE_DATA: NS = START_RENDER;*/
+		START: NS = START_RENDER;
 		START_RENDER: NS = WAIT_RENDER;
 		WAIT_RENDER:
 			if (rr_done)
 				NS = RENDER_DONE;
 			else
 				NS = WAIT_RENDER;
-		RENDER_DONE: NS = WAIT_A;
+		RENDER_DONE: NS = WAIT_INPUT;
+		WAIT_INPUT:
+			if (~KEY[0])
+				NS = INCR;
+			else if (~KEY[1])
+				NS = DECR;
+			else
+				NS = WAIT_INPUT;
+		INCR: NS = WAIT_INCR;
+		WAIT_INCR:
+			if (KEY[0])
+				NS = START_RENDER;
+			else
+				NS = WAIT_INCR;
+		DECR: NS = WAIT_DECR;
+		WAIT_DECR:
+			if (KEY[1])
+				NS = START_RENDER;
+			else
+				NS = WAIT_DECR;
 		default: NS = ERR;
 	endcase
 end
@@ -231,11 +284,13 @@ begin
 		src_a <= 32'd0;
 		src_b <= 32'd0;
 		op <= 4'd0;
+		curr_rend_mem_addr <= 20'd0;
 	end
 	else
 	begin
 		case(S)
-			WAIT_A:
+			/*WAIT_A:*/
+			START:
 			begin
 				reset_renderer <= 1'b1;
 				rr_start <= 1'b0;
@@ -246,7 +301,9 @@ begin
 				src_a <= 32'd0;
 				src_b <= 32'd0;
 				op <= 4'd0;
+				curr_rend_mem_addr <= 20'd0;
 			end
+			/*
 			READ_A: src_a <= SW[9] ? {22'hFFFFFF, SW[9:0]} : {22'd0, SW[9:0]};
 			READ_B: src_b <= SW[9] ? {22'hFFFFFF, SW[9:0]} : {22'd0, SW[9:0]};
 			READ_OP: op <= SW[3:0];
@@ -255,9 +312,16 @@ begin
 				rf_w_addr <= 5'd1;
 				rf_w_data <= alu_result;
 				rf_w_en <= 1'b1;
+			end*/
+			START_RENDER:
+			begin
+				rr_start <= 1'b1;
+				reset_renderer <= 1'b1;
 			end
-			START_RENDER: rr_start <= 1'b1;
+			WAIT_RENDER: rr_start <= 1'b0;
 			RENDER_DONE: reset_renderer <= 1'b0;
+			INCR: curr_rend_mem_addr <= curr_rend_mem_addr + (232 * 4);
+			DECR: curr_rend_mem_addr <= curr_rend_mem_addr - (232 * 4);
 		endcase
 	end
 end
