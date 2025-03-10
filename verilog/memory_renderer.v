@@ -2,7 +2,7 @@ module memory_renderer(
 	input clk,
 	input rst,
 	input start, // start rendering
-	input [17:0]start_addr, // starting address for render
+	input [19:0]start_addr, // starting address for render
 	output [15:0]mem_addr, // memory in-addr
 	input [31:0]mem_data, // memory output
 	output reg ascii_write_en,

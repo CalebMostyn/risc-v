@@ -91,11 +91,11 @@ module data_memory (
 		altsyncram_component.byte_size = 8,
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "data_memory.mif",
+		altsyncram_component.init_file = "../data_memory.mif",
 		altsyncram_component.intended_device_family = "Cyclone V",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
-		altsyncram_component.numwords_a = 64000,
+		altsyncram_component.numwords_a = 57600,
 		altsyncram_component.operation_mode = "SINGLE_PORT",
 		altsyncram_component.outdata_aclr_a = "NONE",
 		altsyncram_component.outdata_reg_a = "CLOCK0",
@@ -130,8 +130,8 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "data_memory.mif"
-// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "64000"
+// Retrieval info: PRIVATE: MIFfilename STRING "../data_memory.mif"
+// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "57600"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
@@ -148,11 +148,11 @@ endmodule
 // Retrieval info: CONSTANT: BYTE_SIZE NUMERIC "8"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
-// Retrieval info: CONSTANT: INIT_FILE STRING "data_memory.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "../data_memory.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
-// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "64000"
+// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "57600"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
 // Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"

@@ -2,12 +2,49 @@
 FPGA RISC-V Processor
 
 # Specs
-- 32-bit
+- 32-bit Word Length
 - 32 General Purpose Registers
-- 250 KiB of Data Memory (64.000, 32-bit words, byte addressable)
-    - Addressable from 0x00000 (maybe 0x00004 to prevent null pointer from being addressable) to 0x3E7FC
-- 125 KiB of Instruction Memory (32.000, 32-bit words)
-    - Addressable from 0x00000 to 0x1F3FC
+- 225 KiB of Data Memory (57.600, 32-bit words, byte addressable)
+    - Addressable from 0x00000 (maybe 0x00004 to prevent null pointer from being addressable) to 0x383FC
+- 62.5 KiB of Instruction Memory (16.000, 32-bit words)
+    - Addressable from 0x00000 to 0x0F9FC
+    - ROM
+- 80 character by 60 row ASCII Character VGA Output 
+
+# ISA
+- TinyRV2
+    - [X] ADD
+    - [X] ADDI
+    - [X] SUB
+    - [X] MUL
+    - [X] AND
+    - [X] ANDI
+    - [X] OR
+    - [X] ORI
+    - [X] XOR
+    - [X] XORI
+    - [X] SLT
+    - [X] SLTI
+    - [X] SLTU
+    - [X] SLTIU
+    - [X] SRA
+    - [X] SRAI
+    - [X] SRL
+    - [X] SRLI
+    - [X] SLL
+    - [X] SLLI
+    - [ ] LUI
+    - [ ] AUIPC
+    - [ ] LW
+    - [ ] SW
+    - [ ] JAL
+    - [ ] JALR
+    - [ ] BEQ
+    - [ ] BNE
+    - [ ] BLT
+    - [ ] BGE
+    - [ ] BLTU
+    - [ ] BGEU
 
 # Components
 For Tiny RISC-V:
