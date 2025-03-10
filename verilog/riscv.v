@@ -423,6 +423,11 @@ begin
 						func <= im_r_data[14:12];
 						imm <= {{21{im_r_data[31]}}, im_r_data[30:20]};
 					end
+					I_TYPE_U_IMM_LUI:
+					begin
+						rd <= im_r_data[11:7];
+						imm <= im_r_data[31:12] << 12;
+					end
 				endcase
 			end
 			EXECUTE:
@@ -494,6 +499,16 @@ begin
 				default: alu_op = 4'hF;
 			endcase
 		end
+		I_TYPE_U_IMM_LUI:
+		begin
+			register_file_read_addr_0 = 5'd0;
+			register_file_read_addr_1 = 5'd0;
+			alu_src_a = 32'd0;
+			alu_src_b = 32'd0;
+			rf_w_addr = rd;
+			rf_w_data = imm;
+			rf_w_en = 1'b1;
+		end
 		default:
 		begin
 			register_file_read_addr_0 = 5'd0;
@@ -521,7 +536,9 @@ begin
 end
 
 parameter R_TYPE = 7'b0110011,
-			I_TYPE_I_IMM = 7'b0010011;
+			I_TYPE_I_IMM = 7'b0010011,
+			I_TYPE_U_IMM_LUI = 7'b0110111,
+			I_TYPE_U_IMM_AUIPC = 7'b0010111;
 
 parameter R_ADD = 10'b0000000000,
 			R_SUB = 10'b0100000000,

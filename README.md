@@ -33,7 +33,7 @@ FPGA RISC-V Processor
     - [X] SRLI
     - [X] SLL
     - [X] SLLI
-    - [ ] LUI
+    - [X] LUI
     - [ ] AUIPC
     - [ ] LW
     - [ ] SW
