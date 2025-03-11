@@ -3,131 +3,131 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -13.655
-TNS   : -51348.610
+Slack : -13.721
+TNS   : -44775.069
 
 Type  : Slow 1100mV 85C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -2.958
-TNS   : -103.214
+Slack : -2.861
+TNS   : -106.018
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.333
+Slack : 0.239
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.461
+Slack : 0.563
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -3.312
-TNS   : -465.059
+Slack : -3.215
+TNS   : -452.159
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 1.323
+Slack : 1.336
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -38449.464
+TNS   : -38458.449
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
 Slack : -0.394
-TNS   : -22.644
+TNS   : -23.517
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -13.569
-TNS   : -49244.938
+Slack : -13.637
+TNS   : -43091.765
 
 Type  : Slow 1100mV 0C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -2.971
-TNS   : -100.624
+Slack : -2.774
+TNS   : -105.277
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.048
-TNS   : -0.048
+Slack : -0.093
+TNS   : -0.093
 
 Type  : Slow 1100mV 0C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.472
+Slack : 0.571
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -3.198
-TNS   : -451.577
+Slack : -3.104
+TNS   : -437.245
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 1.194
+Slack : 1.258
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -38428.727
+TNS   : -38427.119
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
 Slack : -0.394
-TNS   : -22.588
+TNS   : -23.209
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -8.233
-TNS   : -31124.073
+Slack : -7.988
+TNS   : -26008.642
 
 Type  : Fast 1100mV 85C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -1.375
-TNS   : -46.860
-
-Type  : Fast 1100mV 85C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.175
-TNS   : 0.000
+Slack : -1.286
+TNS   : -46.939
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.177
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
+Slack : 0.220
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -1.678
-TNS   : -227.085
+Slack : -1.688
+TNS   : -224.308
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.798
+Slack : 0.786
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -37634.908
+TNS   : -37643.530
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.076
+Slack : 0.082
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -7.183
-TNS   : -26674.505
+Slack : -7.048
+TNS   : -22293.333
 
 Type  : Fast 1100mV 0C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -1.236
-TNS   : -40.991
+Slack : -1.124
+TNS   : -41.477
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.059
-TNS   : -0.059
+Slack : -0.048
+TNS   : -0.048
 
 Type  : Fast 1100mV 0C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.158
+Slack : 0.203
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.426
-TNS   : -194.274
+Slack : -1.440
+TNS   : -190.982
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.686
+Slack : 0.700
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -37657.026
+TNS   : -37665.149
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.093
+Slack : 0.098
 TNS   : 0.000
 
 ------------------------------------------------------------

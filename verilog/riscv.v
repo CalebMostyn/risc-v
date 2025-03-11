@@ -391,6 +391,7 @@ begin
 		rs2 <= 5'd0;
 		rd <= 5'd0;
 		func <= 10'd0;
+		imm <= 32'd0;
 	end
 	else
 	begin
@@ -436,7 +437,7 @@ begin
 					JAL:
 					begin
 						rd <= im_r_data[11:7];
-						imm <= {{12{im_r_data[31]}}, im_r_data[19:12], im_r_data[30:25], im_r_data[24:21], 1'b0};
+						imm <= {{12{im_r_data[31]}}, im_r_data[19:12], im_r_data[20], im_r_data[30:25], im_r_data[24:21], 1'b0};
 					end
 					JALR:
 					begin
