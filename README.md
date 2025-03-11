@@ -34,11 +34,11 @@ FPGA RISC-V Processor
     - [X] SLL
     - [X] SLLI
     - [X] LUI
-    - [ ] AUIPC
+    - [X] AUIPC
     - [ ] LW
     - [ ] SW
     - [ ] JAL
-    - [ ] JALR
+    - [X] JALR
     - [ ] BEQ
     - [ ] BNE
     - [ ] BLT

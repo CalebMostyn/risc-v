@@ -423,10 +423,26 @@ begin
 						func <= im_r_data[14:12];
 						imm <= {{21{im_r_data[31]}}, im_r_data[30:20]};
 					end
-					I_TYPE_U_IMM_LUI:
+					LUI:
 					begin
 						rd <= im_r_data[11:7];
 						imm <= im_r_data[31:12] << 12;
+					end
+					AUIPC:
+					begin
+						rd <= im_r_data[11:7];
+						imm <= im_r_data[31:12] << 12;
+					end
+					JAL:
+					begin
+						rd <= im_r_data[11:7];
+						imm <= {{12{im_r_data[31]}}, im_r_data[19:12], im_r_data[30:25], im_r_data[24:21], 1'b0};
+					end
+					JALR:
+					begin
+						rs1 <= im_r_data[19:15];
+						rd <= im_r_data[11:7];
+						imm <= {{21{im_r_data[31]}}, im_r_data[30:20]};
 					end
 				endcase
 			end
@@ -436,8 +452,11 @@ begin
 			end
 			WRITEBACK:
 			begin
-				// TODO: if (branch) 
-				pc <= pc + 32'd4;
+				case(opcode)
+					JAL: pc <= pc + imm;
+					JALR: pc <= (rf_r_data_0 + imm) & 32'hFFFFFFFE;
+					default: pc <= pc + 32'd4;
+				endcase
 			end
 			RENDER_START: render_start <= 1'b1;
 			RENDER_DONE: reset_render <= 1'b0;
@@ -499,7 +518,7 @@ begin
 				default: alu_op = 4'hF;
 			endcase
 		end
-		I_TYPE_U_IMM_LUI:
+		LUI:
 		begin
 			register_file_read_addr_0 = 5'd0;
 			register_file_read_addr_1 = 5'd0;
@@ -508,6 +527,40 @@ begin
 			rf_w_addr = rd;
 			rf_w_data = imm;
 			rf_w_en = 1'b1;
+			alu_op = 4'hF;
+		end
+		AUIPC:
+		begin
+			register_file_read_addr_0 = 5'd0;
+			register_file_read_addr_1 = 5'd0;
+			alu_src_a = pc;
+			alu_src_b = imm;
+			rf_w_addr = rd;
+			rf_w_data = alu_result;
+			rf_w_en = 1'b1;
+			alu_op = ALU_ADD;
+		end
+		JAL:
+		begin
+			register_file_read_addr_0 = 5'd0;
+			register_file_read_addr_1 = 5'd0;
+			alu_src_a = pc;
+			alu_src_b = 32'd4;
+			rf_w_addr = rd;
+			rf_w_data = alu_result;
+			rf_w_en = 1'b1;
+			alu_op = ALU_ADD;
+		end
+		JALR:
+		begin
+			register_file_read_addr_0 = rs1;
+			register_file_read_addr_1 = 5'd0;
+			alu_src_a = pc;
+			alu_src_b = 32'd4;
+			rf_w_addr = rd;
+			rf_w_data = alu_result;
+			rf_w_en = 1'b1;
+			alu_op = ALU_ADD;
 		end
 		default:
 		begin
@@ -535,10 +588,19 @@ begin
 	end
 end
 
+// opcodes
 parameter R_TYPE = 7'b0110011,
 			I_TYPE_I_IMM = 7'b0010011,
-			I_TYPE_U_IMM_LUI = 7'b0110111,
-			I_TYPE_U_IMM_AUIPC = 7'b0010111;
+			LUI = 7'b0110111, // I Type, U-Imm
+			AUIPC = 7'b0010111, // I Type, U-Imm
+			LOAD_MEM = 7'b0000011, // I Type, I-Imm
+			STORE_MEM = 7'b0100011, // S Type, S-Imm
+			JAL = 7'b1101111,
+			JALR = 7'b1100111,
+			BRANCH = 7'b1100011;
+		
+// func codes	
+parameter MEM_WORD = 3'b010, MEM_BYTE = 3'b000;
 
 parameter R_ADD = 10'b0000000000,
 			R_SUB = 10'b0100000000,
@@ -560,7 +622,8 @@ parameter I_I_IMM_ADDI = 3'b000,
 			I_I_IMM_SLTIU = 3'b011,
 			I_I_IMM_SRI = 3'b101, // SRAI inst[30] == 1, SRLI inst[30] == 0
 			I_I_IMM_SLLI = 3'b001;
-			
+
+// alu_op codes			
 parameter ALU_ADD = 4'd0,
 			ALU_SUB = 4'd1,
 			ALU_AND = 4'd2,

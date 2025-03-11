@@ -3,211 +3,131 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -13.661
-TNS   : -49075.919
-
-Type  : Slow 1100mV 85C Model Setup 'opcode[0]'
-Slack : -6.088
-TNS   : -23.803
+Slack : -13.655
+TNS   : -51348.610
 
 Type  : Slow 1100mV 85C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -2.761
-TNS   : -88.991
+Slack : -2.958
+TNS   : -103.214
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.363
+Slack : 0.333
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.454
+Slack : 0.461
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'opcode[0]'
-Slack : 0.884
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'opcode[0]'
-Slack : -3.598
-TNS   : -12.096
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.622
-TNS   : -381.033
-
-Type  : Slow 1100mV 85C Model Removal 'opcode[0]'
-Slack : 0.987
-TNS   : 0.000
+Slack : -3.312
+TNS   : -465.059
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 1.554
+Slack : 1.323
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -38446.007
+TNS   : -38449.464
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
 Slack : -0.394
-TNS   : -20.835
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'opcode[0]'
-Slack : 0.085
-TNS   : 0.000
+TNS   : -22.644
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -13.517
-TNS   : -47001.662
-
-Type  : Slow 1100mV 0C Model Setup 'opcode[0]'
-Slack : -6.124
-TNS   : -24.002
+Slack : -13.569
+TNS   : -49244.938
 
 Type  : Slow 1100mV 0C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -2.732
-TNS   : -88.695
+Slack : -2.971
+TNS   : -100.624
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.043
-TNS   : -0.043
+Slack : -0.048
+TNS   : -0.048
 
 Type  : Slow 1100mV 0C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.468
+Slack : 0.472
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'opcode[0]'
-Slack : 0.874
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'opcode[0]'
-Slack : -3.718
-TNS   : -12.481
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.476
-TNS   : -358.179
-
-Type  : Slow 1100mV 0C Model Removal 'opcode[0]'
-Slack : 1.098
-TNS   : 0.000
+Slack : -3.198
+TNS   : -451.577
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 1.437
+Slack : 1.194
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -38429.244
+TNS   : -38428.727
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
 Slack : -0.394
-TNS   : -20.545
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'opcode[0]'
-Slack : 0.120
-TNS   : 0.000
+TNS   : -22.588
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -7.769
-TNS   : -29041.495
-
-Type  : Fast 1100mV 85C Model Setup 'opcode[0]'
-Slack : -3.146
-TNS   : -12.079
+Slack : -8.233
+TNS   : -31124.073
 
 Type  : Fast 1100mV 85C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -1.261
-TNS   : -39.241
+Slack : -1.375
+TNS   : -46.860
 
 Type  : Fast 1100mV 85C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.169
+Slack : 0.175
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.173
+Slack : 0.177
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'opcode[0]'
-Slack : 0.602
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'opcode[0]'
-Slack : -1.668
-TNS   : -5.250
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -1.286
-TNS   : -182.603
-
-Type  : Fast 1100mV 85C Model Removal 'opcode[0]'
-Slack : 0.458
-TNS   : 0.000
+Slack : -1.678
+TNS   : -227.085
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.882
+Slack : 0.798
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -37633.358
+TNS   : -37634.908
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.056
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'opcode[0]'
-Slack : 0.115
+Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -7.018
-TNS   : -24892.172
-
-Type  : Fast 1100mV 0C Model Setup 'opcode[0]'
-Slack : -2.913
-TNS   : -11.212
+Slack : -7.183
+TNS   : -26674.505
 
 Type  : Fast 1100mV 0C Model Setup 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : -1.128
-TNS   : -34.972
+Slack : -1.236
+TNS   : -40.991
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.113
-TNS   : -0.131
+Slack : -0.059
+TNS   : -0.059
 
 Type  : Fast 1100mV 0C Model Hold 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.157
+Slack : 0.158
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'opcode[0]'
-Slack : 0.530
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'opcode[0]'
-Slack : -1.580
-TNS   : -5.046
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.061
-TNS   : -149.159
-
-Type  : Fast 1100mV 0C Model Removal 'opcode[0]'
-Slack : 0.526
-TNS   : 0.000
+Slack : -1.426
+TNS   : -194.274
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.787
+Slack : 0.686
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -2.174
-TNS   : -37654.937
+TNS   : -37657.026
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ascii_master_controller:controller|vga_controller:controller|clock_divider:clock|clk_25'
-Slack : 0.076
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'opcode[0]'
-Slack : 0.181
+Slack : 0.093
 TNS   : 0.000
 
 ------------------------------------------------------------
