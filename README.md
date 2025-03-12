@@ -13,38 +13,14 @@ FPGA RISC-V Processor
 
 # ISA
 - TinyRV2
-    - [X] ADD
-    - [X] ADDI
-    - [X] SUB
-    - [X] MUL
-    - [X] AND
-    - [X] ANDI
-    - [X] OR
-    - [X] ORI
-    - [X] XOR
-    - [X] XORI
-    - [X] SLT
-    - [X] SLTI
-    - [X] SLTU
-    - [X] SLTIU
-    - [X] SRA
-    - [X] SRAI
-    - [X] SRL
-    - [X] SRLI
-    - [X] SLL
-    - [X] SLLI
-    - [X] LUI
-    - [X] AUIPC
-    - [ ] LW
-    - [ ] SW
-    - [X] JAL
-    - [X] JALR
-    - [X] BEQ
-    - [X] BNE
-    - [X] BLT
-    - [X] BGE
-    - [X] BLTU
-    - [X] BGEU
+    - ADD, ADDI, SUB, MUL
+    - AND, ANDI, OR, ORI, XOR, XORI
+    - SLT, SLTI, SLTU, SLTIU
+    - SRA, SRAI, SRL, SRLI, SLL, SLLI
+    - LUI, AUIPC
+    - LW, SW, LH, SH, LB, SB
+    - JAL, JALR
+    - BEQ, BNE, BLT, BGE, BLTU, BGEU
 
 # Components
 For Tiny RISC-V:
@@ -52,7 +28,7 @@ For Tiny RISC-V:
 - [X] Register File (with visualization)
 - [X] Data Memory (with visualization)
 - [X] Instruction Memory (with visualization)
-- [ ] FSM for Instruction Execution
+- [X] FSM for Instruction Execution
 
 Possible Stretch Goals
 - [ ] Simple Syscall Implementations

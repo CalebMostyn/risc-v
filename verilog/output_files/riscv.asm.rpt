@@ -1,5 +1,5 @@
 Assembler report for riscv
-Tue Mar 11 20:44:32 2025
+Wed Mar 12 16:37:32 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 11 20:44:32 2025 ;
+; Assembler Status      ; Successful - Wed Mar 12 16:37:32 2025 ;
 ; Revision Name         ; riscv                                 ;
 ; Top-level Entity Name ; riscv                                 ;
 ; Family                ; Cyclone V                             ;
@@ -95,8 +95,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                  ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x07BC69E0                                                                                                               ;
-; Checksum       ; 0x07BC69E0                                                                                                               ;
+; JTAG usercode  ; 0x08A14BC1                                                                                                               ;
+; Checksum       ; 0x08A14BC1                                                                                                               ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Mar 11 20:44:24 2025
+    Info: Processing started: Wed Mar 12 16:37:24 2025
 Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off riscv -c riscv
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
@@ -682,9 +682,9 @@ Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_P -entity DE1_SoC was ignored
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 572 warnings
-    Info: Peak virtual memory: 4947 megabytes
-    Info: Processing ended: Tue Mar 11 20:44:32 2025
+    Info: Peak virtual memory: 4932 megabytes
+    Info: Processing ended: Wed Mar 12 16:37:32 2025
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -143,9 +143,9 @@ alu alu_0(
 );
 
 reg [15:0]dm_addr;
-wire [3:0]dm_byte_en;
-wire [31:0]dm_w_data;
-wire dm_w_en;
+reg [3:0]dm_byte_en;
+reg [31:0]dm_w_data;
+reg dm_w_en;
 wire [31:0]dm_r_data;
 
 data_memory dm(
@@ -153,7 +153,7 @@ data_memory dm(
 	.byteena(dm_byte_en),
 	.clock(CLOCK_50),
 	.data(dm_w_data),
-	.wren(1'b0),
+	.wren(dm_w_en),
 	.q(dm_r_data)
 );
 
@@ -333,11 +333,12 @@ parameter START = 8'd0,
 			WAIT_INST_MEM = 8'd4,
 			DECODE = 8'd5,
 			EXECUTE = 8'd6,
-			WAIT_DATA_MEM = 8'd7,
-			WRITEBACK = 8'd8,
-			RENDER_START = 8'd9,
-			RENDER_WAIT = 8'd10,
-			RENDER_DONE = 8'd11,
+			FETCH_DATA_MEM = 8'd7,
+			WAIT_DATA_MEM = 8'd8,
+			WRITEBACK = 8'd9,
+			RENDER_START = 8'd10,
+			RENDER_WAIT = 8'd11,
+			RENDER_DONE = 8'd12,
 			ERR = 8'hFF;
 			
 always@(posedge clk or negedge rst)
@@ -364,7 +365,13 @@ begin
 		FETCH: NS = FETCH_INST_MEM;
 		FETCH_INST_MEM: NS = WAIT_INST_MEM;
 		WAIT_INST_MEM: NS = DECODE;
-		DECODE: NS = EXECUTE;
+		DECODE: 
+			if (im_r_data[6:0] == LOAD_MEM || im_r_data[6:0] == STORE_MEM)
+				NS = FETCH_DATA_MEM;
+			else
+				NS = EXECUTE;
+		FETCH_DATA_MEM: NS = WAIT_DATA_MEM;
+		WAIT_DATA_MEM: NS = EXECUTE;
 		EXECUTE: NS = WRITEBACK;
 		WRITEBACK: NS = RENDER_START;
 		RENDER_START: NS = RENDER_WAIT;
@@ -414,10 +421,10 @@ begin
 				case(im_r_data[6:0])
 					R_TYPE:
 					begin
-						rs1 <= im_r_data[19:15]; //rs1
-						rs2 <= im_r_data[24:20]; // rs2
-						rd <= im_r_data[11:7]; // rd
-						func <= {im_r_data[31:25], im_r_data[14:12]}; // func
+						rs1 <= im_r_data[19:15];
+						rs2 <= im_r_data[24:20];
+						rd <= im_r_data[11:7];
+						func <= {im_r_data[31:25], im_r_data[14:12]};
 					end
 					I_TYPE_I_IMM:
 					begin
@@ -453,6 +460,20 @@ begin
 						rs2 <= im_r_data[24:20];
 						func <= im_r_data[14:12];
 						imm <= {{20{im_r_data[31]}}, im_r_data[7], im_r_data[30:25], im_r_data[11:8], 1'b0};
+					end
+					LOAD_MEM:
+					begin
+						rs1 <= im_r_data[19:15];
+						rd <= im_r_data[11:7];
+						func <= im_r_data[14:12];
+						imm <= {{21{im_r_data[31]}}, im_r_data[30:20]};
+					end
+					STORE_MEM:
+					begin
+						rs1 <= im_r_data[19:15];
+						rs2 <= im_r_data[24:20];
+						func <= im_r_data[14:12];
+						imm <= {{21{im_r_data[31]}}, im_r_data[30:25], im_r_data[11:7]};
 					end
 				endcase
 			end
@@ -631,6 +652,44 @@ begin
 				end
 			endcase
 		end
+		LOAD_MEM:
+		begin
+			register_file_read_addr_0 = rs1;
+			register_file_read_addr_1 = 5'd0;
+			alu_src_a = rf_r_data_0;
+			alu_src_b = imm;
+			rf_w_addr = rd;
+			case(func)
+				MEM_BYTE:
+					case(alu_result[1:0])
+						2'd0: rf_w_data = {{24{dm_r_data[7]}}, dm_r_data[7:0]};
+						2'd1: rf_w_data = {{24{dm_r_data[15]}}, dm_r_data[15:8]};
+						2'd2: rf_w_data = {{24{dm_r_data[23]}}, dm_r_data[23:16]};
+						2'd3: rf_w_data = {{24{dm_r_data[31]}}, dm_r_data[31:24]};
+					endcase
+				MEM_HALFWORD:
+					case(alu_result[1])
+						2'd0: rf_w_data = {{16{dm_r_data[15]}}, dm_r_data[15:0]};
+						2'd1: rf_w_data = {{16{dm_r_data[31]}}, dm_r_data[31:16]};
+					endcase
+				default: rf_w_data = dm_r_data;
+			endcase
+			rf_w_en = 1'b1;
+			alu_op = ALU_ADD;
+			reverse_operator = 1'b0;
+		end
+		STORE_MEM:
+		begin
+			register_file_read_addr_0 = rs1;
+			register_file_read_addr_1 = rs2;
+			alu_src_a = rf_r_data_0;
+			alu_src_b = imm;
+			rf_w_addr = 5'd0;
+			rf_w_data = 32'd0;
+			rf_w_en = 1'b0;
+			alu_op = ALU_ADD;
+			reverse_operator = 1'b0;
+		end
 		default:
 		begin
 			register_file_read_addr_0 = 5'd0;
@@ -645,6 +704,48 @@ begin
 		end
 	endcase
 	end
+	else if (S == DECODE || S == FETCH_DATA_MEM || WAIT_DATA_MEM)
+	begin
+		// Address Calculation
+		case(im_r_data[6:0])
+			LOAD_MEM:
+			begin
+				register_file_read_addr_0 = rs1;
+				register_file_read_addr_1 = 5'd0;
+				alu_src_a = rf_r_data_0;
+				alu_src_b = imm;
+				rf_w_addr = 5'd0;
+				rf_w_data = 32'd0;
+				rf_w_en = 1'b0;
+				alu_op = ALU_ADD;
+				reverse_operator = 1'b0;
+			end
+			STORE_MEM:
+			begin
+				register_file_read_addr_0 = rs1;
+				register_file_read_addr_1 = rs2;
+				alu_src_a = rf_r_data_0;
+				alu_src_b = imm;
+				rf_w_addr = 5'd0;
+				rf_w_data = 32'd0;
+				rf_w_en = 1'b0;
+				alu_op = ALU_ADD;
+				reverse_operator = 1'b0;
+			end
+			default:
+			begin
+				register_file_read_addr_0 = 5'd0;
+				register_file_read_addr_1 = 5'd0;
+				alu_src_a = 32'd0;
+				alu_src_b = 32'd0;
+				rf_w_addr = 5'd0;
+				rf_w_data = 32'd0;
+				rf_w_en = 1'b0;
+				alu_op = 4'hF;
+				reverse_operator = 1'b0;
+			end
+		endcase
+	end
 	else
 	begin
 		register_file_read_addr_0 = 5'd0;
@@ -656,6 +757,71 @@ begin
 		rf_w_en = 1'b0;
 		alu_op = 4'hF;
 		reverse_operator = 1'b0;
+	end
+end
+
+always@(*)
+begin
+	if (S == FETCH_DATA_MEM || S == WAIT_DATA_MEM || S == EXECUTE)
+	begin
+		case(opcode)
+			LOAD_MEM:
+			begin
+				data_memory_addr = alu_result >> 2;
+				dm_w_data = 32'd0;
+				dm_byte_en = 4'b0000;
+				dm_w_en = 1'b0;
+			end
+			STORE_MEM:
+			begin
+				data_memory_addr = alu_result >> 2;
+				case(func)
+					MEM_BYTE:
+					begin
+						// write only the first byte of the register data
+						dm_w_data = {4{rf_r_data_1[7:0]}};
+						// write only to byte specified
+						case(alu_result[1:0])
+							2'd0: dm_byte_en = 4'b0001;
+							2'd1: dm_byte_en = 4'b0010;
+							2'd2: dm_byte_en = 4'b0100;
+							2'd3: dm_byte_en = 4'b1000;
+						endcase
+					end
+					MEM_HALFWORD:
+					begin
+						// write only the first half of the register data
+						dm_w_data = {2{rf_r_data_1[15:0]}};
+						// write only to byte specified
+						case(alu_result[1])
+							2'd0: dm_byte_en = 4'b0011;
+							2'd1: dm_byte_en = 4'b1100;
+						endcase
+					end
+					default:
+					begin
+						// default to writing full word
+						dm_w_data = rf_r_data_1;
+						dm_byte_en = 4'b1111;
+					end
+				endcase
+				dm_w_en = 1'b1;
+			end
+			default:
+			begin
+				data_memory_addr = 16'd0;
+				dm_w_data = 32'd0;
+				dm_byte_en = 4'b0000;
+				dm_w_en = 1'b0;
+			end
+		endcase
+	end
+	else
+	begin
+		data_memory_addr = 16'd0;
+		dm_w_data = 32'd0;
+		dm_byte_en = 4'b0000;
+		dm_w_en = 1'b0;
 	end
 end
 
@@ -692,7 +858,9 @@ parameter I_I_IMM_ADDI = 3'b000,
 			I_I_IMM_SRI = 3'b101, // SRAI inst[30] == 1, SRLI inst[30] == 0
 			I_I_IMM_SLLI = 3'b001;
 			
-parameter MEM_WORD = 3'b010, MEM_BYTE = 3'b000;
+parameter MEM_WORD = 3'b010,
+			MEM_BYTE = 3'b000,
+			MEM_HALFWORD = 3'b001;
 
 parameter BEQ = 3'b000,
 			BNE = 3'b001,
