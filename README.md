@@ -37,14 +37,14 @@ FPGA RISC-V Processor
     - [X] AUIPC
     - [ ] LW
     - [ ] SW
-    - [ ] JAL
+    - [X] JAL
     - [X] JALR
-    - [ ] BEQ
-    - [ ] BNE
-    - [ ] BLT
-    - [ ] BGE
-    - [ ] BLTU
-    - [ ] BGEU
+    - [X] BEQ
+    - [X] BNE
+    - [X] BLT
+    - [X] BGE
+    - [X] BLTU
+    - [X] BGEU
 
 # Components
 For Tiny RISC-V:

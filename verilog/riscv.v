@@ -323,7 +323,8 @@ reg [4:0]rs2;
 reg [4:0]rd;
 reg [9:0]func;
 reg [31:0]imm;
-
+reg branch_flag;
+reg reverse_operator;
 
 parameter START = 8'd0,
 			RELEASE = 8'd1, 
@@ -392,6 +393,7 @@ begin
 		rd <= 5'd0;
 		func <= 10'd0;
 		imm <= 32'd0;
+		branch_flag <= 1'b0;
 	end
 	else
 	begin
@@ -445,17 +447,30 @@ begin
 						rd <= im_r_data[11:7];
 						imm <= {{21{im_r_data[31]}}, im_r_data[30:20]};
 					end
+					BRANCH:
+					begin
+						rs1 <= im_r_data[19:15];
+						rs2 <= im_r_data[24:20];
+						func <= im_r_data[14:12];
+						imm <= {{20{im_r_data[31]}}, im_r_data[7], im_r_data[30:25], im_r_data[11:8], 1'b0};
+					end
 				endcase
 			end
 			EXECUTE:
 			begin
-				// ?
+				if (opcode == BRANCH)
+					branch_flag <= alu_result[0] ^ reverse_operator;
 			end
 			WRITEBACK:
 			begin
 				case(opcode)
 					JAL: pc <= pc + imm;
 					JALR: pc <= (rf_r_data_0 + imm) & 32'hFFFFFFFE;
+					BRANCH:
+						if (branch_flag)
+							pc <= pc + imm;
+						else
+							pc <= pc + 32'd4;
 					default: pc <= pc + 32'd4;
 				endcase
 			end
@@ -479,6 +494,7 @@ begin
 			rf_w_addr = rd;
 			rf_w_data = alu_result;
 			rf_w_en = 1'b1;
+			reverse_operator = 1'b0;
 			case(func)
 				R_ADD: alu_op = ALU_ADD;
 				R_SUB: alu_op = ALU_SUB;
@@ -503,6 +519,7 @@ begin
 			rf_w_addr = rd;
 			rf_w_data = alu_result;
 			rf_w_en = 1'b1;
+			reverse_operator = 1'b0;
 			case(func[2:0])
 				I_I_IMM_ADDI: alu_op = ALU_ADD;
 				I_I_IMM_ANDI: alu_op = ALU_AND;
@@ -529,6 +546,7 @@ begin
 			rf_w_data = imm;
 			rf_w_en = 1'b1;
 			alu_op = 4'hF;
+			reverse_operator = 1'b0;
 		end
 		AUIPC:
 		begin
@@ -540,6 +558,7 @@ begin
 			rf_w_data = alu_result;
 			rf_w_en = 1'b1;
 			alu_op = ALU_ADD;
+			reverse_operator = 1'b0;
 		end
 		JAL:
 		begin
@@ -551,6 +570,7 @@ begin
 			rf_w_data = alu_result;
 			rf_w_en = 1'b1;
 			alu_op = ALU_ADD;
+			reverse_operator = 1'b0;
 		end
 		JALR:
 		begin
@@ -562,6 +582,54 @@ begin
 			rf_w_data = alu_result;
 			rf_w_en = 1'b1;
 			alu_op = ALU_ADD;
+			reverse_operator = 1'b0;
+		end
+		BRANCH:
+		begin
+			register_file_read_addr_0 = rs1;
+			register_file_read_addr_1 = rs2;
+			alu_src_a = rf_r_data_0;
+			alu_src_b = rf_r_data_1;
+			rf_w_addr = 5'd0;
+			rf_w_data = 32'd0;
+			rf_w_en = 1'b0;
+			case(func[2:0])
+				BEQ:
+				begin
+					alu_op = ALU_EQ;
+					reverse_operator = 1'b0;
+				end
+				BNE:
+				begin
+					alu_op = ALU_EQ;
+					reverse_operator = 1'b1;
+				end
+				BLT:
+				begin
+					alu_op = ALU_LT;
+					reverse_operator = 1'b0;
+				end
+				BGE:
+				begin
+					alu_op = ALU_LT;
+					reverse_operator = 1'b1;
+				end
+				BLTU:
+				begin
+					alu_op = ALU_LT_U;
+					reverse_operator = 1'b0;
+				end
+				BGEU:
+				begin
+					alu_op = ALU_LT_U;
+					reverse_operator = 1'b1;
+				end
+				default:
+				begin
+					alu_op = 4'hF;
+					reverse_operator = 1'b0;
+				end
+			endcase
 		end
 		default:
 		begin
@@ -573,6 +641,7 @@ begin
 			rf_w_data = 32'd0;
 			rf_w_en = 1'b0;
 			alu_op = 4'hF;
+			reverse_operator = 1'b0;
 		end
 	endcase
 	end
@@ -584,8 +653,9 @@ begin
 		alu_src_b = 32'd0;
 		rf_w_addr = 5'd0;
 		rf_w_data = 32'd0;
-		rf_w_en <= 1'b0;
+		rf_w_en = 1'b0;
 		alu_op = 4'hF;
+		reverse_operator = 1'b0;
 	end
 end
 
@@ -599,10 +669,8 @@ parameter R_TYPE = 7'b0110011,
 			JAL = 7'b1101111,
 			JALR = 7'b1100111,
 			BRANCH = 7'b1100011;
-		
-// func codes	
-parameter MEM_WORD = 3'b010, MEM_BYTE = 3'b000;
 
+// func codes	
 parameter R_ADD = 10'b0000000000,
 			R_SUB = 10'b0100000000,
 			R_AND = 10'b0000000111,
@@ -623,6 +691,15 @@ parameter I_I_IMM_ADDI = 3'b000,
 			I_I_IMM_SLTIU = 3'b011,
 			I_I_IMM_SRI = 3'b101, // SRAI inst[30] == 1, SRLI inst[30] == 0
 			I_I_IMM_SLLI = 3'b001;
+			
+parameter MEM_WORD = 3'b010, MEM_BYTE = 3'b000;
+
+parameter BEQ = 3'b000,
+			BNE = 3'b001,
+			BLT = 3'b100,
+			BGE = 3'b101,
+			BLTU = 3'b110,
+			BGEU = 3'b111;
 
 // alu_op codes			
 parameter ALU_ADD = 4'd0,
