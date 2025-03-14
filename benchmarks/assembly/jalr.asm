@@ -7,6 +7,6 @@ jal ra test_jump_return
 j end
 
 test_jump_return: addi t2 zero 0xAA
-jalr ra ra 0 # equivalent to jr ra
+jr ra # pseudo-instruction for jalr zero ra 0
 
 end: addi t2 zero 0xFA

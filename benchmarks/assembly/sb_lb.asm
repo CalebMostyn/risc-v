@@ -1,7 +1,7 @@
 # Store/load byte test -- stores to each byte individually (ending with 0x0A0B0C0D)
 # then loads them individually into another register
 
-lui t1 0x10040
+lui t1 0 # for RARS, 0x10040
 li t0 0x0D
 sb t0 3(t1)
 li t0 0x0C
