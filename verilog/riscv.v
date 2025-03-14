@@ -134,6 +134,7 @@ register_renderer rr(
 	.start(rr_start), // start rendering
 	.rf_addr(rr_addr), // register file in-addr
 	.rf_data(rf_r_data_0), // register file output
+	.pc(pc),
 	.ascii_write_en(rr_vga_write_en),
 	.ascii_input(rr_vga_input_data),
 	.ascii_write_address(rr_vga_write_address),
