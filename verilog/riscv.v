@@ -1,76 +1,14 @@
 module riscv(
-	//////////// ADC //////////
-	//output		          		ADC_CONVST,
-	//output		          		ADC_DIN,
-	//input 		          		ADC_DOUT,
-	//output		          		ADC_SCLK,
-
-	//////////// Audio //////////
-	//input 		          		AUD_ADCDAT,
-	//inout 		          		AUD_ADCLRCK,
-	//inout 		          		AUD_BCLK,
-	//output		          		AUD_DACDAT,
-	//inout 		          		AUD_DACLRCK,
-	//output		          		AUD_XCK,
-
-	//////////// CLOCK //////////
-	//input 		          		CLOCK2_50,
-	//input 		          		CLOCK3_50,
-	//input 		          		CLOCK4_50,
 	input 		          		CLOCK_50,
-
-	//////////// SDRAM //////////
-	//output		    [12:0]		DRAM_ADDR,
-	//output		     [1:0]		DRAM_BA,
-	//output		          		DRAM_CAS_N,
-	//output		          		DRAM_CKE,
-	//output		          		DRAM_CLK,
-	//output		          		DRAM_CS_N,
-	//inout 		    [15:0]		DRAM_DQ,
-	//output		          		DRAM_LDQM,
-	//output		          		DRAM_RAS_N,
-	//output		          		DRAM_UDQM,
-	//output		          		DRAM_WE_N,
-
-	//////////// I2C for Audio and Video-In //////////
-	//output		          		FPGA_I2C_SCLK,
-	//inout 		          		FPGA_I2C_SDAT,
-
-	//////////// SEG7 //////////
 	output		     [6:0]		HEX0,
 	output		     [6:0]		HEX1,
 	output		     [6:0]		HEX2,
 	output		     [6:0]		HEX3,
 	output		     [6:0]		HEX4,
 	output		     [6:0]		HEX5,
-
-	//////////// IR //////////
-	//input 		          		IRDA_RXD,
-	//output		          		IRDA_TXD,
-
-	//////////// KEY //////////
 	input 		     [3:0]		KEY,
-
-	//////////// LED //////////
 	output		     [9:0]		LEDR,
-
-	//////////// PS2 //////////
-	//inout 		          		PS2_CLK,
-	//inout 		          		PS2_CLK2,
-	//inout 		          		PS2_DAT,
-	//inout 		          		PS2_DAT2,
-
-	//////////// SW //////////
 	input 		     [9:0]		SW,
-
-	//////////// Video-In //////////
-	//input 		          		TD_CLK27,
-	//input 		     [7:0]		TD_DATA,
-	//input 		          		TD_HS,
-	//output		          		TD_RESET_N,
-	//input 		          		TD_VS,
-
-	//////////// VGA //////////
 	output		          		VGA_BLANK_N,
 	output		     [7:0]		VGA_B,
 	output		          		VGA_CLK,
@@ -79,12 +17,6 @@ module riscv(
 	output		     [7:0]		VGA_R,
 	output		          		VGA_SYNC_N,
 	output		          		VGA_VS
-
-	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-	//inout 		    [35:0]		GPIO_0,
-
-	//////////// GPIO_1, GPIO_1 connect to GPIO Default //////////
-	//inout 		    [35:0]		GPIO_1
 );
 
 assign clk = CLOCK_50;
@@ -326,19 +258,26 @@ reg [31:0]imm;
 reg branch_flag;
 reg reverse_operator;
 
+reg execution_run;
+reg execution_done;
+
 parameter START = 8'd0,
-			RELEASE = 8'd1, 
-			FETCH = 8'd2,
-			FETCH_INST_MEM = 8'd3,
-			WAIT_INST_MEM = 8'd4,
-			DECODE = 8'd5,
-			EXECUTE = 8'd6,
-			FETCH_DATA_MEM = 8'd7,
-			WAIT_DATA_MEM = 8'd8,
-			WRITEBACK = 8'd9,
-			RENDER_START = 8'd10,
-			RENDER_WAIT = 8'd11,
-			RENDER_DONE = 8'd12,
+			WAIT_KEY_PRESS = 8'd1,
+			RELEASE_STEP = 8'd2,
+			RELEASE_RUN = 8'd3, 
+			FETCH = 8'd4,
+			FETCH_INST_MEM = 8'd5,
+			WAIT_INST_MEM = 8'd6,
+			DECODE = 8'd7,
+			EXECUTE = 8'd8,
+			FETCH_DATA_MEM = 8'd9,
+			WAIT_DATA_MEM = 8'd10,
+			WRITEBACK = 8'd11,
+			RENDER_START = 8'd12,
+			RENDER_WAIT = 8'd13,
+			RENDER_DONE = 8'd14,
+			EXECUTION_DONE = 8'd15,
+			DONE_RELEASE = 8'd16,
 			ERR = 8'hFF;
 			
 always@(posedge clk or negedge rst)
@@ -352,16 +291,24 @@ end
 always@(*)
 begin
 	case(S)
-		START: 
+		START: NS = RENDER_START;
+		WAIT_KEY_PRESS:
 			if (~KEY[0])
-				NS = RELEASE;
+				NS = RELEASE_STEP;
+			else if (~KEY[1])
+				NS = RELEASE_RUN;
 			else
-				NS = START;
-		RELEASE:
+				NS = WAIT_KEY_PRESS;
+		RELEASE_STEP:
 			if (KEY[0])
 				NS = FETCH;
 			else
-				NS = RELEASE;
+				NS = RELEASE_STEP;
+		RELEASE_RUN:
+			if (KEY[1])
+				NS = FETCH;
+			else
+				NS = RELEASE_RUN;
 		FETCH: NS = FETCH_INST_MEM;
 		FETCH_INST_MEM: NS = WAIT_INST_MEM;
 		WAIT_INST_MEM: NS = DECODE;
@@ -373,14 +320,32 @@ begin
 		FETCH_DATA_MEM: NS = WAIT_DATA_MEM;
 		WAIT_DATA_MEM: NS = EXECUTE;
 		EXECUTE: NS = WRITEBACK;
-		WRITEBACK: NS = RENDER_START;
+		WRITEBACK: 
+			if (~execution_run || execution_done)
+				NS = RENDER_START;
+			else
+				NS = FETCH;
 		RENDER_START: NS = RENDER_WAIT;
 		RENDER_WAIT:
 			if (render_done)
 				NS = RENDER_DONE;
 			else
 				NS = RENDER_WAIT;
-		RENDER_DONE: NS = START;
+		RENDER_DONE: 
+			if (execution_done)
+				NS = EXECUTION_DONE;
+			else
+				NS = WAIT_KEY_PRESS;
+		EXECUTION_DONE:
+			if (~KEY[0] || ~KEY[1] || ~KEY[2])
+				NS = DONE_RELEASE;
+			else
+				NS = EXECUTION_DONE;
+		DONE_RELEASE:
+			if (KEY[0] && KEY[1] && KEY[2])
+				NS = RENDER_START;
+			else
+				NS = DONE_RELEASE;
 		default: NS = ERR;
 	endcase
 end
@@ -401,6 +366,8 @@ begin
 		func <= 10'd0;
 		imm <= 32'd0;
 		branch_flag <= 1'b0;
+		execution_run <= 1'b0;
+		execution_done <= 1'b0;
 	end
 	else
 	begin
@@ -409,9 +376,25 @@ begin
 			begin
 				render_start <= 1'b0;
 				reset_render <= 1'b1;
+				curr_rend_mem_addr <= 20'd0;
+				pc <= 32'd0;
+				inst <= 32'd0;
+				opcode <= 7'd0;
+				rs1 <= 5'd0;
+				rs2 <= 5'd0;
+				rd <= 5'd0;
+				func <= 10'd0;
+				imm <= 32'd0;
+				branch_flag <= 1'b0;
+				execution_run <= 1'b0;
+				execution_done <= 1'b0;
 			end
+			RELEASE_STEP: execution_run <= 1'b0;
+			RELEASE_RUN: execution_run <= 1'b1;
 			FETCH:
 			begin
+				render_start <= 1'b0;
+				reset_render <= 1'b1;
 				instruction_memory_addr <= pc >> 2;
 			end
 			DECODE:
@@ -481,6 +464,9 @@ begin
 			begin
 				if (opcode == BRANCH)
 					branch_flag <= alu_result[0] ^ reverse_operator;
+					
+				if (inst == 32'd0 || pc > 32'h0000F9FC)
+					execution_done <= 1'b1;
 			end
 			WRITEBACK:
 			begin
@@ -497,6 +483,11 @@ begin
 			end
 			RENDER_START: render_start <= 1'b1;
 			RENDER_DONE: reset_render <= 1'b0;
+			EXECUTION_DONE:
+			begin
+				render_start <= 1'b0;
+				reset_render <= 1'b1;
+			end
 		endcase
 	end
 end

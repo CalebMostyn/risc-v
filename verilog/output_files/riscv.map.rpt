@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Wed Mar 12 16:22:17 2025
+Fri Mar 14 09:15:52 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -50,13 +50,12 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  42. Parameter Settings for User Entity Instance: memory_renderer:mr
  43. Parameter Settings for User Entity Instance: register_renderer:rr
  44. altsyncram Parameter Settings by Entity Instance
- 45. Port Connectivity Checks: "memory_renderer:mr"
- 46. Port Connectivity Checks: "ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer"
- 47. Port Connectivity Checks: "ascii_master_controller:controller"
- 48. Post-Synthesis Netlist Statistics for Top Partition
- 49. Elapsed Time Per Partition
- 50. Analysis & Synthesis Messages
- 51. Analysis & Synthesis Suppressed Messages
+ 45. Port Connectivity Checks: "ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer"
+ 46. Port Connectivity Checks: "ascii_master_controller:controller"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+ 50. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -83,13 +82,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 12 16:22:17 2025          ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 14 09:15:52 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 1478                                           ;
+; Total registers                 ; 1507                                           ;
 ; Total pins                      ; 96                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 3,125,248                                      ;
@@ -209,7 +208,9 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processors 7-16        ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -258,7 +259,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/decode_61a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_61a.tdf                                ;         ;
 ; db/mux_ahb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_ahb.tdf                                   ;         ;
 ; db/altsyncram_92h1.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_92h1.tdf                           ;         ;
-; ../instruction_memory.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
+; instruction_memory.mif                           ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
 ; db/decode_u0a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_u0a.tdf                                ;         ;
 ; db/mux_2hb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_2hb.tdf                                   ;         ;
 +--------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
@@ -269,16 +270,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2546           ;
+; Estimate of Logic utilization (ALMs needed) ; 2733           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 3256           ;
-;     -- 7 input functions                    ; 93             ;
-;     -- 6 input functions                    ; 1568           ;
-;     -- 5 input functions                    ; 481            ;
-;     -- 4 input functions                    ; 441            ;
-;     -- <=3 input functions                  ; 673            ;
+; Combinational ALUT usage for logic          ; 3522           ;
+;     -- 7 input functions                    ; 103            ;
+;     -- 6 input functions                    ; 1677           ;
+;     -- 5 input functions                    ; 598            ;
+;     -- 4 input functions                    ; 460            ;
+;     -- <=3 input functions                  ; 684            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1478           ;
+; Dedicated logic registers                   ; 1507           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 96             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -287,9 +288,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 2              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1866           ;
-; Total fan-out                               ; 29418          ;
-; Average fan-out                             ; 5.50           ;
+; Maximum fan-out                             ; 1895           ;
+; Total fan-out                               ; 30739          ;
+; Average fan-out                             ; 5.45           ;
 +---------------------------------------------+----------------+
 
 
@@ -298,9 +299,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |riscv                                             ; 3256 (665)          ; 1478 (127)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
-;    |alu:alu_0|                                     ; 402 (402)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |riscv|alu:alu_0                                                                                                                                                               ; alu                     ; work         ;
-;    |ascii_master_controller:controller|            ; 160 (44)            ; 191 (25)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
+; |riscv                                             ; 3522 (810)          ; 1507 (157)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
+;    |alu:alu_0|                                     ; 392 (392)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |riscv|alu:alu_0                                                                                                                                                               ; alu                     ; work         ;
+;    |ascii_master_controller:controller|            ; 160 (44)            ; 190 (24)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
 ;       |ascii_master:master|                        ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master                                                                                                                  ; ascii_master            ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component                                                                                  ; altsyncram              ; work         ;
 ;             |altsyncram_lb12:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated                                                   ; altsyncram_lb12         ; work         ;
@@ -320,17 +321,17 @@ https://fpgasoftware.intel.com/eula.
 ;    |data_memory:dm|                                ; 114 (0)             ; 6 (0)                     ; 1843200           ; 0          ; 0    ; 0            ; |riscv|data_memory:dm                                                                                                                                                          ; data_memory             ; work         ;
 ;       |altsyncram:altsyncram_component|            ; 114 (0)             ; 6 (0)                     ; 1843200           ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component                                                                                                                          ; altsyncram              ; work         ;
 ;          |altsyncram_cjq1:auto_generated|          ; 114 (0)             ; 6 (6)                     ; 1843200           ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated                                                                                           ; altsyncram_cjq1         ; work         ;
-;             |decode_61a:rden_decode|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|decode_61a:rden_decode                                                                    ; decode_61a              ; work         ;
-;             |decode_dla:decode3|                   ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|decode_dla:decode3                                                                        ; decode_dla              ; work         ;
+;             |decode_61a:rden_decode|               ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|decode_61a:rden_decode                                                                    ; decode_61a              ; work         ;
+;             |decode_dla:decode3|                   ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|decode_dla:decode3                                                                        ; decode_dla              ; work         ;
 ;             |mux_ahb:mux2|                         ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2                                                                              ; mux_ahb                 ; work         ;
 ;    |instruction_memory:im|                         ; 32 (0)              ; 2 (0)                     ; 512000            ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im                                                                                                                                                   ; instruction_memory      ; work         ;
 ;       |altsyncram:altsyncram_component|            ; 32 (0)              ; 2 (0)                     ; 512000            ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im|altsyncram:altsyncram_component                                                                                                                   ; altsyncram              ; work         ;
 ;          |altsyncram_92h1:auto_generated|          ; 32 (0)              ; 2 (2)                     ; 512000            ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im|altsyncram:altsyncram_component|altsyncram_92h1:auto_generated                                                                                    ; altsyncram_92h1         ; work         ;
 ;             |mux_2hb:mux2|                         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im|altsyncram:altsyncram_component|altsyncram_92h1:auto_generated|mux_2hb:mux2                                                                       ; mux_2hb                 ; work         ;
-;    |memory_renderer:mr|                            ; 620 (617)           ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr                                                                                                                                                      ; memory_renderer         ; work         ;
+;    |memory_renderer:mr|                            ; 622 (619)           ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr                                                                                                                                                      ; memory_renderer         ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr|nibble_to_hex:hex                                                                                                                                    ; nibble_to_hex           ; work         ;
-;    |register_file:rf|                              ; 742 (742)           ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
-;    |register_renderer:rr|                          ; 521 (518)           ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr                                                                                                                                                    ; register_renderer       ; work         ;
+;    |register_file:rf|                              ; 872 (872)           ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
+;    |register_renderer:rr|                          ; 520 (517)           ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr                                                                                                                                                    ; register_renderer       ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr|nibble_to_hex:hex                                                                                                                                  ; nibble_to_hex           ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -374,26 +375,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |riscv|S                                                                                                                                                                                                 ;
-+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+-----------+---------+-------+
-; Name             ; S.RENDER_DONE ; S.RENDER_WAIT ; S.RENDER_START ; S.WRITEBACK ; S.WAIT_DATA_MEM ; S.FETCH_DATA_MEM ; S.EXECUTE ; S.DECODE ; S.WAIT_INST_MEM ; S.FETCH_INST_MEM ; S.FETCH ; S.RELEASE ; S.START ; S.ERR ;
-+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+-----------+---------+-------+
-; S.START          ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 0       ; 0     ;
-; S.RELEASE        ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 1         ; 1       ; 0     ;
-; S.FETCH          ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 1       ; 0         ; 1       ; 0     ;
-; S.FETCH_INST_MEM ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 1                ; 0       ; 0         ; 1       ; 0     ;
-; S.WAIT_INST_MEM  ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 1               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.DECODE         ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 1        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.EXECUTE        ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 1         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.FETCH_DATA_MEM ; 0             ; 0             ; 0              ; 0           ; 0               ; 1                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.WAIT_DATA_MEM  ; 0             ; 0             ; 0              ; 0           ; 1               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.WRITEBACK      ; 0             ; 0             ; 0              ; 1           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.RENDER_START   ; 0             ; 0             ; 1              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.RENDER_WAIT    ; 0             ; 1             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.RENDER_DONE    ; 1             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 0     ;
-; S.ERR            ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0         ; 1       ; 1     ;
-+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+-----------+---------+-------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |riscv|S                                                                                                                                                                                                                                                                             ;
++------------------+----------------+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+---------------+----------------+------------------+---------+-------+
+; Name             ; S.DONE_RELEASE ; S.EXECUTION_DONE ; S.RENDER_DONE ; S.RENDER_WAIT ; S.RENDER_START ; S.WRITEBACK ; S.WAIT_DATA_MEM ; S.FETCH_DATA_MEM ; S.EXECUTE ; S.DECODE ; S.WAIT_INST_MEM ; S.FETCH_INST_MEM ; S.FETCH ; S.RELEASE_RUN ; S.RELEASE_STEP ; S.WAIT_KEY_PRESS ; S.START ; S.ERR ;
++------------------+----------------+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+---------------+----------------+------------------+---------+-------+
+; S.START          ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 0       ; 0     ;
+; S.WAIT_KEY_PRESS ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 1                ; 1       ; 0     ;
+; S.RELEASE_STEP   ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 1              ; 0                ; 1       ; 0     ;
+; S.RELEASE_RUN    ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 1             ; 0              ; 0                ; 1       ; 0     ;
+; S.FETCH          ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 1       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.FETCH_INST_MEM ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 1                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.WAIT_INST_MEM  ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 1               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.DECODE         ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 1        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.EXECUTE        ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 1         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.FETCH_DATA_MEM ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 1                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.WAIT_DATA_MEM  ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 1               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.WRITEBACK      ; 0              ; 0                ; 0             ; 0             ; 0              ; 1           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.RENDER_START   ; 0              ; 0                ; 0             ; 0             ; 1              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.RENDER_WAIT    ; 0              ; 0                ; 0             ; 1             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.RENDER_DONE    ; 0              ; 0                ; 1             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.EXECUTION_DONE ; 0              ; 1                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.DONE_RELEASE   ; 1              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 0     ;
+; S.ERR            ; 0              ; 0                ; 0             ; 0             ; 0              ; 0           ; 0               ; 0                ; 0         ; 0        ; 0               ; 0                ; 0       ; 0             ; 0              ; 0                ; 1       ; 1     ;
++------------------+----------------+------------------+---------------+---------------+----------------+-------------+-----------------+------------------+-----------+----------+-----------------+------------------+---------+---------------+----------------+------------------+---------+-------+
 
 
 Encoding Type:  One-Hot
@@ -506,91 +511,100 @@ Encoding Type:  One-Hot
 +-----------+----------+----------+-----------+------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-; Register name                                                                                   ; Reason for Removal                                           ;
-+-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-; register_renderer:rr|ascii_input[31]                                                            ; Lost fanout                                                  ;
-; memory_renderer:mr|ascii_input[31]                                                              ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[31] ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_1[31] ; Lost fanout                                                  ;
-; memory_renderer:mr|curr_addr[0,1]                                                               ; Stuck at GND due to stuck port data_in                       ;
-; memory_renderer:mr|ascii_input[1..23]                                                           ; Merged with memory_renderer:mr|ascii_input[0]                ;
-; register_renderer:rr|ascii_input[1..23]                                                         ; Merged with register_renderer:rr|ascii_input[0]              ;
-; register_file:rf|data[0][31]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][30]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][29]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][28]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][27]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][26]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][25]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][24]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][23]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][22]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][21]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][20]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][19]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][18]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][17]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][16]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][15]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][14]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][13]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][12]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][11]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][10]                                                                    ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][9]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][8]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][7]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][6]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][5]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][4]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][3]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][2]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][1]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; register_file:rf|data[0][0]                                                                     ; Stuck at GND due to stuck port clock_enable                  ;
-; S~4                                                                                             ; Lost fanout                                                  ;
-; S~5                                                                                             ; Lost fanout                                                  ;
-; S~6                                                                                             ; Lost fanout                                                  ;
-; S~7                                                                                             ; Lost fanout                                                  ;
-; S~9                                                                                             ; Lost fanout                                                  ;
-; S~10                                                                                            ; Lost fanout                                                  ;
-; S~11                                                                                            ; Lost fanout                                                  ;
-; register_renderer:rr|S~4                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~5                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~6                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~7                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~8                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~9                                                                        ; Lost fanout                                                  ;
-; register_renderer:rr|S~10                                                                       ; Lost fanout                                                  ;
-; register_renderer:rr|S~11                                                                       ; Lost fanout                                                  ;
-; memory_renderer:mr|S~4                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~5                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~6                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~7                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~8                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~9                                                                          ; Lost fanout                                                  ;
-; memory_renderer:mr|S~10                                                                         ; Lost fanout                                                  ;
-; memory_renderer:mr|S~11                                                                         ; Lost fanout                                                  ;
-; ascii_master_controller:controller|WRITE_S~4                                                    ; Lost fanout                                                  ;
-; ascii_master_controller:controller|WRITE_S~5                                                    ; Lost fanout                                                  ;
-; ascii_master_controller:controller|WRITE_S~6                                                    ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|SWITCH_S~4                         ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|SWITCH_S~5                         ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~4           ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~5           ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs~4             ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs~5             ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs~4             ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs~5             ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.ERROR       ; Lost fanout                                                  ;
-; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.START       ; Merged with ascii_master_controller:controller|WRITE_S.START ;
-; S.ERR                                                                                           ; Stuck at GND due to stuck port data_in                       ;
-; register_renderer:rr|S.ERR                                                                      ; Stuck at GND due to stuck port data_in                       ;
-; memory_renderer:mr|S.ERR                                                                        ; Stuck at GND due to stuck port data_in                       ;
-; Total Number of Removed Registers = 123                                                         ;                                                              ;
-+-------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------+
+; Register name                                                                                   ; Reason for Removal                              ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------+
+; register_renderer:rr|ascii_input[31]                                                            ; Lost fanout                                     ;
+; memory_renderer:mr|ascii_input[31]                                                              ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_2[31] ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|data_in_1[31] ; Lost fanout                                     ;
+; curr_rend_mem_addr[0..19]                                                                       ; Stuck at GND due to stuck port data_in          ;
+; memory_renderer:mr|curr_addr[0,1]                                                               ; Stuck at GND due to stuck port data_in          ;
+; memory_renderer:mr|ascii_input[1..23]                                                           ; Merged with memory_renderer:mr|ascii_input[0]   ;
+; register_renderer:rr|ascii_input[1..23]                                                         ; Merged with register_renderer:rr|ascii_input[0] ;
+; opcode[6]                                                                                       ; Merged with inst[6]                             ;
+; opcode[5]                                                                                       ; Merged with inst[5]                             ;
+; opcode[4]                                                                                       ; Merged with inst[4]                             ;
+; opcode[3]                                                                                       ; Merged with inst[3]                             ;
+; opcode[2]                                                                                       ; Merged with inst[2]                             ;
+; opcode[1]                                                                                       ; Merged with inst[1]                             ;
+; opcode[0]                                                                                       ; Merged with inst[0]                             ;
+; register_file:rf|data[0][31]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][30]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][29]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][28]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][27]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][26]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][25]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][24]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][23]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][22]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][21]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][20]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][19]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][18]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][17]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][16]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][15]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][14]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][13]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][12]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][11]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][10]                                                                    ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][9]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][8]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][7]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][6]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][5]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][4]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][3]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][2]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][1]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; register_file:rf|data[0][0]                                                                     ; Stuck at GND due to stuck port clock_enable     ;
+; S~4                                                                                             ; Lost fanout                                     ;
+; S~5                                                                                             ; Lost fanout                                     ;
+; S~6                                                                                             ; Lost fanout                                     ;
+; S~7                                                                                             ; Lost fanout                                     ;
+; S~8                                                                                             ; Lost fanout                                     ;
+; S~10                                                                                            ; Lost fanout                                     ;
+; S~11                                                                                            ; Lost fanout                                     ;
+; register_renderer:rr|S~4                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~5                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~6                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~7                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~8                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~9                                                                        ; Lost fanout                                     ;
+; register_renderer:rr|S~10                                                                       ; Lost fanout                                     ;
+; register_renderer:rr|S~11                                                                       ; Lost fanout                                     ;
+; memory_renderer:mr|S~4                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~5                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~6                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~7                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~8                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~9                                                                          ; Lost fanout                                     ;
+; memory_renderer:mr|S~10                                                                         ; Lost fanout                                     ;
+; memory_renderer:mr|S~11                                                                         ; Lost fanout                                     ;
+; ascii_master_controller:controller|WRITE_S~4                                                    ; Lost fanout                                     ;
+; ascii_master_controller:controller|WRITE_S~5                                                    ; Lost fanout                                     ;
+; ascii_master_controller:controller|WRITE_S~6                                                    ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S~4                         ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|SWITCH_S~5                         ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~4           ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~5           ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs~4             ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hs~5             ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs~4             ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vs~5             ; Lost fanout                                     ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.ERROR       ; Lost fanout                                     ;
+; ascii_master_controller:controller|WRITE_S.START                                                ; Merged with S.START                             ;
+; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.START       ; Merged with S.START                             ;
+; S.ERR                                                                                           ; Stuck at GND due to stuck port data_in          ;
+; register_renderer:rr|S.ERR                                                                      ; Stuck at GND due to stuck port data_in          ;
+; memory_renderer:mr|S.ERR                                                                        ; Stuck at GND due to stuck port data_in          ;
+; Total Number of Removed Registers = 151                                                         ;                                                 ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -604,6 +618,10 @@ Encoding Type:  One-Hot
 ;                                                                                       ;                                ; register_file:rf|data[0][7]                                                               ;
 ; register_file:rf|data[0][6]                                                           ; Stuck at GND                   ; register_file:rf|data[0][5], register_file:rf|data[0][4],                                 ;
 ;                                                                                       ; due to stuck port clock_enable ; register_file:rf|data[0][3]                                                               ;
+; curr_rend_mem_addr[1]                                                                 ; Stuck at GND                   ; memory_renderer:mr|curr_addr[1]                                                           ;
+;                                                                                       ; due to stuck port data_in      ;                                                                                           ;
+; curr_rend_mem_addr[0]                                                                 ; Stuck at GND                   ; memory_renderer:mr|curr_addr[0]                                                           ;
+;                                                                                       ; due to stuck port data_in      ;                                                                                           ;
 ; register_file:rf|data[0][31]                                                          ; Stuck at GND                   ; register_file:rf|data[0][0]                                                               ;
 ;                                                                                       ; due to stuck port clock_enable ;                                                                                           ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~4 ; Lost Fanouts                   ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.ERROR ;
@@ -615,12 +633,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1478  ;
+; Total registers                              ; 1507  ;
 ; Number of registers using Synchronous Clear  ; 60    ;
-; Number of registers using Synchronous Load   ; 107   ;
-; Number of registers using Asynchronous Clear ; 1306  ;
+; Number of registers using Synchronous Load   ; 58    ;
+; Number of registers using Asynchronous Clear ; 1335  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1322  ;
+; Number of registers using Clock Enable       ; 1228  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -634,7 +652,7 @@ Encoding Type:  One-Hot
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vblank ; 18      ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_hs ; 1       ;
 ; ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vga_vs ; 1       ;
-; reset_render                                                                          ; 5       ;
+; reset_render                                                                          ; 6       ;
 ; register_renderer:rr|bg_str_count[7]                                                  ; 137     ;
 ; register_renderer:rr|bg_str_count[0]                                                  ; 163     ;
 ; register_renderer:rr|bg_str_count[3]                                                  ; 125     ;
@@ -665,62 +683,62 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|reg_num[0]                                                                                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|reg_num[1]                                                                                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[4]                                                                             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[4]                                                                               ;
-; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[14]                  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_input[28]                                                                             ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|memory_renderer:mr|ascii_input[25]                                                                               ;
-; 60:1               ; 6 bits    ; 240 LEs       ; 6 LEs                ; 234 LEs                ; Yes        ; |riscv|imm[8]                                                                                                           ;
-; 60:1               ; 11 bits   ; 440 LEs       ; 0 LEs                ; 440 LEs                ; Yes        ; |riscv|imm[23]                                                                                                          ;
-; 60:1               ; 8 bits    ; 320 LEs       ; 0 LEs                ; 320 LEs                ; Yes        ; |riscv|imm[12]                                                                                                          ;
-; 63:1               ; 7 bits    ; 294 LEs       ; 7 LEs                ; 287 LEs                ; Yes        ; |riscv|func[9]                                                                                                          ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[6]                         ;
-; 129:1              ; 30 bits   ; 2580 LEs      ; 60 LEs               ; 2520 LEs               ; Yes        ; |riscv|pc[9]                                                                                                            ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[2]                                                                      ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[3]                                                                      ;
-; 62:1               ; 4 bits    ; 164 LEs       ; 8 LEs                ; 156 LEs                ; Yes        ; |riscv|imm[3]                                                                                                           ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[0]                         ;
-; 12:1               ; 12 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |riscv|memory_renderer:mr|ascii_write_address[7]                                                                        ;
-; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[1]                                                                                     ;
-; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[3]                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|register_renderer:rr|num_count[2]                                                                                ;
+; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|read_data[6]                   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_input[25]                                                                             ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|memory_renderer:mr|ascii_input[24]                                                                               ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[8]                         ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[0]                                                                      ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[9]                                                                      ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]                         ;
+; 12:1               ; 12 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |riscv|memory_renderer:mr|ascii_write_address[12]                                                                       ;
+; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[0]                                                                                     ;
+; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[2]                                                                                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|register_renderer:rr|num_count[0]                                                                                ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|memory_renderer:mr|val_count[0]                                                                                  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[5]                                                                             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[7]                                                                             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[3]                                                                               ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |riscv|im_addr[0]                                                                                                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |riscv|Selector164                                                                                                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |riscv|Selector286                                                                                                      ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |riscv|im_addr[8]                                                                                                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight0                                                                                            ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight1                                                                                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight0                                                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_w_addr[3]                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[2]                                                                                                     ;
-; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; No         ; |riscv|vga_write_en                                                                                                     ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_r_addr_0[3]                                                                                                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[14]                                                                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[23]                                                                                                    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |riscv|dm_addr[15]                                                                                                      ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux15                                                                                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux60                                                                                           ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2|l3_w24_n0_mux_dataout ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |riscv|dm_byte_en[3]                                                                                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[28]                                                                                                    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_w_addr[1]                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[7]                                                                                                     ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; No         ; |riscv|vga_input_data[28]                                                                                               ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_r_addr_0[1]                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[9]                                                                                                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[22]                                                                                                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |riscv|dm_addr[10]                                                                                                      ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux22                                                                                           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux34                                                                                           ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2|l3_w30_n0_mux_dataout ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |riscv|dm_byte_en[0]                                                                                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[31]                                                                                                    ;
+; 60:1               ; 6 bits    ; 240 LEs       ; 12 LEs               ; 228 LEs                ; No         ; |riscv|Selector33                                                                                                       ;
+; 60:1               ; 11 bits   ; 440 LEs       ; 22 LEs               ; 418 LEs                ; No         ; |riscv|Selector12                                                                                                       ;
+; 60:1               ; 8 bits    ; 320 LEs       ; 16 LEs               ; 304 LEs                ; No         ; |riscv|Selector26                                                                                                       ;
+; 63:1               ; 7 bits    ; 294 LEs       ; 14 LEs               ; 280 LEs                ; No         ; |riscv|Selector45                                                                                                       ;
+; 129:1              ; 30 bits   ; 2580 LEs      ; 60 LEs               ; 2520 LEs               ; No         ; |riscv|Selector65                                                                                                       ;
+; 62:1               ; 4 bits    ; 164 LEs       ; 8 LEs                ; 156 LEs                ; No         ; |riscv|Selector35                                                                                                       ;
 ; 21:1               ; 5 bits    ; 70 LEs        ; 60 LEs               ; 10 LEs                 ; No         ; |riscv|alu:alu_0|Mux27                                                                                                  ;
-; 130:1              ; 30 bits   ; 2580 LEs      ; 570 LEs              ; 2010 LEs               ; No         ; |riscv|alu_src_a[6]                                                                                                     ;
-; 23:1               ; 2 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux21                                                                                                  ;
-; 21:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux19                                                                                                  ;
-; 24:1               ; 3 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux28                                                                                                  ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 22 LEs               ; 26 LEs                 ; No         ; |riscv|alu_src_a[0]                                                                                                     ;
-; 14:1               ; 31 bits   ; 279 LEs       ; 248 LEs              ; 31 LEs                 ; No         ; |riscv|alu_src_b[15]                                                                                                    ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 44 LEs               ; 4 LEs                  ; No         ; |riscv|rf_w_data[17]                                                                                                    ;
+; 130:1              ; 30 bits   ; 2580 LEs      ; 570 LEs              ; 2010 LEs               ; No         ; |riscv|alu_src_a[19]                                                                                                    ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux22                                                                                                  ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux18                                                                                                  ;
+; 24:1               ; 3 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux30                                                                                                  ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 22 LEs               ; 26 LEs                 ; No         ; |riscv|alu_src_a[1]                                                                                                     ;
+; 14:1               ; 31 bits   ; 279 LEs       ; 248 LEs              ; 31 LEs                 ; No         ; |riscv|alu_src_b[31]                                                                                                    ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 44 LEs               ; 4 LEs                  ; No         ; |riscv|rf_w_data[7]                                                                                                     ;
 ; 19:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; No         ; |riscv|rf_w_data[12]                                                                                                    ;
-; 22:1               ; 7 bits    ; 98 LEs        ; 84 LEs               ; 14 LEs                 ; No         ; |riscv|rf_w_data[6]                                                                                                     ;
-; 39:1               ; 7 bits    ; 182 LEs       ; 161 LEs              ; 21 LEs                 ; No         ; |riscv|rf_w_data[21]                                                                                                    ;
-; 42:1               ; 3 bits    ; 84 LEs        ; 75 LEs               ; 9 LEs                  ; No         ; |riscv|rf_w_data[30]                                                                                                    ;
+; 22:1               ; 7 bits    ; 98 LEs        ; 84 LEs               ; 14 LEs                 ; No         ; |riscv|rf_w_data[5]                                                                                                     ;
+; 39:1               ; 7 bits    ; 182 LEs       ; 161 LEs              ; 21 LEs                 ; No         ; |riscv|rf_w_data[20]                                                                                                    ;
+; 42:1               ; 3 bits    ; 84 LEs        ; 75 LEs               ; 9 LEs                  ; No         ; |riscv|rf_w_data[28]                                                                                                    ;
 ; 41:1               ; 2 bits    ; 54 LEs        ; 48 LEs               ; 6 LEs                  ; No         ; |riscv|rf_w_data[26]                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 
@@ -788,18 +806,22 @@ Encoding Type:  One-Hot
 ; DATA_MEMORY_RENDER        ; 01         ; Unsigned Binary              ;
 ; INSTRUCTION_MEMORY_RENDER ; 10         ; Unsigned Binary              ;
 ; START                     ; 00000000   ; Unsigned Binary              ;
-; RELEASE                   ; 00000001   ; Unsigned Binary              ;
-; FETCH                     ; 00000010   ; Unsigned Binary              ;
-; FETCH_INST_MEM            ; 00000011   ; Unsigned Binary              ;
-; WAIT_INST_MEM             ; 00000100   ; Unsigned Binary              ;
-; DECODE                    ; 00000101   ; Unsigned Binary              ;
-; EXECUTE                   ; 00000110   ; Unsigned Binary              ;
-; FETCH_DATA_MEM            ; 00000111   ; Unsigned Binary              ;
-; WAIT_DATA_MEM             ; 00001000   ; Unsigned Binary              ;
-; WRITEBACK                 ; 00001001   ; Unsigned Binary              ;
-; RENDER_START              ; 00001010   ; Unsigned Binary              ;
-; RENDER_WAIT               ; 00001011   ; Unsigned Binary              ;
-; RENDER_DONE               ; 00001100   ; Unsigned Binary              ;
+; WAIT_KEY_PRESS            ; 00000001   ; Unsigned Binary              ;
+; RELEASE_STEP              ; 00000010   ; Unsigned Binary              ;
+; RELEASE_RUN               ; 00000011   ; Unsigned Binary              ;
+; FETCH                     ; 00000100   ; Unsigned Binary              ;
+; FETCH_INST_MEM            ; 00000101   ; Unsigned Binary              ;
+; WAIT_INST_MEM             ; 00000110   ; Unsigned Binary              ;
+; DECODE                    ; 00000111   ; Unsigned Binary              ;
+; EXECUTE                   ; 00001000   ; Unsigned Binary              ;
+; FETCH_DATA_MEM            ; 00001001   ; Unsigned Binary              ;
+; WAIT_DATA_MEM             ; 00001010   ; Unsigned Binary              ;
+; WRITEBACK                 ; 00001011   ; Unsigned Binary              ;
+; RENDER_START              ; 00001100   ; Unsigned Binary              ;
+; RENDER_WAIT               ; 00001101   ; Unsigned Binary              ;
+; RENDER_DONE               ; 00001110   ; Unsigned Binary              ;
+; EXECUTION_DONE            ; 00001111   ; Unsigned Binary              ;
+; DONE_RELEASE              ; 00010000   ; Unsigned Binary              ;
 ; ERR                       ; 11111111   ; Unsigned Binary              ;
 ; R_TYPE                    ; 0110011    ; Unsigned Binary              ;
 ; I_TYPE_I_IMM              ; 0010011    ; Unsigned Binary              ;
@@ -1428,15 +1450,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "memory_renderer:mr" ;
-+------------+-------+----------+----------------+
-; Port       ; Type  ; Severity ; Details        ;
-+------------+-------+----------+----------------+
-; start_addr ; Input ; Info     ; Stuck at GND   ;
-+------------+-------+----------+----------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer"                                                                    ;
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1463,18 +1476,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1478                        ;
-;     CLR               ; 136                         ;
+; arriav_ff             ; 1507                        ;
+;     CLR               ; 259                         ;
 ;     CLR SCLR          ; 10                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 88                          ;
-;     ENA CLR           ; 1078                        ;
+;     ENA CLR           ; 1033                        ;
 ;     ENA CLR SCLR      ; 32                          ;
-;     ENA CLR SLD       ; 49                          ;
 ;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 57                          ;
 ;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 3263                        ;
+; arriav_lcell_comb     ; 3531                        ;
 ;     arith             ; 353                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 195                         ;
@@ -1482,22 +1494,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 5                           ;
 ;         5 data inputs ; 94                          ;
-;     extend            ; 93                          ;
-;         7 data inputs ; 93                          ;
-;     normal            ; 2817                        ;
+;     extend            ; 103                         ;
+;         7 data inputs ; 103                         ;
+;     normal            ; 3075                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 181                         ;
-;         3 data inputs ; 237                         ;
-;         4 data inputs ; 436                         ;
-;         5 data inputs ; 387                         ;
-;         6 data inputs ; 1568                        ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 174                         ;
+;         3 data inputs ; 255                         ;
+;         4 data inputs ; 455                         ;
+;         5 data inputs ; 504                         ;
+;         6 data inputs ; 1677                        ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 421                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 8.10                        ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 8.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1506,7 +1518,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -1516,7 +1528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Mar 12 16:21:51 2025
+    Info: Processing started: Fri Mar 14 09:15:30 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file riscv.v
@@ -1553,49 +1565,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file instruc
     Info (12023): Found entity 1: instruction_memory File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
     Info (12023): Found entity 1: data_memory File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/data_memory.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at riscv.v(90): created implicit net for "clk" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at riscv.v(91): created implicit net for "rst" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 91
+Warning (10236): Verilog HDL Implicit Net warning at riscv.v(22): created implicit net for "clk" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at riscv.v(23): created implicit net for "rst" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 23
 Warning (10236): Verilog HDL Implicit Net warning at register_renderer.v(38): created implicit net for "LEDR" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/register_renderer.v Line: 38
 Warning (10236): Verilog HDL Implicit Net warning at memory_renderer.v(48): created implicit net for "LEDR" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 48
 Info (12127): Elaborating entity "riscv" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at riscv.v(237): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 237
-Warning (10230): Verilog HDL assignment warning at riscv.v(252): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 252
-Warning (10230): Verilog HDL assignment warning at riscv.v(267): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 267
-Warning (10230): Verilog HDL assignment warning at riscv.v(282): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 282
-Warning (10230): Verilog HDL assignment warning at riscv.v(299): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 299
-Info (10264): Verilog HDL Case Statement information at riscv.v(354): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 354
-Warning (10230): Verilog HDL assignment warning at riscv.v(415): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 415
-Info (10264): Verilog HDL Case Statement information at riscv.v(407): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 407
-Warning (10240): Verilog HDL Always Construct warning at riscv.v(388): inferring latch(es) for variable "curr_rend_mem_addr", which holds its previous value in one or more paths through the always construct File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Warning (10230): Verilog HDL assignment warning at riscv.v(770): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 770
-Warning (10230): Verilog HDL assignment warning at riscv.v(777): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 777
-Warning (10034): Output port "HEX0" at riscv.v(40) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-Warning (10034): Output port "HEX1" at riscv.v(41) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-Warning (10034): Output port "HEX2" at riscv.v(42) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-Warning (10034): Output port "HEX3" at riscv.v(43) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-Warning (10034): Output port "HEX4" at riscv.v(44) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-Warning (10034): Output port "HEX5" at riscv.v(45) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-Info (10041): Inferred latch for "curr_rend_mem_addr[0]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[1]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[2]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[3]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[4]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[5]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[6]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[7]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[8]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[9]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[10]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[11]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[12]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[13]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[14]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[15]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[16]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[17]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[18]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (10041): Inferred latch for "curr_rend_mem_addr[19]" at riscv.v(388) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 388
-Info (12128): Elaborating entity "ascii_master_controller" for hierarchy "ascii_master_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 111
+Warning (10230): Verilog HDL assignment warning at riscv.v(169): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 169
+Warning (10230): Verilog HDL assignment warning at riscv.v(184): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 184
+Warning (10230): Verilog HDL assignment warning at riscv.v(199): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 199
+Warning (10230): Verilog HDL assignment warning at riscv.v(214): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 214
+Warning (10230): Verilog HDL assignment warning at riscv.v(231): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 231
+Info (10264): Verilog HDL Case Statement information at riscv.v(293): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 293
+Warning (10230): Verilog HDL assignment warning at riscv.v(398): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 398
+Info (10264): Verilog HDL Case Statement information at riscv.v(374): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 374
+Warning (10230): Verilog HDL assignment warning at riscv.v(761): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 761
+Warning (10230): Verilog HDL assignment warning at riscv.v(768): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 768
+Warning (10034): Output port "HEX0" at riscv.v(3) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+Warning (10034): Output port "HEX1" at riscv.v(4) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+Warning (10034): Output port "HEX2" at riscv.v(5) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+Warning (10034): Output port "HEX3" at riscv.v(6) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+Warning (10034): Output port "HEX4" at riscv.v(7) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+Warning (10034): Output port "HEX5" at riscv.v(8) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+Info (12128): Elaborating entity "ascii_master_controller" for hierarchy "ascii_master_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
 Info (10264): Verilog HDL Case Statement information at ascii_master_controller.v(170): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master_controller.v Line: 170
 Info (12128): Elaborating entity "vga_controller" for hierarchy "ascii_master_controller:controller|vga_controller:controller" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master_controller.v Line: 56
 Warning (10230): Verilog HDL assignment warning at vga_controller.v(141): truncated value with size 32 to match size of target (13) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/vga_controller.v Line: 141
@@ -1700,9 +1691,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_lb12 File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_lb12.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_lb12" for hierarchy "ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Critical Warning (127005): Memory depth (8192) in the design file differs from memory depth (4800) in the Memory Initialization File "C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master/ascii_master.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/vga_controller/ascii_master/ascii_master.v Line: 89
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:rf" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 131
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_0" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 143
-Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:dm" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 158
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:rf" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 63
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_0" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 75
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:dm" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 90
 Info (12128): Elaborating entity "altsyncram" for hierarchy "data_memory:dm|altsyncram:altsyncram_component" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/data_memory.v Line: 89
 Info (12130): Elaborated megafunction instantiation "data_memory:dm|altsyncram:altsyncram_component" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/data_memory.v Line: 89
 Info (12133): Instantiated megafunction "data_memory:dm|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/data_memory.v Line: 89
@@ -1734,7 +1725,7 @@ Info (12128): Elaborating entity "decode_61a" for hierarchy "data_memory:dm|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ahb.tdf
     Info (12023): Found entity 1: mux_ahb File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_ahb.tdf Line: 23
 Info (12128): Elaborating entity "mux_ahb" for hierarchy "data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_cjq1.tdf Line: 48
-Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:im" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 167
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:im" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 99
 Info (12128): Elaborating entity "altsyncram" for hierarchy "instruction_memory:im|altsyncram:altsyncram_component" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.v Line: 82
 Info (12130): Elaborated megafunction instantiation "instruction_memory:im|altsyncram:altsyncram_component" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.v Line: 82
 Info (12133): Instantiated megafunction "instruction_memory:im|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.v Line: 82
@@ -1761,7 +1752,7 @@ Info (12128): Elaborating entity "decode_u0a" for hierarchy "instruction_memory:
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_2hb.tdf
     Info (12023): Found entity 1: mux_2hb File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_2hb.tdf Line: 23
 Info (12128): Elaborating entity "mux_2hb" for hierarchy "instruction_memory:im|altsyncram:altsyncram_component|altsyncram_92h1:auto_generated|mux_2hb:mux2" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_92h1.tdf Line: 42
-Info (12128): Elaborating entity "memory_renderer" for hierarchy "memory_renderer:mr" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 190
+Info (12128): Elaborating entity "memory_renderer" for hierarchy "memory_renderer:mr" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 122
 Warning (10036): Verilog HDL or VHDL warning at memory_renderer.v(48): object "LEDR" assigned a value but never read File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 48
 Warning (10230): Verilog HDL assignment warning at memory_renderer.v(14): truncated value with size 20 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 14
 Warning (10230): Verilog HDL assignment warning at memory_renderer.v(48): truncated value with size 8 to match size of target (1) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 48
@@ -1777,7 +1768,7 @@ Warning (10230): Verilog HDL assignment warning at memory_renderer.v(180): trunc
 Warning (10230): Verilog HDL assignment warning at memory_renderer.v(184): truncated value with size 32 to match size of target (8) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 184
 Info (10264): Verilog HDL Case Statement information at memory_renderer.v(114): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 114
 Info (12128): Elaborating entity "nibble_to_hex" for hierarchy "memory_renderer:mr|nibble_to_hex:hex" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/memory_renderer.v Line: 39
-Info (12128): Elaborating entity "register_renderer" for hierarchy "register_renderer:rr" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 209
+Info (12128): Elaborating entity "register_renderer" for hierarchy "register_renderer:rr" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 141
 Warning (10036): Verilog HDL or VHDL warning at register_renderer.v(38): object "LEDR" assigned a value but never read File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/register_renderer.v Line: 38
 Warning (10230): Verilog HDL assignment warning at register_renderer.v(38): truncated value with size 8 to match size of target (1) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/register_renderer.v Line: 38
 Info (10264): Verilog HDL Case Statement information at register_renderer.v(50): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/register_renderer.v Line: 50
@@ -1797,55 +1788,54 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component|altsyncram_lb12:auto_generated|q_b[31]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_lb12.tdf Line: 1061
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 40
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 41
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 42
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 43
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 44
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 45
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 55
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 80
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 6
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 7
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 8
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 10
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 10
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 10
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 10
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 10
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 39 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -2423,27 +2413,25 @@ Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not
 Info (144001): Generated suppressed messages file C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/output_files/riscv.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 52
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 52
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 64
-Info (21057): Implemented 4968 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
+Info (21057): Implemented 5188 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 4449 logic cells
+    Info (21061): Implemented 4669 logic cells
     Info (21064): Implemented 421 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 685 warnings
-    Info: Peak virtual memory: 4991 megabytes
-    Info: Processing ended: Wed Mar 12 16:22:17 2025
-    Info: Elapsed time: 00:00:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 681 warnings
+    Info: Peak virtual memory: 4989 megabytes
+    Info: Processing ended: Fri Mar 14 09:15:52 2025
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:23
 
 

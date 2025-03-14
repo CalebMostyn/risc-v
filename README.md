@@ -18,9 +18,13 @@ FPGA RISC-V Processor
     - SLT, SLTI, SLTU, SLTIU
     - SRA, SRAI, SRL, SRLI, SLL, SLLI
     - LUI, AUIPC
-    - LW, SW, LH, SH, LB, SB
+    - LW, SW
     - JAL, JALR
     - BEQ, BNE, BLT, BGE, BLTU, BGEU
+- Extensions of TinyRV2
+    - LH, SH, LB, SB
+- Omissions from TinyRV2
+    - CSRR, CSRW
 
 # Components
 For Tiny RISC-V:
@@ -30,6 +34,6 @@ For Tiny RISC-V:
 - [X] Instruction Memory (with visualization)
 - [X] FSM for Instruction Execution
 
-Possible Stretch Goals
+Stretch Goals
 - [ ] Simple Syscall Implementations
 - [ ] Standard I/O
