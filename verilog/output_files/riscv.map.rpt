@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Fri Mar 14 11:18:21 2025
+Fri Mar 14 12:29:25 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -82,13 +82,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 14 11:18:20 2025          ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 14 12:29:25 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 1507                                           ;
+; Total registers                 ; 1539                                           ;
 ; Total pins                      ; 96                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 3,125,248                                      ;
@@ -207,7 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processors 6-16        ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processors 7-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -256,7 +257,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/decode_61a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_61a.tdf                                ;         ;
 ; db/mux_ahb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_ahb.tdf                                   ;         ;
 ; db/altsyncram_92h1.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_92h1.tdf                           ;         ;
-; instruction_memory.mif                           ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
+; ../instruction_memory.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
 ; db/decode_u0a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_u0a.tdf                                ;         ;
 ; db/mux_2hb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_2hb.tdf                                   ;         ;
 +--------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
@@ -267,16 +268,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2751           ;
+; Estimate of Logic utilization (ALMs needed) ; 3079           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 3550           ;
-;     -- 7 input functions                    ; 201            ;
-;     -- 6 input functions                    ; 1587           ;
-;     -- 5 input functions                    ; 596            ;
-;     -- 4 input functions                    ; 476            ;
-;     -- <=3 input functions                  ; 690            ;
+; Combinational ALUT usage for logic          ; 3937           ;
+;     -- 7 input functions                    ; 106            ;
+;     -- 6 input functions                    ; 1952           ;
+;     -- 5 input functions                    ; 659            ;
+;     -- 4 input functions                    ; 489            ;
+;     -- <=3 input functions                  ; 731            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1507           ;
+; Dedicated logic registers                   ; 1539           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 96             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -285,9 +286,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 2              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1895           ;
-; Total fan-out                               ; 30957          ;
-; Average fan-out                             ; 5.46           ;
+; Maximum fan-out                             ; 1927           ;
+; Total fan-out                               ; 33029          ;
+; Average fan-out                             ; 5.42           ;
 +---------------------------------------------+----------------+
 
 
@@ -296,8 +297,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |riscv                                             ; 3550 (823)          ; 1507 (157)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
-;    |alu:alu_0|                                     ; 396 (396)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |riscv|alu:alu_0                                                                                                                                                               ; alu                     ; work         ;
+; |riscv                                             ; 3937 (940)          ; 1539 (189)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
+;    |alu:alu_0|                                     ; 392 (392)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |riscv|alu:alu_0                                                                                                                                                               ; alu                     ; work         ;
 ;    |ascii_master_controller:controller|            ; 160 (44)            ; 190 (24)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
 ;       |ascii_master:master|                        ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master                                                                                                                  ; ascii_master            ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master|altsyncram:altsyncram_component                                                                                  ; altsyncram              ; work         ;
@@ -327,7 +328,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |mux_2hb:mux2|                         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im|altsyncram:altsyncram_component|altsyncram_92h1:auto_generated|mux_2hb:mux2                                                                       ; mux_2hb                 ; work         ;
 ;    |memory_renderer:mr|                            ; 622 (619)           ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr                                                                                                                                                      ; memory_renderer         ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr|nibble_to_hex:hex                                                                                                                                    ; nibble_to_hex           ; work         ;
-;    |register_file:rf|                              ; 854 (854)           ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
+;    |register_file:rf|                              ; 1128 (1128)         ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
 ;    |register_renderer:rr|                          ; 549 (546)           ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr                                                                                                                                                    ; register_renderer       ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr|nibble_to_hex:hex                                                                                                                                  ; nibble_to_hex           ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
@@ -609,17 +610,15 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
 ; Register name                                                                         ; Reason for Removal             ; Registers Removed due to This Register                                                    ;
 +---------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
-; register_file:rf|data[0][17]                                                          ; Stuck at GND                   ; register_file:rf|data[0][14], register_file:rf|data[0][13],                               ;
-;                                                                                       ; due to stuck port clock_enable ; register_file:rf|data[0][12], register_file:rf|data[0][10],                               ;
-;                                                                                       ;                                ; register_file:rf|data[0][9], register_file:rf|data[0][8],                                 ;
-;                                                                                       ;                                ; register_file:rf|data[0][7]                                                               ;
-; register_file:rf|data[0][6]                                                           ; Stuck at GND                   ; register_file:rf|data[0][5], register_file:rf|data[0][4],                                 ;
-;                                                                                       ; due to stuck port clock_enable ; register_file:rf|data[0][3]                                                               ;
+; register_file:rf|data[0][31]                                                          ; Stuck at GND                   ; register_file:rf|data[0][18], register_file:rf|data[0][6],                                ;
+;                                                                                       ; due to stuck port clock_enable ; register_file:rf|data[0][5], register_file:rf|data[0][4],                                 ;
+;                                                                                       ;                                ; register_file:rf|data[0][3], register_file:rf|data[0][2],                                 ;
+;                                                                                       ;                                ; register_file:rf|data[0][1], register_file:rf|data[0][0]                                  ;
 ; curr_rend_mem_addr[1]                                                                 ; Stuck at GND                   ; memory_renderer:mr|curr_addr[1]                                                           ;
 ;                                                                                       ; due to stuck port data_in      ;                                                                                           ;
 ; curr_rend_mem_addr[0]                                                                 ; Stuck at GND                   ; memory_renderer:mr|curr_addr[0]                                                           ;
 ;                                                                                       ; due to stuck port data_in      ;                                                                                           ;
-; register_file:rf|data[0][31]                                                          ; Stuck at GND                   ; register_file:rf|data[0][0]                                                               ;
+; register_file:rf|data[0][27]                                                          ; Stuck at GND                   ; register_file:rf|data[0][11]                                                              ;
 ;                                                                                       ; due to stuck port clock_enable ;                                                                                           ;
 ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S~4 ; Lost Fanouts                   ; ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|S.ERROR ;
 +---------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
@@ -630,10 +629,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1507  ;
+; Total registers                              ; 1539  ;
 ; Number of registers using Synchronous Clear  ; 60    ;
 ; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 1335  ;
+; Number of registers using Asynchronous Clear ; 1367  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1228  ;
 ; Number of registers using Preset             ; 0     ;
@@ -680,62 +679,62 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[4]                                                                             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[4]                                                                               ;
-; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_2[7]                   ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_input[25]                                                                             ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|memory_renderer:mr|ascii_input[26]                                                                               ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|reg_num[0]                                                                                  ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[2]                         ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[1]                         ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[2]                                                                      ;
-; 9:1                ; 10 bits   ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[6]                                                                      ;
-; 12:1               ; 12 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |riscv|memory_renderer:mr|ascii_write_address[5]                                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[2]                                                                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[2]                                                                               ;
+; 3:1                ; 57 bits   ; 114 LEs       ; 57 LEs               ; 57 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|double_buffer:buffer|address_1[0]                   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_input[26]                                                                             ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |riscv|memory_renderer:mr|ascii_input[24]                                                                               ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |riscv|register_renderer:rr|reg_num[3]                                                                                  ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|hcount[7]                         ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |riscv|ascii_master_controller:controller|vga_controller:controller|vga_driver:driver|vcount[2]                         ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[1]                                                                      ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; Yes        ; |riscv|register_renderer:rr|ascii_write_address[7]                                                                      ;
+; 12:1               ; 12 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |riscv|memory_renderer:mr|ascii_write_address[1]                                                                        ;
 ; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[1]                                                                                     ;
 ; 49:1               ; 2 bits    ; 64 LEs        ; 62 LEs               ; 2 LEs                  ; Yes        ; |riscv|memory_renderer:mr|nibble[3]                                                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|register_renderer:rr|num_count[2]                                                                                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|memory_renderer:mr|val_count[0]                                                                                  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[0]                                                                             ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[12]                                                                              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |riscv|Selector294                                                                                                      ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |riscv|im_addr[2]                                                                                                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|register_renderer:rr|num_count[1]                                                                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |riscv|memory_renderer:mr|val_count[1]                                                                                  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|register_renderer:rr|bg_str_count[9]                                                                             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |riscv|memory_renderer:mr|bg_str_count[0]                                                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |riscv|Selector334                                                                                                      ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |riscv|im_addr[6]                                                                                                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight0                                                                                            ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight1                                                                                            ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight0                                                                                            ;
-; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftLeft0                                                                                             ;
+; 4:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |riscv|alu:alu_0|ShiftRight1                                                                                            ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_w_addr[1]                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[7]                                                                                                     ;
-; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; No         ; |riscv|vga_input_data[28]                                                                                               ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_r_addr_0[1]                                                                                                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[9]                                                                                                     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[22]                                                                                                    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |riscv|dm_addr[10]                                                                                                      ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux22                                                                                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux34                                                                                           ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2|l3_w30_n0_mux_dataout ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[5]                                                                                                     ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; No         ; |riscv|vga_write_address[7]                                                                                             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |riscv|rf_r_addr_0[3]                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[10]                                                                                                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[23]                                                                                                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |riscv|dm_addr[2]                                                                                                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux37                                                                                           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |riscv|register_file:rf|Mux18                                                                                           ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |riscv|data_memory:dm|altsyncram:altsyncram_component|altsyncram_cjq1:auto_generated|mux_ahb:mux2|l3_w27_n0_mux_dataout ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |riscv|dm_byte_en[0]                                                                                                    ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |riscv|dm_w_data[31]                                                                                                    ;
-; 60:1               ; 6 bits    ; 240 LEs       ; 12 LEs               ; 228 LEs                ; No         ; |riscv|Selector33                                                                                                       ;
-; 60:1               ; 11 bits   ; 440 LEs       ; 22 LEs               ; 418 LEs                ; No         ; |riscv|Selector12                                                                                                       ;
-; 60:1               ; 8 bits    ; 320 LEs       ; 16 LEs               ; 304 LEs                ; No         ; |riscv|Selector26                                                                                                       ;
-; 63:1               ; 7 bits    ; 294 LEs       ; 14 LEs               ; 280 LEs                ; No         ; |riscv|Selector45                                                                                                       ;
-; 129:1              ; 30 bits   ; 2580 LEs      ; 60 LEs               ; 2520 LEs               ; No         ; |riscv|Selector65                                                                                                       ;
+; 60:1               ; 6 bits    ; 240 LEs       ; 12 LEs               ; 228 LEs                ; No         ; |riscv|Selector34                                                                                                       ;
+; 60:1               ; 11 bits   ; 440 LEs       ; 22 LEs               ; 418 LEs                ; No         ; |riscv|Selector9                                                                                                        ;
+; 60:1               ; 8 bits    ; 320 LEs       ; 16 LEs               ; 304 LEs                ; No         ; |riscv|Selector21                                                                                                       ;
+; 63:1               ; 7 bits    ; 294 LEs       ; 14 LEs               ; 280 LEs                ; No         ; |riscv|Selector42                                                                                                       ;
+; 129:1              ; 30 bits   ; 2580 LEs      ; 60 LEs               ; 2520 LEs               ; No         ; |riscv|Selector68                                                                                                       ;
 ; 62:1               ; 4 bits    ; 164 LEs       ; 8 LEs                ; 156 LEs                ; No         ; |riscv|Selector35                                                                                                       ;
 ; 21:1               ; 5 bits    ; 70 LEs        ; 60 LEs               ; 10 LEs                 ; No         ; |riscv|alu:alu_0|Mux27                                                                                                  ;
-; 130:1              ; 30 bits   ; 2580 LEs      ; 570 LEs              ; 2010 LEs               ; No         ; |riscv|alu_src_a[19]                                                                                                    ;
+; 130:1              ; 30 bits   ; 2580 LEs      ; 570 LEs              ; 2010 LEs               ; No         ; |riscv|alu_src_a[24]                                                                                                    ;
 ; 23:1               ; 2 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux22                                                                                                  ;
-; 21:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux18                                                                                                  ;
-; 24:1               ; 3 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux30                                                                                                  ;
+; 21:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux19                                                                                                  ;
+; 24:1               ; 3 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |riscv|alu:alu_0|Mux29                                                                                                  ;
 ; 37:1               ; 2 bits    ; 48 LEs        ; 22 LEs               ; 26 LEs                 ; No         ; |riscv|alu_src_a[1]                                                                                                     ;
-; 14:1               ; 31 bits   ; 279 LEs       ; 248 LEs              ; 31 LEs                 ; No         ; |riscv|alu_src_b[31]                                                                                                    ;
+; 14:1               ; 31 bits   ; 279 LEs       ; 248 LEs              ; 31 LEs                 ; No         ; |riscv|alu_src_b[11]                                                                                                    ;
 ; 18:1               ; 4 bits    ; 48 LEs        ; 44 LEs               ; 4 LEs                  ; No         ; |riscv|rf_w_data[7]                                                                                                     ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; No         ; |riscv|rf_w_data[12]                                                                                                    ;
-; 22:1               ; 7 bits    ; 98 LEs        ; 84 LEs               ; 14 LEs                 ; No         ; |riscv|rf_w_data[5]                                                                                                     ;
-; 39:1               ; 7 bits    ; 182 LEs       ; 161 LEs              ; 21 LEs                 ; No         ; |riscv|rf_w_data[20]                                                                                                    ;
-; 42:1               ; 3 bits    ; 84 LEs        ; 75 LEs               ; 9 LEs                  ; No         ; |riscv|rf_w_data[28]                                                                                                    ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 77 LEs               ; 7 LEs                  ; No         ; |riscv|rf_w_data[9]                                                                                                     ;
+; 22:1               ; 7 bits    ; 98 LEs        ; 84 LEs               ; 14 LEs                 ; No         ; |riscv|rf_w_data[2]                                                                                                     ;
+; 39:1               ; 7 bits    ; 182 LEs       ; 161 LEs              ; 21 LEs                 ; No         ; |riscv|rf_w_data[21]                                                                                                    ;
+; 42:1               ; 3 bits    ; 84 LEs        ; 75 LEs               ; 9 LEs                  ; No         ; |riscv|rf_w_data[30]                                                                                                    ;
 ; 41:1               ; 2 bits    ; 54 LEs        ; 48 LEs               ; 6 LEs                  ; No         ; |riscv|rf_w_data[26]                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 
@@ -1473,8 +1472,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1507                        ;
-;     CLR               ; 259                         ;
+; arriav_ff             ; 1539                        ;
+;     CLR               ; 291                         ;
 ;     CLR SCLR          ; 10                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 88                          ;
@@ -1483,30 +1482,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 57                          ;
 ;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 3559                        ;
+; arriav_lcell_comb     ; 3946                        ;
 ;     arith             ; 353                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 195                         ;
-;         2 data inputs ; 51                          ;
+;         2 data inputs ; 83                          ;
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 5                           ;
-;         5 data inputs ; 94                          ;
-;     extend            ; 201                         ;
-;         7 data inputs ; 201                         ;
-;     normal            ; 3005                        ;
+;         5 data inputs ; 62                          ;
+;     extend            ; 106                         ;
+;         7 data inputs ; 106                         ;
+;     normal            ; 3487                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 174                         ;
-;         3 data inputs ; 261                         ;
-;         4 data inputs ; 471                         ;
-;         5 data inputs ; 502                         ;
-;         6 data inputs ; 1587                        ;
+;         2 data inputs ; 181                         ;
+;         3 data inputs ; 263                         ;
+;         4 data inputs ; 484                         ;
+;         5 data inputs ; 597                         ;
+;         6 data inputs ; 1952                        ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 421                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 8.21                        ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 7.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1525,7 +1524,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 14 11:17:54 2025
+    Info: Processing started: Fri Mar 14 12:28:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file riscv.v
@@ -1572,11 +1571,11 @@ Warning (10230): Verilog HDL assignment warning at riscv.v(185): truncated value
 Warning (10230): Verilog HDL assignment warning at riscv.v(200): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 200
 Warning (10230): Verilog HDL assignment warning at riscv.v(215): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 215
 Warning (10230): Verilog HDL assignment warning at riscv.v(232): truncated value with size 16 to match size of target (14) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 232
-Info (10264): Verilog HDL Case Statement information at riscv.v(294): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 294
-Warning (10230): Verilog HDL assignment warning at riscv.v(399): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 399
-Info (10264): Verilog HDL Case Statement information at riscv.v(375): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 375
-Warning (10230): Verilog HDL assignment warning at riscv.v(762): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 762
-Warning (10230): Verilog HDL assignment warning at riscv.v(769): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 769
+Info (10264): Verilog HDL Case Statement information at riscv.v(295): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 295
+Warning (10230): Verilog HDL assignment warning at riscv.v(402): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 402
+Info (10264): Verilog HDL Case Statement information at riscv.v(377): all case item expressions in this case statement are onehot File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 377
+Warning (10230): Verilog HDL assignment warning at riscv.v(768): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 768
+Warning (10230): Verilog HDL assignment warning at riscv.v(775): truncated value with size 32 to match size of target (16) File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 775
 Warning (10034): Output port "HEX0" at riscv.v(3) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 3
 Warning (10034): Output port "HEX1" at riscv.v(4) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 4
 Warning (10034): Output port "HEX2" at riscv.v(5) has no driver File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 5
@@ -2419,17 +2418,17 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/riscv.v Line: 11
-Info (21057): Implemented 5216 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5603 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 4697 logic cells
+    Info (21061): Implemented 5084 logic cells
     Info (21064): Implemented 421 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 681 warnings
-    Info: Peak virtual memory: 5056 megabytes
-    Info: Processing ended: Fri Mar 14 11:18:21 2025
+    Info: Peak virtual memory: 4997 megabytes
+    Info: Processing ended: Fri Mar 14 12:29:25 2025
     Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

@@ -256,6 +256,7 @@ reg [4:0]rs2;
 reg [4:0]rd;
 reg [9:0]func;
 reg [31:0]imm;
+reg [31:0]jalr_rs1_val;
 reg branch_flag;
 reg reverse_operator;
 
@@ -366,6 +367,7 @@ begin
 		rd <= 5'd0;
 		func <= 10'd0;
 		imm <= 32'd0;
+		jalr_rs1_val <= 32'd0;
 		branch_flag <= 1'b0;
 		execution_run <= 1'b0;
 		execution_done <= 1'b0;
@@ -386,6 +388,7 @@ begin
 				rd <= 5'd0;
 				func <= 10'd0;
 				imm <= 32'd0;
+				jalr_rs1_val <= 32'd0;
 				branch_flag <= 1'b0;
 				execution_run <= 1'b0;
 				execution_done <= 1'b0;
@@ -466,6 +469,9 @@ begin
 				if (opcode == BRANCH)
 					branch_flag <= alu_result[0] ^ reverse_operator;
 					
+				if (opcode == JALR)
+					jalr_rs1_val <= rf_r_data_0;
+					
 				if (inst == 32'd0 || pc > 32'h0000F9FC)
 					execution_done <= 1'b1;
 			end
@@ -473,7 +479,7 @@ begin
 			begin
 				case(opcode)
 					JAL: pc <= pc + imm;
-					JALR: pc <= (rf_r_data_0 + imm) & 32'hFFFFFFFE;
+					JALR: pc <= (jalr_rs1_val + imm) & 32'hFFFFFFFE;
 					BRANCH:
 						if (branch_flag)
 							pc <= pc + imm;
