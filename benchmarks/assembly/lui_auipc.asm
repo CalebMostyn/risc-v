@@ -1,0 +1,2 @@
+lui t0 0xABCDE # ABCDE000
+auipc t1 0xF # 0000F004
