@@ -1,3 +1,5 @@
+call main
+	ebreak
 	.file	"factorial.c"
 	.option nopic
 	.attribute arch, "rv32i2p1_m2p0"
@@ -55,8 +57,8 @@ main:
 	lw	a0,-20(s0)
 	call	factorial
 	mv	a3,a0
-	lui	a5,%hi(arr)
-	addi	a4,a5,%lo(arr)
+	lui	a5,0
+	addi	a4,a5,0
 	lw	a5,-20(s0)
 	slli	a5,a5,2
 	add	a5,a4,a5
