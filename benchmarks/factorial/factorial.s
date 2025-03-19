@@ -58,7 +58,7 @@ main:
 	call	factorial
 	mv	a3,a0
 	lui	a5,0
-	addi	a4,a5,0
+	addi	a4,a5,4
 	lw	a5,-20(s0)
 	slli	a5,a5,2
 	add	a5,a4,a5

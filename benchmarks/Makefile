@@ -9,13 +9,27 @@ ASM = $(SRC:.c=.s)
 BIN = $(SRC:.c=.bin)
 MIF = $(SRC:.c=.mif)
 
+STATIC_MAPPINGS = arr=4
+
 all: $(ASM) $(BIN) $(MIF)
 
 %.s: %.c
 	$(CC) $(CFLAGS) -S $< -o $@
 	echo "call main\n\tebreak" | cat - $@ > temp.s
-	sed -E 's/%hi\([^)]*\)/0/g; s/%lo\([^)]*\)/0/g' temp.s > $@
-	rm temp.s
+
+	# Generate sed script dynamically
+	rm -f static_mappings.sed
+	touch static_mappings.sed
+	@for pair in $(STATIC_MAPPINGS); do \
+		TARGET=$$(echo $$pair | cut -d= -f1); \
+		VALUE=$$(echo $$pair | cut -d= -f2); \
+		echo "s/%hi(\\($$TARGET\\))/0/g" >> static_mappings.sed; \
+		echo "s/%lo(\\($$TARGET\\))/$$VALUE/g" >> static_mappings.sed; \
+	done
+
+	# Apply replacements using the generated sed script
+	sed -f static_mappings.sed temp.s > $@
+	rm temp.s static_mappings.sed
 
 %.bin: %.s
 	$(RARS) a dump .text BinaryText $@ $<
