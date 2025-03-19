@@ -1,5 +1,5 @@
 main:
-	lui t2 0 #0x10040 in RARS
+	lui t2 0x10040# in RARS
 	li t1 49 # arr size - 1, assuming random 50 numbers already present in data memory
 	li t0 0 # i
 for_cond_0:	
