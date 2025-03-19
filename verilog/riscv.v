@@ -135,6 +135,7 @@ register_renderer rr(
 	.rf_addr(rr_addr), // register file in-addr
 	.rf_data(rf_r_data_0), // register file output
 	.pc(pc),
+	.num_inst(num_inst),
 	.ascii_write_en(rr_vga_write_en),
 	.ascii_input(rr_vga_input_data),
 	.ascii_write_address(rr_vga_write_address),
@@ -263,6 +264,8 @@ reg reverse_operator;
 reg execution_run;
 reg execution_done;
 
+reg [31:0]num_inst;
+
 parameter START = 8'd0,
 			WAIT_KEY_PRESS = 8'd1,
 			RELEASE_STEP = 8'd2,
@@ -371,6 +374,7 @@ begin
 		branch_flag <= 1'b0;
 		execution_run <= 1'b0;
 		execution_done <= 1'b0;
+		num_inst <= 32'd0;
 	end
 	else
 	begin
@@ -392,6 +396,7 @@ begin
 				branch_flag <= 1'b0;
 				execution_run <= 1'b0;
 				execution_done <= 1'b0;
+				num_inst <= 32'd0;
 			end
 			RELEASE_STEP: execution_run <= 1'b0;
 			RELEASE_RUN: execution_run <= 1'b1;
@@ -487,6 +492,9 @@ begin
 							pc <= pc + 32'd4;
 					default: pc <= pc + 32'd4;
 				endcase
+				
+				if (~execution_done)
+					num_inst <= num_inst + 32'd1;
 			end
 			RENDER_START: render_start <= 1'b1;
 			RENDER_DONE: reset_render <= 1'b0;

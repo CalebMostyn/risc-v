@@ -5,7 +5,7 @@ FPGA RISC-V Processor
 - 32-bit Word Length
 - 32 General Purpose Registers
 - 225 KiB of Data Memory (57.600, 32-bit words, byte addressable)
-    - Addressable from 0x00000 (maybe 0x00004 to prevent null pointer from being addressable) to 0x383FC
+    - Addressable from 0x00000 to 0x383FC
 - 62.5 KiB of Instruction Memory (16.000, 32-bit words)
     - Addressable from 0x00000 to 0x0F9FC
     - ROM
