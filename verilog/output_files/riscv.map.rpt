@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Wed Mar 19 01:08:38 2025
+Wed Mar 19 08:23:28 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -82,7 +82,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 19 01:08:37 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 19 08:23:28 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; riscv                                          ;
 ; Top-level Entity Name           ; riscv                                          ;
@@ -259,7 +259,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/decode_61a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_61a.tdf                                ;         ;
 ; db/mux_ahb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_ahb.tdf                                   ;         ;
 ; db/altsyncram_92h1.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/altsyncram_92h1.tdf                           ;         ;
-; instruction_memory.mif                           ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
+; ../instruction_memory.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/instruction_memory.mif                           ;         ;
 ; db/decode_u0a.tdf                                ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/decode_u0a.tdf                                ;         ;
 ; db/mux_2hb.tdf                                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb/Documents/ECE 289/BADGES/INTERMEDIATE+ - HW IMPLEMENTATION/risc-v/verilog/db/mux_2hb.tdf                                   ;         ;
 +--------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
@@ -270,14 +270,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 3158           ;
+; Estimate of Logic utilization (ALMs needed) ; 3163           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 4051           ;
+; Combinational ALUT usage for logic          ; 4062           ;
 ;     -- 7 input functions                    ; 117            ;
 ;     -- 6 input functions                    ; 1985           ;
 ;     -- 5 input functions                    ; 679            ;
 ;     -- 4 input functions                    ; 510            ;
-;     -- <=3 input functions                  ; 760            ;
+;     -- <=3 input functions                  ; 771            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1571           ;
 ;                                             ;                ;
@@ -289,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1959           ;
-; Total fan-out                               ; 33636          ;
+; Total fan-out                               ; 33647          ;
 ; Average fan-out                             ; 5.39           ;
 +---------------------------------------------+----------------+
 
@@ -299,7 +299,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name             ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |riscv                                             ; 4051 (1006)         ; 1571 (221)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
+; |riscv                                             ; 4062 (1006)         ; 1571 (221)                ; 3125248           ; 2          ; 96   ; 0            ; |riscv                                                                                                                                                                         ; riscv                   ; work         ;
 ;    |alu:alu_0|                                     ; 392 (392)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |riscv|alu:alu_0                                                                                                                                                               ; alu                     ; work         ;
 ;    |ascii_master_controller:controller|            ; 160 (44)            ; 190 (24)                  ; 770048            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller                                                                                                                                      ; ascii_master_controller ; work         ;
 ;       |ascii_master:master|                        ; 0 (0)               ; 0 (0)                     ; 253952            ; 0          ; 0    ; 0            ; |riscv|ascii_master_controller:controller|ascii_master:master                                                                                                                  ; ascii_master            ; work         ;
@@ -330,7 +330,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |mux_2hb:mux2|                         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|instruction_memory:im|altsyncram:altsyncram_component|altsyncram_92h1:auto_generated|mux_2hb:mux2                                                                       ; mux_2hb                 ; work         ;
 ;    |memory_renderer:mr|                            ; 622 (619)           ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr                                                                                                                                                      ; memory_renderer         ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|memory_renderer:mr|nibble_to_hex:hex                                                                                                                                    ; nibble_to_hex           ; work         ;
-;    |register_file:rf|                              ; 1128 (1128)         ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
+;    |register_file:rf|                              ; 1139 (1139)         ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_file:rf                                                                                                                                                        ; register_file           ; work         ;
 ;    |register_renderer:rr|                          ; 597 (594)           ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr                                                                                                                                                    ; register_renderer       ; work         ;
 ;       |nibble_to_hex:hex|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |riscv|register_renderer:rr|nibble_to_hex:hex                                                                                                                                  ; nibble_to_hex           ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
@@ -661,6 +661,17 @@ Encoding Type:  One-Hot
 ; register_renderer:rr|num_count[2]                                                     ; 19      ;
 ; register_renderer:rr|num_count[1]                                                     ; 17      ;
 ; register_renderer:rr|num_count[0]                                                     ; 17      ;
+; register_file:rf|data[2][2]                                                           ; 3       ;
+; register_file:rf|data[2][3]                                                           ; 3       ;
+; register_file:rf|data[2][9]                                                           ; 3       ;
+; register_file:rf|data[2][8]                                                           ; 3       ;
+; register_file:rf|data[2][7]                                                           ; 3       ;
+; register_file:rf|data[2][6]                                                           ; 3       ;
+; register_file:rf|data[2][5]                                                           ; 3       ;
+; register_file:rf|data[2][4]                                                           ; 3       ;
+; register_file:rf|data[2][17]                                                          ; 3       ;
+; register_file:rf|data[2][16]                                                          ; 3       ;
+; register_file:rf|data[2][15]                                                          ; 3       ;
 ; memory_renderer:mr|bg_str_count[3]                                                    ; 44      ;
 ; memory_renderer:mr|bg_str_count[1]                                                    ; 136     ;
 ; memory_renderer:mr|bg_str_count[0]                                                    ; 145     ;
@@ -672,7 +683,7 @@ Encoding Type:  One-Hot
 ; memory_renderer:mr|val_count[1]                                                       ; 10      ;
 ; memory_renderer:mr|val_count[0]                                                       ; 5       ;
 ; memory_renderer:mr|addr_count[2]                                                      ; 8       ;
-; Total number of inverted registers = 26                                               ;         ;
+; Total number of inverted registers = 37                                               ;         ;
 +---------------------------------------------------------------------------------------+---------+
 
 
@@ -1484,7 +1495,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 57                          ;
 ;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 4060                        ;
+; arriav_lcell_comb     ; 4071                        ;
 ;     arith             ; 385                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 226                         ;
@@ -1494,9 +1505,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 62                          ;
 ;     extend            ; 117                         ;
 ;         7 data inputs ; 117                         ;
-;     normal            ; 3558                        ;
+;     normal            ; 3569                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
+;         1 data inputs ; 19                          ;
 ;         2 data inputs ; 184                         ;
 ;         3 data inputs ; 257                         ;
 ;         4 data inputs ; 505                         ;
@@ -1506,8 +1517,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 96                          ;
 ; stratixv_ram_block    ; 421                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.20                       ;
-; Average LUT depth     ; 7.83                        ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 8.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1526,7 +1537,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Mar 19 01:08:13 2025
+    Info: Processing started: Wed Mar 19 08:23:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file riscv.v
@@ -2427,9 +2438,9 @@ Info (21057): Implemented 5717 device resources after synthesis - the final reso
     Info (21064): Implemented 421 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 681 warnings
-    Info: Peak virtual memory: 5149 megabytes
-    Info: Processing ended: Wed Mar 19 01:08:38 2025
-    Info: Elapsed time: 00:00:25
+    Info: Peak virtual memory: 5039 megabytes
+    Info: Processing ended: Wed Mar 19 08:23:28 2025
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:32
 
 
