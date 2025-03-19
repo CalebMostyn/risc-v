@@ -15,7 +15,7 @@ all: $(ASM) $(BIN) $(MIF)
 
 %.s: %.c
 	$(CC) $(CFLAGS) -S $< -o $@
-	echo "call main\n\tebreak" | cat - $@ > temp.s
+	echo "\tcall main\n\tebreak" | cat - $@ > temp.s
 
 	# Generate sed script dynamically
 	rm -f static_mappings.sed
