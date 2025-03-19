@@ -29,7 +29,7 @@ FPGA RISC-V Processor
     - CSRR, CSRW
 
 # Build
-Programs written in languages supported by GCC can be compiled and ran on this CPU, as long as they fit within the constraints of the defined ISA. Programs with syscalls or division/modulus operations are able to be ran, but their behavior is indeterminate.
+Programs written in languages supported by GCC can be compiled and ran on this CPU, as long as they fit within the constraints of the defined ISA. Programs with syscalls, division/modulus operations, control status registers, and so on are able to be ran, but their behavior is indeterminate.
 
 The Makefile can be ran as 
 ```
@@ -43,7 +43,7 @@ To more easily run in the bare-metal environment, assembling is handled by RARS.
 
 Memory locations for static variables can be mapped with `STATIC_MAPPINGS`, although this is currently limited to memory locations that can fit in `addi` immediate value. Static mappings can be left up to RARS, but this may result in addresses outside of the valid adresses of the data memory (although very unlikely).
 
-The generated assembly has a call to main inserted at the beginning and an `ebreak`, a RARS instruction for a program breakpoint. If running through RARS, you can leave as ease to pause execution at the end of the program, but when generating the binary files this is replaced with 0x00000000 such that execution falls off and ends.
+The generated assembly has a call to main inserted at the beginning and an `ebreak`, a RARS instruction for a program breakpoint. If running through RARS, you can leave as is to pause execution at the end of the program, but when generating the binary files this is replaced with 0x00000000 such that execution falls off and ends.
 
 # Components
 For Tiny RISC-V:
