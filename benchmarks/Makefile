@@ -9,7 +9,7 @@ ASM = $(SRC:.c=.s)
 BIN = $(SRC:.c=.bin)
 MIF = $(SRC:.c=.mif)
 
-STATIC_MAPPINGS = arr=4
+STATIC_MAPPINGS = arr=0
 
 all: $(ASM) $(BIN) $(MIF)
 

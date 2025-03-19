@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #define ARR_LENGTH 50
-
+int arr[ARR_LENGTH];
 
 void swap(int* arr, int idx_1, int idx_2) {
     int temp = arr[idx_1];
@@ -10,23 +7,9 @@ void swap(int* arr, int idx_1, int idx_2) {
     arr[idx_2] = temp;
 }
 
-void print_arr(int* arr) {
-    printf("arr[");
-    for (int i = 0; i < ARR_LENGTH; i++) {
-        printf("%d", arr[i]);
-        if (i != 49) {
-            printf(", ");
-        }
-    }
-    printf("]\n");
-}
-
 void main() {
-    int arr[ARR_LENGTH]; // starting at 0x00000
-    for (int i = 0; i < ARR_LENGTH; i++) {
-        arr[i] = rand();
-    }
-    print_arr(arr);
+    // Leaving unitialized, python script initializes data memory to random values
+    // in leu of syscalls
     
     for (int i = 0; i < ARR_LENGTH; i++) {
         int smallest_index = i;
@@ -39,6 +22,5 @@ void main() {
         // swap current element with smallest
         swap(arr, i, smallest_index);
     }
-    print_arr(arr);
 }
 
