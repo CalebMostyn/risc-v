@@ -18,7 +18,7 @@ begin
 	begin
 		data[0] <= 32'd0;
 		data[1] <= 32'd0;
-		data[2] <= 32'd0;
+		data[2] <= 32'h000383FC;
 		data[3] <= 32'd0;
 		data[4] <= 32'd0;
 		data[5] <= 32'd0;

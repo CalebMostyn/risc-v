@@ -10,6 +10,8 @@ FPGA RISC-V Processor
     - Addressable from 0x00000 to 0x0F9FC
     - ROM
 - 80 character by 60 row ASCII Character VGA Output 
+- `sp` is initalized to the last addressable word of Data Memory
+- `gp` is left to be initialized by the program if needed
 
 # ISA
 - TinyRV2
